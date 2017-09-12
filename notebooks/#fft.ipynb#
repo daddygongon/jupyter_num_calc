@@ -7,11 +7,11 @@
    },
    "source": [
     "# Table of Contents\n",
-    " <p><div class=\"lev1 toc-item\"><a href=\"#FFTã®å¿œç”¨\" data-toc-modified-id=\"FFTã®å¿œç”¨-1\"><span class=\"toc-item-num\">1&nbsp;&nbsp;</span>FFTã®å¿œç”¨</a></div><div class=\"lev2 toc-item\"><a href=\"#å‘¨æ³¢æ•°åˆ†è§£\" data-toc-modified-id=\"å‘¨æ³¢æ•°åˆ†è§£-11\"><span class=\"toc-item-num\">1.1&nbsp;&nbsp;</span>å‘¨æ³¢æ•°åˆ†è§£</a></div><div class=\"lev2 toc-item\"><a href=\"#é«˜å‘¨æ³¢ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼\" data-toc-modified-id=\"é«˜å‘¨æ³¢ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼-12\"><span class=\"toc-item-num\">1.2&nbsp;&nbsp;</span>é«˜å‘¨æ³¢ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼</a></div><div class=\"lev1 toc-item\"><a href=\"#FFTã®å‹•ä½œåŽŸç†\" data-toc-modified-id=\"FFTã®å‹•ä½œåŽŸç†-2\"><span class=\"toc-item-num\">2&nbsp;&nbsp;</span>FFTã®å‹•ä½œåŽŸç†</a></div><div class=\"lev1 toc-item\"><a href=\"#é–¢æ•°å†…æŒ¿ã¨ã—ã¦ã®Fourieré–¢æ•°ç³»\" data-toc-modified-id=\"é–¢æ•°å†…æŒ¿ã¨ã—ã¦ã®Fourieré–¢æ•°ç³»-3\"><span class=\"toc-item-num\">3&nbsp;&nbsp;</span>é–¢æ•°å†…æŒ¿ã¨ã—ã¦ã®Fourieré–¢æ•°ç³»</a></div><div class=\"lev1 toc-item\"><a href=\"#ç›´äº¤é–¢ä¿‚ã‹ã‚‰ã®ç©åˆ†ã«ã‚ˆã‚‹ä¿‚æ•°æ±ºå®š\" data-toc-modified-id=\"ç›´äº¤é–¢ä¿‚ã‹ã‚‰ã®ç©åˆ†ã«ã‚ˆã‚‹ä¿‚æ•°æ±ºå®š-4\"><span class=\"toc-item-num\">4&nbsp;&nbsp;</span>ç›´äº¤é–¢ä¿‚ã‹ã‚‰ã®ç©åˆ†ã«ã‚ˆã‚‹ä¿‚æ•°æ±ºå®š</a></div><div class=\"lev1 toc-item\"><a href=\"#ç›´æŽ¥ç©åˆ†ã«ã‚ˆã‚‹ãƒ•ãƒ¼ãƒªã‚¨ä¿‚æ•°\" data-toc-modified-id=\"ç›´æŽ¥ç©åˆ†ã«ã‚ˆã‚‹ãƒ•ãƒ¼ãƒªã‚¨ä¿‚æ•°-5\"><span class=\"toc-item-num\">5&nbsp;&nbsp;</span>ç›´æŽ¥ç©åˆ†ã«ã‚ˆã‚‹ãƒ•ãƒ¼ãƒªã‚¨ä¿‚æ•°</a></div><div class=\"lev1 toc-item\"><a href=\"#é¸ç‚¹ç›´äº¤æ€§ã«ã‚ˆã‚‹è¨ˆç®—ã®ç°¡ç´ åŒ–\" data-toc-modified-id=\"é¸ç‚¹ç›´äº¤æ€§ã«ã‚ˆã‚‹è¨ˆç®—ã®ç°¡ç´ åŒ–-6\"><span class=\"toc-item-num\">6&nbsp;&nbsp;</span>é¸ç‚¹ç›´äº¤æ€§ã«ã‚ˆã‚‹è¨ˆç®—ã®ç°¡ç´ åŒ–</a></div><div class=\"lev4 toc-item\"><a href=\"#ç›´äº¤é–¢æ•°ç³»ã®é¸ç‚¹ç›´äº¤æ€§\" data-toc-modified-id=\"ç›´äº¤é–¢æ•°ç³»ã®é¸ç‚¹ç›´äº¤æ€§-6001\"><span class=\"toc-item-num\">6.0.0.1&nbsp;&nbsp;</span>ç›´äº¤é–¢æ•°ç³»ã®é¸ç‚¹ç›´äº¤æ€§</a></div><div class=\"lev2 toc-item\"><a href=\"#é¸ç‚¹ç›´äº¤æ€§ã‚’ç”¨ã„ãŸçµæžœ\" data-toc-modified-id=\"é¸ç‚¹ç›´äº¤æ€§ã‚’ç”¨ã„ãŸçµæžœ-61\"><span class=\"toc-item-num\">6.1&nbsp;&nbsp;</span>é¸ç‚¹ç›´äº¤æ€§ã‚’ç”¨ã„ãŸçµæžœ</a></div><div class=\"lev1 toc-item\"><a href=\"#é«˜é€Ÿãƒ•ãƒ¼ãƒªã‚¨å¤‰æ›ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã«ã‚ˆã‚‹é«˜é€ŸåŒ–\" data-toc-modified-id=\"é«˜é€Ÿãƒ•ãƒ¼ãƒªã‚¨å¤‰æ›ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã«ã‚ˆã‚‹é«˜é€ŸåŒ–-7\"><span class=\"toc-item-num\">7&nbsp;&nbsp;</span>é«˜é€Ÿãƒ•ãƒ¼ãƒªã‚¨å¤‰æ›ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã«ã‚ˆã‚‹é«˜é€ŸåŒ–</a></div><div class=\"lev1 toc-item\"><a href=\"#FFTé–¢æ•°ã‚’ç”¨ã„ãŸçµæžœ\" data-toc-modified-id=\"FFTé–¢æ•°ã‚’ç”¨ã„ãŸçµæžœ-8\"><span class=\"toc-item-num\">8&nbsp;&nbsp;</span>FFTé–¢æ•°ã‚’ç”¨ã„ãŸçµæžœ</a></div><div class=\"lev1 toc-item\"><a href=\"#èª²é¡Œã¨è§£ç­”ä¾‹\" data-toc-modified-id=\"èª²é¡Œã¨è§£ç­”ä¾‹-9\"><span class=\"toc-item-num\">9&nbsp;&nbsp;</span>èª²é¡Œã¨è§£ç­”ä¾‹</a></div><div class=\"lev1 toc-item\"><a href=\"#evalf(funcs[1])];\" data-toc-modified-id=\"evalf(funcs[1])];-10\"><span class=\"toc-item-num\">10&nbsp;&nbsp;</span>evalf(funcs[1])];</a></div>"
+    " <p><div class=\"lev1 toc-item\"><a href=\"#FFT’¤Î’±þ’ÍÑ\" data-toc-modified-id=\"FFT’¤Î’±þ’ÍÑ-1\"><span class=\"toc-item-num\">1&nbsp;&nbsp;</span>FFT’¤Î’±þ’ÍÑ</a></div><div class=\"lev2 toc-item\"><a href=\"#’¼þ’ÇÈ’¿ô’Ê¬’²ò\" data-toc-modified-id=\"’¼þ’ÇÈ’¿ô’Ê¬’²ò-11\"><span class=\"toc-item-num\">1.1&nbsp;&nbsp;</span>’¼þ’ÇÈ’¿ô’Ê¬’²ò</a></div><div class=\"lev2 toc-item\"><a href=\"#’¹â’¼þ’ÇÈ’¥Õ’¥£’¥ë’¥¿’¡¼\" data-toc-modified-id=\"’¹â’¼þ’ÇÈ’¥Õ’¥£’¥ë’¥¿’¡¼-12\"><span class=\"toc-item-num\">1.2&nbsp;&nbsp;</span>’¹â’¼þ’ÇÈ’¥Õ’¥£’¥ë’¥¿’¡¼</a></div><div class=\"lev1 toc-item\"><a href=\"#FFT’¤Î’Æ°’ºî’¸¶’Íý\" data-toc-modified-id=\"FFT’¤Î’Æ°’ºî’¸¶’Íý-2\"><span class=\"toc-item-num\">2&nbsp;&nbsp;</span>FFT’¤Î’Æ°’ºî’¸¶’Íý</a></div><div class=\"lev1 toc-item\"><a href=\"#’´Ø’¿ô’Æâ’ÁÞ’¤È’¤·’¤Æ’¤ÎFourier’´Ø’¿ô’·Ï\" data-toc-modified-id=\"’´Ø’¿ô’Æâ’ÁÞ’¤È’¤·’¤Æ’¤ÎFourier’´Ø’¿ô’·Ï-3\"><span class=\"toc-item-num\">3&nbsp;&nbsp;</span>’´Ø’¿ô’Æâ’ÁÞ’¤È’¤·’¤Æ’¤ÎFourier’´Ø’¿ô’·Ï</a></div><div class=\"lev1 toc-item\"><a href=\"#’Ä¾’¸ò’´Ø’·¸’¤«’¤é’¤Î’ÀÑ’Ê¬’¤Ë’¤è’¤ë’·¸’¿ô’·è’Äê\" data-toc-modified-id=\"’Ä¾’¸ò’´Ø’·¸’¤«’¤é’¤Î’ÀÑ’Ê¬’¤Ë’¤è’¤ë’·¸’¿ô’·è’Äê-4\"><span class=\"toc-item-num\">4&nbsp;&nbsp;</span>’Ä¾’¸ò’´Ø’·¸’¤«’¤é’¤Î’ÀÑ’Ê¬’¤Ë’¤è’¤ë’·¸’¿ô’·è’Äê</a></div><div class=\"lev1 toc-item\"><a href=\"#’Ä¾’ÀÜ’ÀÑ’Ê¬’¤Ë’¤è’¤ë’¥Õ’¡¼’¥ê’¥¨’·¸’¿ô\" data-toc-modified-id=\"’Ä¾’ÀÜ’ÀÑ’Ê¬’¤Ë’¤è’¤ë’¥Õ’¡¼’¥ê’¥¨’·¸’¿ô-5\"><span class=\"toc-item-num\">5&nbsp;&nbsp;</span>’Ä¾’ÀÜ’ÀÑ’Ê¬’¤Ë’¤è’¤ë’¥Õ’¡¼’¥ê’¥¨’·¸’¿ô</a></div><div class=\"lev1 toc-item\"><a href=\"#’Áª’ÅÀ’Ä¾’¸ò’À­’¤Ë’¤è’¤ë’·×’»»’¤Î’´Ê’ÁÇ’²½\" data-toc-modified-id=\"’Áª’ÅÀ’Ä¾’¸ò’À­’¤Ë’¤è’¤ë’·×’»»’¤Î’´Ê’ÁÇ’²½-6\"><span class=\"toc-item-num\">6&nbsp;&nbsp;</span>’Áª’ÅÀ’Ä¾’¸ò’À­’¤Ë’¤è’¤ë’·×’»»’¤Î’´Ê’ÁÇ’²½</a></div><div class=\"lev4 toc-item\"><a href=\"#’Ä¾’¸ò’´Ø’¿ô’·Ï’¤Î’Áª’ÅÀ’Ä¾’¸ò’À­\" data-toc-modified-id=\"’Ä¾’¸ò’´Ø’¿ô’·Ï’¤Î’Áª’ÅÀ’Ä¾’¸ò’À­-6001\"><span class=\"toc-item-num\">6.0.0.1&nbsp;&nbsp;</span>’Ä¾’¸ò’´Ø’¿ô’·Ï’¤Î’Áª’ÅÀ’Ä¾’¸ò’À­</a></div><div class=\"lev2 toc-item\"><a href=\"#’Áª’ÅÀ’Ä¾’¸ò’À­’¤ò’ÍÑ’¤¤’¤¿’·ë’²Ì\" data-toc-modified-id=\"’Áª’ÅÀ’Ä¾’¸ò’À­’¤ò’ÍÑ’¤¤’¤¿’·ë’²Ì-61\"><span class=\"toc-item-num\">6.1&nbsp;&nbsp;</span>’Áª’ÅÀ’Ä¾’¸ò’À­’¤ò’ÍÑ’¤¤’¤¿’·ë’²Ì</a></div><div class=\"lev1 toc-item\"><a href=\"#’¹â’Â®’¥Õ’¡¼’¥ê’¥¨’ÊÑ’´¹’¥¢’¥ë’¥´’¥ê’¥º’¥à’¤Ë’¤è’¤ë’¹â’Â®’²½\" data-toc-modified-id=\"’¹â’Â®’¥Õ’¡¼’¥ê’¥¨’ÊÑ’´¹’¥¢’¥ë’¥´’¥ê’¥º’¥à’¤Ë’¤è’¤ë’¹â’Â®’²½-7\"><span class=\"toc-item-num\">7&nbsp;&nbsp;</span>’¹â’Â®’¥Õ’¡¼’¥ê’¥¨’ÊÑ’´¹’¥¢’¥ë’¥´’¥ê’¥º’¥à’¤Ë’¤è’¤ë’¹â’Â®’²½</a></div><div class=\"lev1 toc-item\"><a href=\"#FFT’´Ø’¿ô’¤ò’ÍÑ’¤¤’¤¿’·ë’²Ì\" data-toc-modified-id=\"FFT’´Ø’¿ô’¤ò’ÍÑ’¤¤’¤¿’·ë’²Ì-8\"><span class=\"toc-item-num\">8&nbsp;&nbsp;</span>FFT’´Ø’¿ô’¤ò’ÍÑ’¤¤’¤¿’·ë’²Ì</a></div><div class=\"lev1 toc-item\"><a href=\"#’²Ý’Âê’¤È’²ò’Åú’Îã\" data-toc-modified-id=\"’²Ý’Âê’¤È’²ò’Åú’Îã-9\"><span class=\"toc-item-num\">9&nbsp;&nbsp;</span>’²Ý’Âê’¤È’²ò’Åú’Îã</a></div><div class=\"lev1 toc-item\"><a href=\"#evalf(funcs[1])];\" data-toc-modified-id=\"evalf(funcs[1])];-10\"><span class=\"toc-item-num\">10&nbsp;&nbsp;</span>evalf(funcs[1])];</a></div>"
    ]
   },
   {
-   "cell_type": "markdown",
+  "cell_type": "markdown",
    "metadata": {},
    "source": [
     "\n",
@@ -23,7 +23,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# FFTã®å¿œç”¨\n"
+    "# FFT’¤Î’±þ’ÍÑ\n"
    ]
   },
   {
@@ -31,7 +31,7 @@
    "metadata": {},
    "source": [
     "\n",
-    "Fast Fourier Transformation(FFT)é«˜é€Ÿãƒ•ãƒ¼ãƒªã‚¨å¤‰æ›(ã‚ã‚‹ã„ã¯ãƒ‡ã‚¸ã‚¿ãƒ«(é›¢æ•£)ãƒ•ãƒ¼ãƒªã‚¨å¤‰æ›(DFT))ã¯ï¼Œå‘¨æ³¢æ•°åˆ†è§£ã‚„ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ã‚’åˆã‚ï¼Œç”»åƒå‡¦ç†ãªã©ã®å¤šãã®åˆ†é‡Žã§ä½¿ã‚ã‚Œã¦ã„ã‚‹ï¼ŽåŸºæœ¬ã¨ãªã‚‹è€ƒãˆæ–¹ã¯ï¼Œç›´äº¤åŸºåº•ã«ã‚ˆã‚‹é–¢æ•°ã®å†…æŒ¿æ³•ã§ã‚ã‚‹ï¼Žæœ€åˆã«ãã®å¿œç”¨ä¾‹ã‚’è¦‹ãŸå¾Œï¼Œã©ã®ã‚ˆã†ãªç†å±ˆã§FFTãŒå‹•ã„ã¦ã„ã‚‹ã‹ã‚’è§£èª¬ã™ã‚‹ï¼Ž\n",
+    "Fast Fourier Transformation(FFT)’¹â’Â®’¥Õ’¡¼’¥ê’¥¨’ÊÑ’´¹(’¤¢’¤ë’¤¤’¤Ï’¥Ç’¥¸’¥¿’¥ë(’Î¥’»¶)’¥Õ’¡¼’¥ê’¥¨’ÊÑ’´¹(DFT))’¤Ï’¡¤’¼þ’ÇÈ’¿ô’Ê¬’²ò’¤ä’¥Õ’¥£’¥ë’¥¿’¡¼’¤ò’½é’¤á’¡¤’²è’Áü’½è’Íý’¤Ê’¤É’¤Î’Â¿’¤¯’¤Î’Ê¬’Ìî’¤Ç’»È’¤ï’¤ì’¤Æ’¤¤’¤ë’¡¥’´ð’ËÜ’¤È’¤Ê’¤ë’¹Í’¤¨’Êý’¤Ï’¡¤’Ä¾’¸ò’´ð’Äì’¤Ë’¤è’¤ë’´Ø’¿ô’¤Î’Æâ’ÁÞ’Ë¡’¤Ç’¤¢’¤ë’¡¥’ºÇ’½é’¤Ë’¤½’¤Î’±þ’ÍÑ’Îã’¤ò’¸«’¤¿’¸å’¡¤’¤É’¤Î’¤è’¤¦’¤Ê’Íý’¶þ’¤ÇFFT’¤¬’Æ°’¤¤’¤Æ’¤¤’¤ë’¤«’¤ò’²ò’Àâ’¤¹’¤ë’¡¥\n",
     "\n",
     "\n"
    ]
@@ -40,14 +40,14 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## å‘¨æ³¢æ•°åˆ†è§£ \n"
+    "## ’¼þ’ÇÈ’¿ô’Ê¬’²ò \n"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "ã¯ã˜ã‚ã®ä¾‹ã¯ï¼Œå‘¨æ³¢æ•°åˆ†è§£ï¼Žå…ˆãšã¯ï¼Œéžæ•´åˆãªæ³¢ã‚’äºŒã¤ç”¨æ„ã—ã¦ãŠãï¼Ž\n",
+    "’¤Ï’¤¸’¤á’¤Î’Îã’¤Ï’¡¤’¼þ’ÇÈ’¿ô’Ê¬’²ò’¡¥’Àè’¤º’¤Ï’¡¤’Èó’À°’¹ç’¤Ê’ÇÈ’¤ò’Æó’¤Ä’ÍÑ’°Õ’¤·’¤Æ’¤ª’¤¯’¡¥\n",
     "```maple\n",
     "> restart:\n",
     "  funcs:=[sin(i/13),sin(i/2)];\n",
@@ -55,9 +55,10 @@
     "  plot(funcs,i=0..300);\n",
     "```\n",
     "\n",
-    "![C10_FFTplot2d1.png](figs/C10_FFTplot2d1.png)\n",
+    "|{{attach_view(C10_FFTplot2d1.png,)}}|\n",
+    "|:----|\n",
     "\n",
-    "ã“ã‚Œã‚’é‡ã­ã‚ã‚ã›ãŸæ³¢ã‚’ä½œã‚‹ï¼Ž\n",
+    "’¤³’¤ì’¤ò’½Å’¤Í’¤¢’¤ï’¤»’¤¿’ÇÈ’¤ò’ºî’¤ë’¡¥\n",
     "```maple\n",
     "> data1:=[]:\n",
     "  for i from 1 to 256 do\n",
@@ -67,9 +68,10 @@
     "  listplot(data1);\n",
     "```\n",
     "\n",
-    "![C10_FFTplot2d2.png](figs/C10_FFTplot2d2.png)\n",
+    "|{{attach_view(C10_FFTplot2d2.png,)}}|\n",
+    "|:----|\n",
     "\n",
-    "ã‚†ã£ãã‚Šå¤‰åŒ–ã™ã‚‹æ³¢ã«ï¼Œæ¿€ã—ãå¤‰åŒ–ã™ã‚‹æ³¢ãŒé‡ãªã£ã¦ã„ã‚‹ã“ã¨ãŒèª­ã¿å–ã‚Œã‚‹ï¼Žã“ã‚Œã«FFTã‚’æŽ›ã‘ã‚‹\n",
+    "’¤æ’¤Ã’¤¯’¤ê’ÊÑ’²½’¤¹’¤ë’ÇÈ’¤Ë’¡¤’·ã’¤·’¤¯’ÊÑ’²½’¤¹’¤ë’ÇÈ’¤¬’½Å’¤Ê’¤Ã’¤Æ’¤¤’¤ë’¤³’¤È’¤¬’ÆÉ’¤ß’¼è’¤ì’¤ë’¡¥’¤³’¤ì’¤ËFFT’¤ò’³Ý’¤±’¤ë\n",
     "```maple\n",
     "> X:=array(data1): \n",
     "  Y:=array(1..256,sparse):\n",
@@ -78,16 +80,17 @@
     "$$\n",
     "256\n",
     "$$\n",
-    "ãã®å¼·ã•ã‚’æ±‚ã‚ã¦ï¼Œå‘¨æ³¢æ•°ã§è¡¨ç¤ºã™ã‚‹ã¨ï¼Œ\n",
+    "’¤½’¤Î’¶¯’¤µ’¤ò’µá’¤á’¤Æ’¡¤’¼þ’ÇÈ’¿ô’¤Ç’É½’¼¨’¤¹’¤ë’¤È’¡¤\n",
     "```maple\n",
     "> Data2:=[seq([i,sqrt(X[i]^2+Y[i]^2)],i=1..128)]:\n",
     "  plot(Data2);\n",
     "```\n",
     "\n",
-    "![C10_FFTplot2d3.png](figs/C10_FFTplot2d3.png)\n",
+    "|{{attach_view(C10_FFTplot2d3.png,)}}|\n",
+    "|:----|\n",
     "\n",
-    "ã‚‚ã¨ã®2ã¤ã®å‘¨æ³¢æ•°ã«å¯¾å¿œã™ã‚‹ã¨ã“ã‚ã«ãƒ”ãƒ¼ã‚¯ãŒã§ãã¦ã„ã‚‹ã®ãŒç¢ºèªã§ãã‚‹ï¼ŽåºƒãŒã‚Šã¯ï¼Œèª¤å·®ã®ã›ã„ï¼Ž\n",
-    "logplotã§ã‚‚è‰¯ã„ï¼Ž\n",
+    "’¤â’¤È’¤Î2’¤Ä’¤Î’¼þ’ÇÈ’¿ô’¤Ë’ÂÐ’±þ’¤¹’¤ë’¤È’¤³’¤í’¤Ë’¥Ô’¡¼’¥¯’¤¬’¤Ç’¤­’¤Æ’¤¤’¤ë’¤Î’¤¬’³Î’Ç§’¤Ç’¤­’¤ë’¡¥’¹­’¤¬’¤ê’¤Ï’¡¤’¸í’º¹’¤Î’¤»’¤¤’¡¥\n",
+    "logplot’¤Ç’¤â’ÎÉ’¤¤’¡¥\n",
     "\n",
     "\n"
    ]
@@ -96,14 +99,14 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## é«˜å‘¨æ³¢ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ \n"
+    "## ’¹â’¼þ’ÇÈ’¥Õ’¥£’¥ë’¥¿’¡¼ \n"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "æ¬¡ã®ä¾‹ã¯ï¼Œé«˜å‘¨æ³¢ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ï¼ŽãŸã¨ãˆã°æ¬¡ã®ã‚ˆã†ãªãƒ­ãƒ¼ãƒ¬ãƒ³ãƒ„é–¢æ•°ã‚’è€ƒãˆã‚‹ï¼Ž\n",
+    "’¼¡’¤Î’Îã’¤Ï’¡¤’¹â’¼þ’ÇÈ’¥Õ’¥£’¥ë’¥¿’¡¼’¡¥’¤¿’¤È’¤¨’¤Ð’¼¡’¤Î’¤è’¤¦’¤Ê’¥í’¡¼’¥ì’¥ó’¥Ä’´Ø’¿ô’¤ò’¹Í’¤¨’¤ë’¡¥\n",
     "```maple\n",
     "> restart;\n",
     "  f1:=t->subs(a=10,b=40000,c=380,d=128,a+b/(c+(t-d)^2));\n",
@@ -116,21 +119,23 @@
     "> plot(f1(t),t=1..256);\n",
     "```\n",
     "\n",
-    "![C10_FFTplot2d4.png](figs/C10_FFTplot2d4.png)\n",
+    "|{{attach_view(C10_FFTplot2d4.png,)}}|\n",
+    "|:----|\n",
     "\n",
     "\n",
-    "ã“ã‚Œã«ãƒŽã‚¤ã‚ºãŒã®ã‚‹ã¨ï¼Œæ¬¡ã®ã‚ˆã†ã«ãªã‚‹ï¼Ž\n",
+    "’¤³’¤ì’¤Ë’¥Î’¥¤’¥º’¤¬’¤Î’¤ë’¤È’¡¤’¼¡’¤Î’¤è’¤¦’¤Ë’¤Ê’¤ë’¡¥\n",
     "```maple\n",
     "> T:=[seq(f1(i)*(0.6+0.8*evalf(rand()/10^12)),i=1..256)]:\n",
-    "  #T:=[seq(evalf(rand()/10^12),i=1..256)]:  #ã“ã‚Œã¯ãƒ›ãƒ¯ã‚¤ãƒˆãƒŽã‚¤ã‚º\n",
-    "  #T:=[seq(f1(i),i=1..256)]: #ã“ã‚Œã¯å…ƒã®é–¢æ•°ãã®ã¾ã¾\n",
+    "  #T:=[seq(evalf(rand()/10^12),i=1..256)]:  #’¤³’¤ì’¤Ï’¥Û’¥ï’¥¤’¥È’¥Î’¥¤’¥º\n",
+    "  #T:=[seq(f1(i),i=1..256)]: #’¤³’¤ì’¤Ï’¸µ’¤Î’´Ø’¿ô’¤½’¤Î’¤Þ’¤Þ\n",
     "  with(plots):\n",
     "  listplot(T);\n",
     "```\n",
     "\n",
-    "![C10_FFTplot2d5.png](figs/C10_FFTplot2d5.png)\n",
+    "|{{attach_view(C10_FFTplot2d5.png,)}}|\n",
+    "|:----|\n",
     "\n",
-    "ã“ã‚Œã«é«˜å‘¨æ³¢ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ã‚’æŽ›ã‘ã‚‹ã¨ãƒŽã‚¤ã‚ºãŒæ¶ˆãˆã‚‹ãŒï¼Œãã®æ§˜å­ã‚’ç¤ºãã†ï¼Žå…ˆãšã¯ï¼ŒFFTã‚’æŽ›ã‘ã‚‹ï¼Ž\n",
+    "’¤³’¤ì’¤Ë’¹â’¼þ’ÇÈ’¥Õ’¥£’¥ë’¥¿’¡¼’¤ò’³Ý’¤±’¤ë’¤È’¥Î’¥¤’¥º’¤¬’¾Ã’¤¨’¤ë’¤¬’¡¤’¤½’¤Î’ÍÍ’»Ò’¤ò’¼¨’¤½’¤¦’¡¥’Àè’¤º’¤Ï’¡¤FFT’¤ò’³Ý’¤±’¤ë’¡¥\n",
     "```maple\n",
     "> Idata:=array([seq(0,i=1..256)]):\n",
     "  Rdata:=convert(T,array):\n",
@@ -139,73 +144,55 @@
     "$$\n",
     "256\n",
     "$$\n",
-    "ã“ã‚Œã¯æ¬¡ã®ã‚ˆã†ãªå¼·åº¦åˆ†å¸ƒã‚’ã‚‚ã£ã¦ã„ã‚‹ï¼Ž\n",
+    "’¤³’¤ì’¤Ï’¼¡’¤Î’¤è’¤¦’¤Ê’¶¯’ÅÙ’Ê¬’ÉÛ’¤ò’¤â’¤Ã’¤Æ’¤¤’¤ë’¡¥\n",
     "```maple\n",
     "> Adata:=[seq([i,sqrt(Idata[i]^2+Rdata[i]^2)],i=1..128)]:\n",
     "> logplot(Adata);\n",
     "```\n",
     "\n",
-    "![C10_FFTplot2d6.png](figs/C10_FFTplot2d6.png)\n",
+    "|{{attach_view(C10_FFTplot2d6.png,)}}|\n",
+    "|:----|\n",
     "\n",
-    "ä½Žå‘¨æ³¢ã®éƒ¨åˆ†ã«ï¼Œã‚†ã£ãã‚Šã¨ã—ãŸå¤‰åŒ–ã‚’è¡¨ã™æˆåˆ†ãŒå›ºã¾ã£ã¦ã„ã‚‹ï¼Žæ¬¡ã®ã‚ˆã†ãªä¸‰è§’ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ã‚’ç”¨æ„ã™ã‚‹ï¼Žã“ã‚Œã¯ï¼Œä½Žå‘¨æ³¢ã»ã©å½±éŸ¿ã‚’å¤§ããã™ã‚‹ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ï¼Ž\n",
+    "’Äã’¼þ’ÇÈ’¤Î’Éô’Ê¬’¤Ë’¡¤’¤æ’¤Ã’¤¯’¤ê’¤È’¤·’¤¿’ÊÑ’²½’¤ò’É½’¤¹’À®’Ê¬’¤¬’¸Ç’¤Þ’¤Ã’¤Æ’¤¤’¤ë’¡¥’¼¡’¤Î’¤è’¤¦’¤Ê’»°’³Ñ’¥Õ’¥£’¥ë’¥¿’¡¼’¤ò’ÍÑ’°Õ’¤¹’¤ë’¡¥’¤³’¤ì’¤Ï’¡¤’Äã’¼þ’ÇÈ’¤Û’¤É’±Æ’¶Á’¤ò’Âç’¤­’¤¯’¤¹’¤ë’¥Õ’¥£’¥ë’¥¿’¡¼’¡¥\n",
     "```maple\n",
-    "> filter:=x->piecewise(x>=0 and x<=20,(1-x/20)): #ä¸‰è§’ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼\n",
-    "  #filter:=x->piecewise(x>=0 and x<=20,1); #æ–¹å½¢ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼\n",
+    "> filter:=x->piecewise(x>=0 and x<=20,(1-x/20)): #’»°’³Ñ’¥Õ’¥£’¥ë’¥¿’¡¼\n",
+    "  #filter:=x->piecewise(x>=0 and x<=20,1); #’Êý’·Á’¥Õ’¥£’¥ë’¥¿’¡¼\n",
     "  plot(filter(x),x=0..40);\n",
     "```\n",
     "\n",
-    "![C10_FFTplot2d7.png](figs/C10_FFTplot2d7.png)\n",
+    "|{{attach_view(C10_FFTplot2d7.png,)}}|\n",
+    "|:----|\n",
     "\n",
-    "ã“ã‚Œã¨ãƒ‡ãƒ¼ã‚¿ã‚’å„ç‚¹ã§æŽ›ã‘ã‚ã‚ã›ã‚‹äº‹ã«ã‚ˆã£ã¦ï¼Œãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ã‚’é€šã—ãŸã“ã¨ã«ãªã‚‹ï¼Ž\n",
+    "’¤³’¤ì’¤È’¥Ç’¡¼’¥¿’¤ò’³Æ’ÅÀ’¤Ç’³Ý’¤±’¤¢’¤ï’¤»’¤ë’»ö’¤Ë’¤è’¤Ã’¤Æ’¡¤’¥Õ’¥£’¥ë’¥¿’¡¼’¤ò’ÄÌ’¤·’¤¿’¤³’¤È’¤Ë’¤Ê’¤ë’¡¥\n",
     "```maple\n",
     "> FRdata:=array([seq(Rdata[i]*filter(i),i=1..256)]):\n",
     "> FIdata:=array([seq(Idata[i]*filter(i),i=1..256)]):\n",
     "```\n",
-    "å…ˆã»ã©ã¨åŒæ§˜ã«è¡¨ç¤ºã™ã‚‹ã¨\n",
+    "’Àè’¤Û’¤É’¤È’Æ±’ÍÍ’¤Ë’É½’¼¨’¤¹’¤ë’¤È\n",
     "```maple\n",
     "> Bdata:=[seq([i,sqrt(FIdata[i]^2+FRdata[i]^2)],i=1..128)]:\n",
     "> logplot(Adata);\n",
     "```\n",
     "\n",
-    "![C10_FFTplot3d6.png](figs/C10_FFTplot3d6.png)\n",
+    "|{{attach_view(C10_FFTplot3d6.png,)}}|\n",
+    "|:----|\n",
     "\n",
-    "$i=20$ä»¥ä¸Šã®é ˜åŸŸãŒãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ã«ã‚ˆã£ã¦ã¡ã‚‡ã‚“åˆ‡ã‚‰ã‚Œã¦ã„ã‚‹ã“ã¨ãŒç¢ºèªã§ãã‚‹ï¼Žã“ã‚Œã‚’é€†ãƒ•ãƒ¼ãƒªã‚¨å¤‰æ›ã™ã‚‹ï¼Ž\n",
+    "$i=20$’°Ê’¾å’¤Î’ÎÎ’°è’¤¬’¥Õ’¥£’¥ë’¥¿’¡¼’¤Ë’¤è’¤Ã’¤Æ’¤Á’¤ç’¤ó’ÀÚ’¤é’¤ì’¤Æ’¤¤’¤ë’¤³’¤È’¤¬’³Î’Ç§’¤Ç’¤­’¤ë’¡¥’¤³’¤ì’¤ò’µÕ’¥Õ’¡¼’¥ê’¥¨’ÊÑ’´¹’¤¹’¤ë’¡¥\n",
     "```maple\n",
     "> iFFT(8,FRdata,FIdata);\n",
     "```\n",
     "$$\n",
     "256\n",
     "$$\n",
-    "ã“ã‚Œã‚’è¡¨ç¤ºã™ã‚‹ã¨ï¼Œ\n",
+    "’¤³’¤ì’¤ò’É½’¼¨’¤¹’¤ë’¤È’¡¤\n",
     "```maple\n",
     "> listplot(FRdata);\n",
     "```\n",
     "\n",
-    "![C10_FFTplot2d8.png](figs/C10_FFTplot2d8.png)\n",
+    "|{{attach_view(C10_FFTplot2d8.png,)}}|\n",
+    "|:----|\n",
     "\n",
-    "ã¨ãªã‚‹ï¼ŽãƒŽã‚¤ã‚ºãŒå–ã‚Šé™¤ã‹ã‚Œã¦ã„ã‚‹ã®ãŒç¢ºèªã§ãã‚‹ï¼Žå…ƒã®é–¢æ•°ã«åŠ ãˆãŸãƒ›ãƒ¯ã‚¤ãƒˆãƒŽã‚¤ã‚ºã«FFTã‚’æŽ›ã‘ã‚Œã°åˆ†ã‹ã‚‹ãŒï¼Œå…¨å‘¨æ³¢æ•°åŸŸã«ã‚ãŸã£ã¦å‡è³ªã«åºƒãŒã£ãŸé–¢æ•°ã¨ãªã‚‹ï¼Žã“ã‚Œã‚’ä¸‰è§’ãƒ•ã‚£ãƒ«ã‚¿ãƒ¼ãªã©ã§é«˜å‘¨æ³¢æˆåˆ†ã‚’ã‚«ãƒƒãƒˆã™ã‚‹ã“ã¨ã§ï¼ŒãƒŽã‚¤ã‚ºãŒå–ã‚Šé™¤ã‹ã‚Œã¦ã„ãã®ãŒç†è§£ã•ã‚Œã‚ˆã†ï¼Ž\n",
-    "\n",
-    "\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "# FFTã®å‹•ä½œåŽŸç†\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "\n",
-    "ã“ã®ã‚ˆã†ã«ä¾¿åˆ©ãªFFTã§ã‚ã‚‹ãŒï¼Œã©ã®ã‚ˆã†ãªç†å±ˆã§å°Žã‹ã‚Œã‚‹ã®ã‹ï¼Ÿã€€Fourierå¤‰æ›æ³•ã¯ï¼Œã“ã®èª²é¡Œã ã‘ã§ã‚‚ä½•å›žã‚‚ã®ã‚³ãƒžæ•°ãŒå¿…è¦ãªã»ã©ã®å†…å®¹ã‚’å«ã‚“ã§ã„ã‚‹ï¼Žã“ã“ã§ã¯ï¼Œ\n",
-    "ãã®åŸºæœ¬ã¨ãªã‚‹è€ƒãˆæ–¹ï¼ˆã®ã²ã¨ã¤)ã ã‘ã‚’æç¤ºã™ã‚‹ï¼Ž\n",
-    "1.  é–¢æ•°ã®å†…æŒ¿ã§å°Žå…¥ã—ãŸåŸºåº•é–¢æ•°ã‚’ç›´äº¤é–¢æ•°ç³»ã§ã¨ã‚‹ï¼Žã¨ã“ã‚ãŒï¼Œå±•é–‹ä¿‚æ•°ã‚’é€†è¡Œåˆ—ã§æ±‚ã‚ã‚‹æ‰‹æ³•ã§ã¯è¨ˆç®—ãŒç ´ç¶»ï¼Ž\n",
-    "1.  ç›´äº¤é–¢ä¿‚ã‹ã‚‰ã®ç©åˆ†ã«ã‚ˆã‚‹ä¿‚æ•°æ±ºå®šï¼Ž\n",
-    "1.  é¸ç‚¹ç›´äº¤æ€§ã«ã‚ˆã‚‹è¨ˆç®—ã®ç°¡ç´ åŒ–ï¼Ž\n",
-    "1.  é«˜é€Ÿãƒ•ãƒ¼ãƒªã‚¨å¤‰æ›ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã«ã‚ˆã‚‹é«˜é€ŸåŒ–ï¼Ž\n",
+    "’¤È’¤Ê’¤ë’¡¥’¥Î’¥¤’¥º’¤¬’¼è’¤ê’½ü’¤«’¤ì’¤Æ’¤¤’¤ë’¤Î’¤¬’³Î’Ç§’¤Ç’¤­’¤ë’¡¥’¸µ’¤Î’´Ø’¿ô’¤Ë’²Ã’¤¨’¤¿’¥Û’¥ï’¥¤’¥È’¥Î’¥¤’¥º’¤ËFFT’¤ò’³Ý’¤±’¤ì’¤Ð’Ê¬’¤«’¤ë’¤¬’¡¤’Á´’¼þ’ÇÈ’¿ô’°è’¤Ë’¤ï’¤¿’¤Ã’¤Æ’¶Ñ’¼Á’¤Ë’¹­’¤¬’¤Ã’¤¿’´Ø’¿ô’¤È’¤Ê’¤ë’¡¥’¤³’¤ì’¤ò’»°’³Ñ’¥Õ’¥£’¥ë’¥¿’¡¼’¤Ê’¤É’¤Ç’¹â’¼þ’ÇÈ’À®’Ê¬’¤ò’¥«’¥Ã’¥È’¤¹’¤ë’¤³’¤È’¤Ç’¡¤’¥Î’¥¤’¥º’¤¬’¼è’¤ê’½ü’¤«’¤ì’¤Æ’¤¤’¤¯’¤Î’¤¬’Íý’²ò’¤µ’¤ì’¤è’¤¦’¡¥\n",
     "\n",
     "\n"
    ]
@@ -214,7 +201,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# é–¢æ•°å†…æŒ¿ã¨ã—ã¦ã®Fourieré–¢æ•°ç³»\n"
+    "# FFT’¤Î’Æ°’ºî’¸¶’Íý\n"
    ]
   },
   {
@@ -222,13 +209,35 @@
    "metadata": {},
    "source": [
     "\n",
-    "ä¸€é€£ã®é–¢æ•°ç³»ã«ã‚ˆã‚‹é–¢æ•°ã®å†…æŒ¿ã¯ï¼ŒåŸºåº•é–¢æ•°ã‚’$\\varphi_n(x)$ã¨ã—ã¦\n",
+    "’¤³’¤Î’¤è’¤¦’¤Ë’ÊØ’Íø’¤ÊFFT’¤Ç’¤¢’¤ë’¤¬’¡¤’¤É’¤Î’¤è’¤¦’¤Ê’Íý’¶þ’¤Ç’Æ³’¤«’¤ì’¤ë’¤Î’¤«’¡©’¡¡Fourier’ÊÑ’´¹’Ë¡’¤Ï’¡¤’¤³’¤Î’²Ý’Âê’¤À’¤±’¤Ç’¤â’²¿’²ó’¤â’¤Î’¥³’¥Þ’¿ô’¤¬’É¬’Í×’¤Ê’¤Û’¤É’¤Î’Æâ’ÍÆ’¤ò’´Þ’¤ó’¤Ç’¤¤’¤ë’¡¥’¤³’¤³’¤Ç’¤Ï’¡¤\n",
+    "’¤½’¤Î’´ð’ËÜ’¤È’¤Ê’¤ë’¹Í’¤¨’Êý’¡Ê’¤Î’¤Ò’¤È’¤Ä)’¤À’¤±’¤ò’Äó’¼¨’¤¹’¤ë’¡¥\n",
+    "1.  ’´Ø’¿ô’¤Î’Æâ’ÁÞ’¤Ç’Æ³’Æþ’¤·’¤¿’´ð’Äì’´Ø’¿ô’¤ò’Ä¾’¸ò’´Ø’¿ô’·Ï’¤Ç’¤È’¤ë’¡¥’¤È’¤³’¤í’¤¬’¡¤’Å¸’³«’·¸’¿ô’¤ò’µÕ’¹Ô’Îó’¤Ç’µá’¤á’¤ë’¼ê’Ë¡’¤Ç’¤Ï’·×’»»’¤¬’ÇË’Ã¾’¡¥\n",
+    "1.  ’Ä¾’¸ò’´Ø’·¸’¤«’¤é’¤Î’ÀÑ’Ê¬’¤Ë’¤è’¤ë’·¸’¿ô’·è’Äê’¡¥\n",
+    "1.  ’Áª’ÅÀ’Ä¾’¸ò’À­’¤Ë’¤è’¤ë’·×’»»’¤Î’´Ê’ÁÇ’²½’¡¥\n",
+    "1.  ’¹â’Â®’¥Õ’¡¼’¥ê’¥¨’ÊÑ’´¹’¥¢’¥ë’¥´’¥ê’¥º’¥à’¤Ë’¤è’¤ë’¹â’Â®’²½’¡¥\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# ’´Ø’¿ô’Æâ’ÁÞ’¤È’¤·’¤Æ’¤ÎFourier’´Ø’¿ô’·Ï\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "\n",
+    "’°ì’Ï¢’¤Î’´Ø’¿ô’·Ï’¤Ë’¤è’¤ë’´Ø’¿ô’¤Î’Æâ’ÁÞ’¤Ï’¡¤’´ð’Äì’´Ø’¿ô’¤ò$\\varphi_n(x)$’¤È’¤·’¤Æ\n",
     "\n",
     "$$\n",
     "F(x) = \\sum^N_{n=1}a_n \\varphi_n(x)\n",
     "$$\n",
-    "ã§å¾—ã‚‰ã‚Œã‚‹ã“ã¨ã‚’è¦‹ãŸï¼Ž\n",
-    "Fourierå¤‰æ›ã§ã¯åŸºåº•é–¢æ•°ã¨ã—ã¦$\\varphi _{n} \\left( x \\right) =\\sin \\left( 2\\,\\pi {\\it nx} \\right) ,\\,\\cos \\left( 2\\,\\pi {\\it nx} \\right)$ã‚’ã¨ã‚‹ï¼Žé–¢æ•°ã®å†…æŒ¿æ³•ã§ç¤ºã—ãŸã‚ˆã†ã«ï¼Œã“ã®$x_i$ã§ã®å€¤$f_i, i=1 \\cdots M$ã¨ï¼Œè¿‘ä¼¼ã®æ¬¡æ•°($N$)ã¨ã§ã¤ãã‚‹ä¿‚æ•°è¡Œåˆ—ï¼Œ\n",
+    "’¤Ç’ÆÀ’¤é’¤ì’¤ë’¤³’¤È’¤ò’¸«’¤¿’¡¥\n",
+    "Fourier’ÊÑ’´¹’¤Ç’¤Ï’´ð’Äì’´Ø’¿ô’¤È’¤·’¤Æ$\\varphi _{n} \\left( x \\right) =\\sin \\left( 2\\,\\pi {\\it nx} \\right) ,\\,\\cos \\left( 2\\,\\pi {\\it nx} \\right)$’¤ò’¤È’¤ë’¡¥’´Ø’¿ô’¤Î’Æâ’ÁÞ’Ë¡’¤Ç’¼¨’¤·’¤¿’¤è’¤¦’¤Ë’¡¤’¤³’¤Î$x_i$’¤Ç’¤Î’ÃÍ$f_i, i=1 \\cdots M$’¤È’¡¤’¶á’»÷’¤Î’¼¡’¿ô($N$)’¤È’¤Ç’¤Ä’¤¯’¤ë’·¸’¿ô’¹Ô’Îó’¡¤\n",
     "\n",
     "$$\n",
     "A=\\left[ \\begin{array}{cccc}\n",
@@ -237,12 +246,12 @@
     "\\varphi_0(x_M)&\\varphi_1(x_M)& \\cdots &\\varphi_N(x_M) \n",
     "\\end{array}\\right]\n",
     "$$\n",
-    "ã‚’æ±‚ã‚ã¦ï¼Œä¿‚æ•°$a_i$ã¨ãƒ‡ãƒ¼ã‚¿ç‚¹$f_i$ã‚’ãã‚Œãžã‚Œãƒ™ã‚¯ãƒˆãƒ«ã¨è€ƒãˆã‚‹ã¨ï¼Œ\n",
+    "’¤ò’µá’¤á’¤Æ’¡¤’·¸’¿ô$a_i$’¤È’¥Ç’¡¼’¥¿’ÅÀ$f_i$’¤ò’¤½’¤ì’¤¾’¤ì’¥Ù’¥¯’¥È’¥ë’¤È’¹Í’¤¨’¤ë’¤È’¡¤\n",
     "\n",
     "$$\n",
     "\\boldsymbol{A}.\\boldsymbol{a} = \\boldsymbol{f}\n",
     "$$\n",
-    "ã‹ã‚‰ï¼Œé€šå¸¸ã®é€†è¡Œåˆ—ã‚’æ±‚ã‚ã‚‹æ‰‹æ³•ã§ä¿‚æ•°ã‚’æ±ºå®šã™ã‚‹ã“ã¨ã‚‚ã§ãã‚‹ï¼Žã—ã‹ã—ï¼Œã“ã®å¼·å¼•ãªæ–¹æ³•ã¯ãƒ‡ãƒ¼ã‚¿æ•°ï¼Œé–¢æ•°ã®æ¬¡æ•°ãŒå¤šã„ï¼Œãƒ•ãƒ¼ãƒªã‚¨å¤‰æ›ãŒå¯¾è±¡ã¨ã—ã‚ˆã†ã¨ã™ã‚‹å•é¡Œã§ã¯ç ´ç¶»ã™ã‚‹ï¼Žã‚‚ã£ã¨ã„ã„æ–¹æ³•ãŒå¿…è¦ã§ï¼Œãã‚ŒãŒç›´äº¤é–¢æ•°ç³»ã§ã¯å­˜åœ¨ã™ã‚‹ï¼Ž\n",
+    "’¤«’¤é’¡¤’ÄÌ’¾ï’¤Î’µÕ’¹Ô’Îó’¤ò’µá’¤á’¤ë’¼ê’Ë¡’¤Ç’·¸’¿ô’¤ò’·è’Äê’¤¹’¤ë’¤³’¤È’¤â’¤Ç’¤­’¤ë’¡¥’¤·’¤«’¤·’¡¤’¤³’¤Î’¶¯’°ú’¤Ê’Êý’Ë¡’¤Ï’¥Ç’¡¼’¥¿’¿ô’¡¤’´Ø’¿ô’¤Î’¼¡’¿ô’¤¬’Â¿’¤¤’¡¤’¥Õ’¡¼’¥ê’¥¨’ÊÑ’´¹’¤¬’ÂÐ’¾Ý’¤È’¤·’¤è’¤¦’¤È’¤¹’¤ë’Ìä’Âê’¤Ç’¤Ï’ÇË’Ã¾’¤¹’¤ë’¡¥’¤â’¤Ã’¤È’¤¤’¤¤’Êý’Ë¡’¤¬’É¬’Í×’¤Ç’¡¤’¤½’¤ì’¤¬’Ä¾’¸ò’´Ø’¿ô’·Ï’¤Ç’¤Ï’Â¸’ºß’¤¹’¤ë’¡¥\n",
     "\n",
     "\n"
    ]
@@ -251,7 +260,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# ç›´äº¤é–¢ä¿‚ã‹ã‚‰ã®ç©åˆ†ã«ã‚ˆã‚‹ä¿‚æ•°æ±ºå®š\n"
+    "# ’Ä¾’¸ò’´Ø’·¸’¤«’¤é’¤Î’ÀÑ’Ê¬’¤Ë’¤è’¤ë’·¸’¿ô’·è’Äê\n"
    ]
   },
   {
@@ -259,7 +268,7 @@
    "metadata": {},
    "source": [
     "\n",
-    "é–¢æ•°ã®ç›´äº¤é–¢ä¿‚ã¯ï¼Œ\n",
+    "’´Ø’¿ô’¤Î’Ä¾’¸ò’´Ø’·¸’¤Ï’¡¤\n",
     "$$\n",
     "\\int _{a}^{b}\\varphi _{n} \\left( x \\right) \\varphi _{m} \\left( x \\right) {dx}=\n",
     "\\delta_{\\it mn}C_{n}= \\left\\{\\begin{array}{lr}\n",
@@ -267,19 +276,21 @@
     "0 & at\\, n\\neq m\n",
     "\\end{array}\\right.\n",
     "$$\n",
-    "ã§ã‚ã‚‹ï¼Žå®šæ•°$C_m$ã¯ï¼Œ$\\sin,\\cos$ã®ä¸‰è§’é–¢æ•°ç³»ã§ã¯æ¬¡ã®é€šã‚Šï¼Ž\n",
+    "’¤Ç’¤¢’¤ë’¡¥’Äê’¿ô$C_m$’¤Ï’¡¤$\\sin,\\cos$’¤Î’»°’³Ñ’´Ø’¿ô’·Ï’¤Ç’¤Ï’¼¡’¤Î’ÄÌ’¤ê’¡¥\n",
     "```maple\n",
     "> plot([sin(x),sin(3*x)],x=0..2*Pi);\n",
     "```\n",
     "\n",
-    "![C10_FFTplot2d9.png](figs/C10_FFTplot2d9.png)\n",
+    "|{{attach_view(C10_FFTplot2d9.png,)}}|\n",
+    "|:----|\n",
     "\n",
     "\n",
     "```maple\n",
     "> plot([sin(x)*sin(3*x)],x=0..2*Pi, color=black);\n",
     "```\n",
     "\n",
-    "![C10_FFTplot2d10.png](figs/C10_FFTplot2d10.png)\n",
+    "|{{attach_view(C10_FFTplot2d10.png,)}}|\n",
+    "|:----|\n",
     "\n",
     "\n",
     "```maple\n",
@@ -307,7 +318,7 @@
     "$$\n",
     "\\int _{a}^{b}F \\left( x \\right) \\varphi _{m} \\left( x \\right) {dx}\n",
     "$$\n",
-    "ã‚’è€ƒãˆã‚‹ï¼Žå…ˆç¨‹ã®\\ref{Eq:Orthogonal}å¼ã‚’ã„ã‚Œã‚‹ã¨\n",
+    "’¤ò’¹Í’¤¨’¤ë’¡¥’Àè’Äø’¤Î\\ref{Eq:Orthogonal}’¼°’¤ò’¤¤’¤ì’¤ë’¤È\n",
     "$$\n",
     "\\int _{a }^{b }F \\left(x \\right)\\varphi _{m }\\left(x \\right) dx =\\int _{a }^{b }{\\sum^N_{n=1} }a _{n }\\varphi _{n }\\left(x \\right)\\varphi _{m }\\left(x \\right)d x = \n",
     "\\left\\{\\begin{array}{lr}\n",
@@ -315,12 +326,12 @@
     "0 & at\\, n\\neq m\n",
     "\\end{array}\\right.\n",
     "$$\n",
-    "ã¨ãªã‚‹ï¼Žã“ã†ã—ã¦ï¼Œä¿‚æ•°$a_n$ãŒ\n",
+    "’¤È’¤Ê’¤ë’¡¥’¤³’¤¦’¤·’¤Æ’¡¤’·¸’¿ô$a_n$’¤¬\n",
     "\n",
     "$$\n",
     "a_{{n}}=\\frac {1}{C_n}\\int _{a}^{b} F \\left( x \\right) \\varphi _{{n}} \\left( x \\right) {dx}\n",
     "$$\n",
-    "ã§æ±ºå®šã§ãã‚‹ï¼Ž\n",
+    "’¤Ç’·è’Äê’¤Ç’¤­’¤ë’¡¥\n",
     "\n",
     "\n"
    ]
@@ -329,7 +340,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# ç›´æŽ¥ç©åˆ†ã«ã‚ˆã‚‹ãƒ•ãƒ¼ãƒªã‚¨ä¿‚æ•°\n"
+    "# ’Ä¾’ÀÜ’ÀÑ’Ê¬’¤Ë’¤è’¤ë’¥Õ’¡¼’¥ê’¥¨’·¸’¿ô\n"
    ]
   },
   {
@@ -337,7 +348,7 @@
    "metadata": {},
    "source": [
     "\n",
-    "å¯¾è±¡ã¨ã™ã‚‹é–¢æ•°ã‚’ã¾ãšä½œã‚‹ï¼Ž\n",
+    "’ÂÐ’¾Ý’¤È’¤¹’¤ë’´Ø’¿ô’¤ò’¤Þ’¤º’ºî’¤ë’¡¥\n",
     "```maple\n",
     "> restart;\n",
     "> #F:=x->piecewise(x=0,1/2,x>0,x); \n",
@@ -352,10 +363,11 @@
     "F := x \\mapsto piecewise(x < \\frac{1}{2}, -1, \\frac{1}{2} \\leq x, 1) \n",
     "$$\n",
     "\n",
-    "![C10_FFTplot2d11.png](figs/C10_FFTplot2d11.png)\n",
+    "|{{attach_view(C10_FFTplot2d11.png,)}}|\n",
+    "|:----|\n",
     "\n",
-    "piecewiseé–¢æ•°ã¯éšŽæ®µé–¢æ•°ã§ï¼ŒæŒ¯ã‚‹èˆžã„ã¯ã‚³ãƒ¡ãƒ³ãƒˆ(\\#)ã‚’é©å½“ã«å¤–ã—ã¦ç¢ºèªã›ã‚ˆï¼Ž\n",
-    "åˆæœŸè¨­å®šï¼Ž\n",
+    "piecewise’´Ø’¿ô’¤Ï’³¬’ÃÊ’´Ø’¿ô’¤Ç’¡¤’¿¶’¤ë’Éñ’¤¤’¤Ï’¥³’¥á’¥ó’¥È(\\#)’¤ò’Å¬’Åö’¤Ë’³°’¤·’¤Æ’³Î’Ç§’¤»’¤è’¡¥\n",
+    "’½é’´ü’Àß’Äê’¡¥\n",
     "```maple\n",
     "> KK:=3; N:=2^KK;L:=1-0;\n",
     "> 2*Pi*1/L*x;\n",
@@ -403,12 +415,12 @@
     "b_7:=\\frac{4}{7\\pi} \\notag \\\\\n",
     "b_8:=0 \\notag \n",
     "$$\n",
-    "ã“ã“ã§ï¼Œã‚ªã‚¤ãƒ©ãƒ¼ã®é–¢ä¿‚\n",
+    "’¤³’¤³’¤Ç’¡¤’¥ª’¥¤’¥é’¡¼’¤Î’´Ø’·¸\n",
     "$$\n",
     "a[n]=c[n]+c[-n],\\, b[n]=I (c[n]-c[-n]) \\notag \\\\\n",
     "c[-n]= \\frac{1}{2} (a[n] + b[n]),\\, c[n]=\\frac{1}{2} (a[n] - I b[n])\n",
     "$$\n",
-    "ã‚’ä½¿ã£ã¦ï¼Œä¸‰è§’é–¢æ•°ç³»ã‹ã‚‰$\\exp$ã¸å¤‰æ›ã™ã‚‹ï¼Ž\n",
+    "’¤ò’»È’¤Ã’¤Æ’¡¤’»°’³Ñ’´Ø’¿ô’·Ï’¤«’¤é$\\exp$’¤Ø’ÊÑ’´¹’¤¹’¤ë’¡¥\n",
     "\n",
     "```maple\n",
     "> for n from 0 to N do c[n]:=1/L*int(F(x)*exp(-I*2*Pi*n/L*x),x=0..L); end do;\n",
@@ -439,7 +451,8 @@
     "> plot({Re(F1(x)),F(x)},x=0..1);\n",
     "```\n",
     "\n",
-    "![C10_FFTplot2d12.png](figs/C10_FFTplot2d12.png)\n",
+    "|{{attach_view(C10_FFTplot2d12.png,)}}|\n",
+    "|:----|\n",
     "\n",
     "\n",
     "```maple\n",
@@ -459,7 +472,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# é¸ç‚¹ç›´äº¤æ€§ã«ã‚ˆã‚‹è¨ˆç®—ã®ç°¡ç´ åŒ–\n"
+    "# ’Áª’ÅÀ’Ä¾’¸ò’À­’¤Ë’¤è’¤ë’·×’»»’¤Î’´Ê’ÁÇ’²½\n"
    ]
   },
   {
@@ -467,7 +480,7 @@
    "metadata": {},
    "source": [
     "\n",
-    "ã¨ã“ã‚ãŒï¼Œå®Ÿéš›ã«ç©åˆ†ã—ã¦ã„ã¦ã¯ï¼Œæ™‚é–“ãŒã‹ã‹ã‚Šã™ãŽã‚‹ï¼Žç›´äº¤é–¢æ•°ç³»ã®é¸ç‚¹ç›´äº¤æ€§ã‚’ä½¿ã†ã¨ã‚ˆã‚Šç°¡å˜ã«ãªã‚‹ï¼Ž\n",
+    "’¤È’¤³’¤í’¤¬’¡¤’¼Â’ºÝ’¤Ë’ÀÑ’Ê¬’¤·’¤Æ’¤¤’¤Æ’¤Ï’¡¤’»þ’´Ö’¤¬’¤«’¤«’¤ê’¤¹’¤®’¤ë’¡¥’Ä¾’¸ò’´Ø’¿ô’·Ï’¤Î’Áª’ÅÀ’Ä¾’¸ò’À­’¤ò’»È’¤¦’¤È’¤è’¤ê’´Ê’Ã±’¤Ë’¤Ê’¤ë’¡¥\n",
     "\n",
     "\n"
    ]
@@ -476,42 +489,42 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### ç›´äº¤é–¢æ•°ç³»ã®é¸ç‚¹ç›´äº¤æ€§ \n"
+    "#### ’Ä¾’¸ò’´Ø’¿ô’·Ï’¤Î’Áª’ÅÀ’Ä¾’¸ò’À­ \n"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "ç›´äº¤å¤šé …å¼ã¯ï¼Œ\n",
+    "’Ä¾’¸ò’Â¿’¹à’¼°’¤Ï’¡¤\n",
     "\n",
     "$$\n",
     "\\varphi _{n} \\left( x \\right) =0 \\,at\\,x_1,\\,x_2,\\,\\cdots x_{n}\n",
     "$$\n",
-    "ã§ã‚ã‚‹ï¼Ž$n-1$ä»¥ä¸‹ã®æ¬¡æ•°$m,\\,l$ã§ã¯ï¼Œ\n",
+    "’¤Ç’¤¢’¤ë’¡¥$n-1$’°Ê’²¼’¤Î’¼¡’¿ô$m,\\,l$’¤Ç’¤Ï’¡¤\n",
     "\n",
     "$$\n",
     "\\sum _{i=1}^{n}\\phi_{l} \\left( x_{i} \\right) \\varphi _{m} \\left( x_{i} \\right) =\\delta_{\\it ml}C_{l}\n",
     "$$\n",
-    "ãŒæˆã‚Šç«‹ã¤ï¼Žã“ã‚Œã¯ï¼Œç›´äº¤é–¢ä¿‚ã¨é•ã„ç©åˆ†ã§ãªã„ã“ã¨ã«æ³¨æ„ï¼Žè¨¼æ˜Žã¯ç•¥ï¼Ž\n",
-    "ã“ã‚Œã‚’ä½¿ãˆã°ï¼Œã“ã®å…ˆç¨‹ã®ç›´äº¤é–¢æ•°å±•é–‹\n",
+    "’¤¬’À®’¤ê’Î©’¤Ä’¡¥’¤³’¤ì’¤Ï’¡¤’Ä¾’¸ò’´Ø’·¸’¤È’°ã’¤¤’ÀÑ’Ê¬’¤Ç’¤Ê’¤¤’¤³’¤È’¤Ë’Ãí’°Õ’¡¥’¾Ú’ÌÀ’¤Ï’Î¬’¡¥\n",
+    "’¤³’¤ì’¤ò’»È’¤¨’¤Ð’¡¤’¤³’¤Î’Àè’Äø’¤Î’Ä¾’¸ò’´Ø’¿ô’Å¸’³«\n",
     "\n",
     "$$\n",
     "F \\left( x \\right) =\\sum _{l=1}^{N}a_{l}\\varphi _{l} \\left( x \\right)\n",
     "$$\n",
-    "ã®ä¸¡è¾ºã«$\\varphi _{m} \\left( x_{i} \\right)$ã‚’æŽ›ã‘ã¦$i$ã«ã¤ã„ã¦å’Œã‚’ã¨ã‚Œã°ï¼Œ\n",
+    "’¤Î’Î¾’ÊÕ’¤Ë$\\varphi _{m} \\left( x_{i} \\right)$’¤ò’³Ý’¤±’¤Æ$i$’¤Ë’¤Ä’¤¤’¤Æ’ÏÂ’¤ò’¤È’¤ì’¤Ð’¡¤\n",
     "$$\n",
     "\\sum _{i=1}^{n} F \\left(x _{i }\\right)\\phi _{m }\\left(x _{i }\\right) = \\\\\n",
     "\\sum _{i=1}^{n}  \\sum _{l=1}^{N}a_{l}\\varphi _{l} \\left( x_{i} \\right) \\varphi _{m} \\left( x_{i} \\right)  \\notag \\\\\n",
     "=\\sum _{l=1}^{N}  a_{l}\\sum _{i=1}^{n}\\varphi _{l} \\left( x_{i} \\right) \\varphi _{m} \\left( x_{i} \\right) \\notag \\\\\n",
     "=\\sum _{l=1}^{N}a_{l}\\delta_{\\it ml}C_{m}=a_{m}C_{m} \\notag\n",
     "$$\n",
-    "ã¨ãªã‚‹ï¼Žã¤ã¾ã‚Šï¼Œ\n",
+    "’¤È’¤Ê’¤ë’¡¥’¤Ä’¤Þ’¤ê’¡¤\n",
     "\n",
     "$$\n",
     "a_{m}=\\frac{1}{C_{m}} {\\sum _{i=1}^{n}F \\left( x_{i} \\right) \\varphi _{m} \\left( x_{i} \\right) }\n",
     "$$\n",
-    "ã¨ãªã‚Šï¼Œå˜ç´”ãªé–¢æ•°ã®ä»£å…¥ã¨ã‹ã‘ç®—ã§ä¿‚æ•°ãŒæ±ºå®šã•ã‚Œã‚‹ï¼Ž\n",
+    "’¤È’¤Ê’¤ê’¡¤’Ã±’½ã’¤Ê’´Ø’¿ô’¤Î’Âå’Æþ’¤È’¤«’¤±’»»’¤Ç’·¸’¿ô’¤¬’·è’Äê’¤µ’¤ì’¤ë’¡¥\n",
     "\n",
     "\n"
    ]
@@ -520,7 +533,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## é¸ç‚¹ç›´äº¤æ€§ã‚’ç”¨ã„ãŸçµæžœ \n"
+    "## ’Áª’ÅÀ’Ä¾’¸ò’À­’¤ò’ÍÑ’¤¤’¤¿’·ë’²Ì \n"
    ]
   },
   {
@@ -558,7 +571,8 @@
     "> plot({Re(F1(x)),F(x)},x=0..1);\n",
     "```\n",
     "\n",
-    "![C10_FFTplot2d13.png](figs/C10_FFTplot2d13.png)\n",
+    "|{{attach_view(C10_FFTplot2d13.png,)}}|\n",
+    "|:----|\n",
     "\n",
     "\n",
     "\n",
@@ -569,7 +583,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# é«˜é€Ÿãƒ•ãƒ¼ãƒªã‚¨å¤‰æ›ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã«ã‚ˆã‚‹é«˜é€ŸåŒ–\n"
+    "# ’¹â’Â®’¥Õ’¡¼’¥ê’¥¨’ÊÑ’´¹’¥¢’¥ë’¥´’¥ê’¥º’¥à’¤Ë’¤è’¤ë’¹â’Â®’²½\n"
    ]
   },
   {
@@ -577,16 +591,16 @@
    "metadata": {},
    "source": [
     "\n",
-    "$\\sin, \\cos$ã¨$\\exp$é–¢æ•°ã‚’çµã³ã¤ã‘ã‚‹ã‚ªã‚¤ãƒ©ãƒ¼ã®é–¢ä¿‚ã‚’ä½¿ã†ã¨ï¼Œ\n",
+    "$\\sin, \\cos$’¤È$\\exp$’´Ø’¿ô’¤ò’·ë’¤Ó’¤Ä’¤±’¤ë’¥ª’¥¤’¥é’¡¼’¤Î’´Ø’·¸’¤ò’»È’¤¦’¤È’¡¤\n",
     "\n",
     "$$\n",
     "$$\n",
-    "ã¨å¤‰æ›ã§ãã‚‹ï¼Žã“ã‚Œã‚’ä½¿ã†ã¨ï¼Œ\n",
+    "’¤È’ÊÑ’´¹’¤Ç’¤­’¤ë’¡¥’¤³’¤ì’¤ò’»È’¤¦’¤È’¡¤\n",
     "\n",
     "$$\n",
     "c_{{k}}=\\frac{1}{C_{{m}}}\\sum _{i=0}^{N-1}F \\left( x_{{i}} \\right) {{\\exp}\\left({{\\frac {-2\\,\\pi I}{N}}}\\right)}\n",
     "$$\n",
-    "ã¨ãªã‚‹ï¼Ž$N = 8$ã®å ´åˆã‚’å®Ÿéš›ã«è¨ˆç®—ã™ã‚‹ã¨ï¼Œ$ z = \\exp(-\\frac{2\\pi}{8}I)$ã¨ã—ã¦ï¼Œ$z^8=1,z^9=z, \\cdots$ã‚’ä½¿ã†ã¨ï¼Œ\n",
+    "’¤È’¤Ê’¤ë’¡¥$N = 8$’¤Î’¾ì’¹ç’¤ò’¼Â’ºÝ’¤Ë’·×’»»’¤¹’¤ë’¤È’¡¤$ z = \\exp(-\\frac{2\\pi}{8}I)$’¤È’¤·’¤Æ’¡¤$z^8=1,z^9=z, \\cdots$’¤ò’»È’¤¦’¤È’¡¤\n",
     "\n",
     "$$\n",
     "\\left[\\begin{array}{c}\n",
@@ -606,8 +620,8 @@
     "F_0\\\\F_1\\\\F_2\\\\F_3\\\\F_4\\\\F_5\\\\F_6\\\\F_7\n",
     "\\end{array}\\right]\n",
     "$$\n",
-    "ã¨ãªã‚‹ï¼Žã“ã®è¡Œåˆ—è¨ˆç®—ã‚’ç´ ç›´ã«å®Ÿè¡Œã™ã‚‹ã¨ï¼Œ8Ã—8=64å›žã®æ¼”ç®—ãŒå¿…è¦ã¨ãªã‚‹ï¼Žã“ã‚Œã‚’æ¸›ã‚‰ã›ãªã„ã‹ã¨è€ƒãˆãŸã®ãŒï¼Œé«˜é€Ÿãƒ•ãƒ¼ãƒªã‚¨å¤‰æ›ã®å§‹ã¾ã‚Šã§ã‚ã‚‹ï¼Ž\n",
-    "ã“ã®è¡Œåˆ—ã‚’ã‚ˆãè¦‹ã‚‹ã¨åŒã˜è¨ˆç®—ã‚’é‡è¤‡ã—ã¦ãŠã“ãªã£ã¦ã„ã‚‹ã“ã¨ãŒåˆ†ã‹ã‚‹ï¼Žãã“ã§ï¼Œè¡Œåˆ—ã®å·¦å´ã¨å³å´ã§åŒã˜è¨ˆç®—ã‚’ã—ã¦ã„ã‚‹éƒ¨åˆ†ã‚’ã¾ã¨ã‚ã‚‹ã¨ï¼Œ\n",
+    "’¤È’¤Ê’¤ë’¡¥’¤³’¤Î’¹Ô’Îó’·×’»»’¤ò’ÁÇ’Ä¾’¤Ë’¼Â’¹Ô’¤¹’¤ë’¤È’¡¤8×8=64’²ó’¤Î’±é’»»’¤¬’É¬’Í×’¤È’¤Ê’¤ë’¡¥’¤³’¤ì’¤ò’¸º’¤é’¤»’¤Ê’¤¤’¤«’¤È’¹Í’¤¨’¤¿’¤Î’¤¬’¡¤’¹â’Â®’¥Õ’¡¼’¥ê’¥¨’ÊÑ’´¹’¤Î’»Ï’¤Þ’¤ê’¤Ç’¤¢’¤ë’¡¥\n",
+    "’¤³’¤Î’¹Ô’Îó’¤ò’¤è’¤¯’¸«’¤ë’¤È’Æ±’¤¸’·×’»»’¤ò’½Å’Ê£’¤·’¤Æ’¤ª’¤³’¤Ê’¤Ã’¤Æ’¤¤’¤ë’¤³’¤È’¤¬’Ê¬’¤«’¤ë’¡¥’¤½’¤³’¤Ç’¡¤’¹Ô’Îó’¤Î’º¸’Â¦’¤È’±¦’Â¦’¤Ç’Æ±’¤¸’·×’»»’¤ò’¤·’¤Æ’¤¤’¤ë’Éô’Ê¬’¤ò’¤Þ’¤È’¤á’¤ë’¤È’¡¤\n",
     "\n",
     "$$\n",
     "\\left[\\begin{array}{c}\n",
@@ -627,17 +641,17 @@
     "F_0+F_4\\\\F_1+F_5\\\\F_2+F_6\\\\F_3+F_7\\\\F_0-F_4\\\\F_1-F_5\\\\F_{[ \\,\\,]}-F_6\\\\F_{[\\,\\,]}-F_7\n",
     "\\end{array}\\right]\n",
     "$$\n",
-    "ã¨ã™ã‚‹ã“ã¨ãŒã§ãã‚‹ï¼Žã“ã“ã§ï¼Œ$z^4 =-1$ãªã©ã‚’ä½¿ã£ã¦ã„ã‚‹ï¼Žå³å´ã®ãƒ™ã‚¯ãƒˆãƒ«ã®è¨ˆç®—ã§ãƒ­ã‚¹ã™ã‚‹ãŒï¼Œè¡Œåˆ—ã®ä¸­ã®è¨ˆç®—ã®å›žæ•°ã‚’åŠåˆ†ã«æ¸›ã‚‰ã™ã“ã¨ãŒã§ãã‚‹ï¼Žå†åº¦ã§ãã‚ãŒã£ãŸè¡Œåˆ—ã‚’è¦‹ã‚Œã°ï¼ŒåŒã˜è¨ˆç®—ã‚’ã•ã‚‰ã«ã¾ã¨ã‚ã‚‹ã“\n",
-    "ã¨ãŒã§ããã†ã§ã‚ã‚‹ï¼Žã“ã†ã—ã¦ï¼Œæ¬¡ã€…ã¨è¨ˆç®—å›žæ•°ã‚’æ¸›ã‚‰ã—ã¦ã„ãã“ã¨ãŒå¯èƒ½ã§ï¼Œæœ€çµ‚çš„ã«è¡Œåˆ—éƒ¨åˆ†ã®è¨ˆç®—ãŒä¸€åˆ‡ãªããªã‚‹ï¼Žæ®‹ã‚‹ã®ã¯ï¼Œå³å´ã®ãƒ™ã‚¯ãƒˆãƒ«ã®è¶³ã—ç®—å¼•ãç®—ã ã‘ã«ãªã‚‹ï¼Ž\n",
+    "’¤È’¤¹’¤ë’¤³’¤È’¤¬’¤Ç’¤­’¤ë’¡¥’¤³’¤³’¤Ç’¡¤$z^4 =-1$’¤Ê’¤É’¤ò’»È’¤Ã’¤Æ’¤¤’¤ë’¡¥’±¦’Â¦’¤Î’¥Ù’¥¯’¥È’¥ë’¤Î’·×’»»’¤Ç’¥í’¥¹’¤¹’¤ë’¤¬’¡¤’¹Ô’Îó’¤Î’Ãæ’¤Î’·×’»»’¤Î’²ó’¿ô’¤ò’È¾’Ê¬’¤Ë’¸º’¤é’¤¹’¤³’¤È’¤¬’¤Ç’¤­’¤ë’¡¥’ºÆ’ÅÙ’¤Ç’¤­’¤¢’¤¬’¤Ã’¤¿’¹Ô’Îó’¤ò’¸«’¤ì’¤Ð’¡¤’Æ±’¤¸’·×’»»’¤ò’¤µ’¤é’¤Ë’¤Þ’¤È’¤á’¤ë’¤³\n",
+    "’¤È’¤¬’¤Ç’¤­’¤½’¤¦’¤Ç’¤¢’¤ë’¡¥’¤³’¤¦’¤·’¤Æ’¡¤’¼¡’¡¹’¤È’·×’»»’²ó’¿ô’¤ò’¸º’¤é’¤·’¤Æ’¤¤’¤¯’¤³’¤È’¤¬’²Ä’Ç½’¤Ç’¡¤’ºÇ’½ª’Åª’¤Ë’¹Ô’Îó’Éô’Ê¬’¤Î’·×’»»’¤¬’°ì’ÀÚ’¤Ê’¤¯’¤Ê’¤ë’¡¥’»Ä’¤ë’¤Î’¤Ï’¡¤’±¦’Â¦’¤Î’¥Ù’¥¯’¥È’¥ë’¤Î’Â­’¤·’»»’°ú’¤­’»»’¤À’¤±’¤Ë’¤Ê’¤ë’¡¥\n",
     "\n",
-    "ã“ã®ãƒ™ã‚¯ãƒˆãƒ«ã®çµ„ã¿åˆã‚ã›ã¯ï¼Œä¸€è¦‹ç›¸å½“è¤‡é›‘ãã†ã§ï¼Œãã®æ¡ä»¶åˆ†å²ã§æ™‚é–“ãŒã‹ã‹ã‚Šãã†ã«æ€ã‚ã‚Œã‚‹ï¼Žã—ã‹ã—ï¼Œã‚ˆãèª¿ã¹ã¦ã¿ã‚Œã°ï¼Œå˜ç´”ãªãƒ“ãƒƒãƒˆæ¼”ç®—ã§å‡¦ç†ã™ã‚‹ã“ã¨ãŒå¯èƒ½ã§ã‚ã‚‹ã“\n",
-    "ã¨ãŒåˆ¤æ˜Žã—ãŸï¼Žã“ã†ã—ã¦ï¼Œ2ã®æ•´æ•°ä¹—ã®ãƒ‡ãƒ¼ã‚¿ã®çµ„ã«å¯¾ã—ã¦ã¯ï¼Œæ¥µã‚ã¦é«˜é€Ÿã«ãƒ•ãƒ¼ãƒªã‚¨å¤‰æ›ã‚’å®Ÿè¡Œã™ã‚‹ã“ã¨ãŒå¯èƒ½ã¨ãªã£ãŸï¼Ž\n",
-    "FFTã§ã®æ¼”ç®—å›žæ•°ã¯ï¼Œãƒ‡ãƒ¼ã‚¿æ•°ã‚’Nã¨ã™ã‚‹ã¨\n",
+    "’¤³’¤Î’¥Ù’¥¯’¥È’¥ë’¤Î’ÁÈ’¤ß’¹ç’¤ï’¤»’¤Ï’¡¤’°ì’¸«’Áê’Åö’Ê£’»¨’¤½’¤¦’¤Ç’¡¤’¤½’¤Î’¾ò’·ï’Ê¬’´ô’¤Ç’»þ’´Ö’¤¬’¤«’¤«’¤ê’¤½’¤¦’¤Ë’»×’¤ï’¤ì’¤ë’¡¥’¤·’¤«’¤·’¡¤’¤è’¤¯’Ä´’¤Ù’¤Æ’¤ß’¤ì’¤Ð’¡¤’Ã±’½ã’¤Ê’¥Ó’¥Ã’¥È’±é’»»’¤Ç’½è’Íý’¤¹’¤ë’¤³’¤È’¤¬’²Ä’Ç½’¤Ç’¤¢’¤ë’¤³\n",
+    "’¤È’¤¬’È½’ÌÀ’¤·’¤¿’¡¥’¤³’¤¦’¤·’¤Æ’¡¤2’¤Î’À°’¿ô’¾è’¤Î’¥Ç’¡¼’¥¿’¤Î’ÁÈ’¤Ë’ÂÐ’¤·’¤Æ’¤Ï’¡¤’¶Ë’¤á’¤Æ’¹â’Â®’¤Ë’¥Õ’¡¼’¥ê’¥¨’ÊÑ’´¹’¤ò’¼Â’¹Ô’¤¹’¤ë’¤³’¤È’¤¬’²Ä’Ç½’¤È’¤Ê’¤Ã’¤¿’¡¥\n",
+    "FFT’¤Ç’¤Î’±é’»»’²ó’¿ô’¤Ï’¡¤’¥Ç’¡¼’¥¿’¿ô’¤òN’¤È’¤¹’¤ë’¤È\n",
     "\n",
     "$$\n",
     "N\\log_2 N\n",
     "$$\n",
-    "ã¨ãªã‚‹ï¼Žå˜ç´”ãªå ´åˆã®$N^2$ã¨æ¯”è¼ƒã™ã‚‹ã¨ï¼Œä»¥ä¸‹ã®ã‚ˆã†ã«ãªã‚Šï¼Œã©ã‚Œã ã‘é«˜é€ŸåŒ–ã•ã‚Œã¦ã„ã‚‹ã‹ãŒç†è§£ã•ã‚Œã‚ˆã†ï¼Ž\n",
+    "’¤È’¤Ê’¤ë’¡¥’Ã±’½ã’¤Ê’¾ì’¹ç’¤Î$N^2$’¤È’Èæ’³Ó’¤¹’¤ë’¤È’¡¤’°Ê’²¼’¤Î’¤è’¤¦’¤Ë’¤Ê’¤ê’¡¤’¤É’¤ì’¤À’¤±’¹â’Â®’²½’¤µ’¤ì’¤Æ’¤¤’¤ë’¤«’¤¬’Íý’²ò’¤µ’¤ì’¤è’¤¦’¡¥\n",
     "```maple\n",
     "> dN2:=[]; dFft:=[]; for i from 2 to 16 do N:=2^i; n2:=N*N; Fft:=N/2*log[2](N);\n",
     "> Fft/n2; printf(\"%10d %12d %12d %10.5f\\n\",N,n2,Fft,evalf(Fft/n2));\n",
@@ -666,7 +680,8 @@
     "> display(l1,l2);\n",
     "```\n",
     "\n",
-    "![C10_FFTplot2d14.png](figs/C10_FFTplot2d14.png)\n",
+    "|{{attach_view(C10_FFTplot2d14.png,)}}|\n",
+    "|:----|\n",
     "\n",
     "\n",
     "```maple\n",
@@ -674,7 +689,8 @@
     "> display(l1,l2);\n",
     "```\n",
     "\n",
-    "![C10_FFTplot2d15.png](figs/C10_FFTplot2d15.png)\n",
+    "|{{attach_view(C10_FFTplot2d15.png,)}}|\n",
+    "|:----|\n",
     "\n",
     "\n",
     "```maple\n",
@@ -682,7 +698,8 @@
     "> display(l1,l2);\n",
     "```\n",
     "\n",
-    "![C10_FFTplot2d16.png](figs/C10_FFTplot2d16.png)\n",
+    "|{{attach_view(C10_FFTplot2d16.png,)}}|\n",
+    "|:----|\n",
     "\n",
     "\n",
     "\n"
@@ -692,7 +709,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# FFTé–¢æ•°ã‚’ç”¨ã„ãŸçµæžœ\n"
+    "# FFT’´Ø’¿ô’¤ò’ÍÑ’¤¤’¤¿’·ë’²Ì\n"
    ]
   },
   {
@@ -732,7 +749,8 @@
     "> plot({Re(F2(x)),F(x)},x=0..1);\n",
     "```\n",
     "\n",
-    "![C10_FFTplot2d17.png](figs/C10_FFTplot2d17.png)\n",
+    "|{{attach_view(C10_FFTplot2d17.png,)}}|\n",
+    "|:----|\n",
     "\n",
     "\n",
     "\n",
@@ -743,7 +761,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# èª²é¡Œã¨è§£ç­”ä¾‹\n"
+    "# ’²Ý’Âê’¤È’²ò’Åú’Îã\n"
    ]
   },
   {
@@ -752,12 +770,12 @@
    "source": [
     "\n",
     "<dl>\n",
-    "<dt>èª²é¡Œ</dt><dd></dd>\n",
+    "<dt>’²Ý’Âê</dt><dd></dd>\n",
     "</dl>\n",
     "\n",
-    "ä¸‹ã®ä¾‹ã«å¾“ã£ã¦ï¼Œsin(i/13)ã¨sin(i/2)ã®åˆæˆæ³¢ã‚’ä½œæˆã—ï¼ŒFFTã‚’ã‹ã‘ãŸå¾Œï¼Œå‘¨æ³¢æ•°ã§ã®å¼·åº¦ã‚’è¡¨ç¤ºã›ã‚ˆï¼Žåˆæˆæ³¢(2*sin(i*2)+sin(i/2))ã¨ã®é•ã„ã‚’ã®ã¹ã‚ˆï¼Ž\n",
+    "’²¼’¤Î’Îã’¤Ë’½¾’¤Ã’¤Æ’¡¤sin(i/13)’¤Èsin(i/2)’¤Î’¹ç’À®’ÇÈ’¤ò’ºî’À®’¤·’¡¤FFT’¤ò’¤«’¤±’¤¿’¸å’¡¤’¼þ’ÇÈ’¿ô’¤Ç’¤Î’¶¯’ÅÙ’¤ò’É½’¼¨’¤»’¤è’¡¥’¹ç’À®’ÇÈ(2*sin(i*2)+sin(i/2))’¤È’¤Î’°ã’¤¤’¤ò’¤Î’¤Ù’¤è’¡¥\n",
     "<dl>\n",
-    "<dt>è§£ç­”ä¾‹</dt><dd></dd>\n",
+    "<dt>’²ò’Åú’Îã</dt><dd></dd>\n",
     "</dl>\n",
     "\n",
     "```maple\n",
@@ -782,7 +800,8 @@
     "{\\it funcs}\\, := \\,[\\sin \\left( i/13 \\right) ,\\,\\sin \\left( i/2 \\right) ]\n",
     "$$\n",
     "\n",
-    "![FFTExplot2d1.png](figs/FFTExplot2d1.png)\n",
+    "|{{attach_view(FFTExplot2d1.png,)}}|\n",
+    "|:----|\n",
     "\n",
     "\n",
     "```maple\n",
@@ -808,7 +827,8 @@
     "listplot(data1);\n",
     "```\n",
     "\n",
-    "![FFTExplot2d2.png](figs/FFTExplot2d2.png)\n",
+    "|{{attach_view(FFTExplot2d2.png,)}}|\n",
+    "|:----|\n",
     "\n",
     "\n",
     "```maple\n",
@@ -827,7 +847,8 @@
     "$$\n",
     "$$\n",
     "\n",
-    "![FFTExplot2d3.png](figs/FFTExplot2d3.png)\n"
+    "|{{attach_view(FFTExplot2d3.png,)}}|\n",
+    "|:----|\n"
    ]
   }
  ],
