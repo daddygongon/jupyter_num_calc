@@ -1,0 +1,24 @@
+#+STARTUP: indent nolineimages nofold
+
+- startからjupyterを打ち込んで，起動
+-- どこがroot dirかわらかない．
+-- あるいは奥のほうのdirにファイルを整理したとしたらどうやって起動するのか？
+-- treeというののdefaultを使うべきなのか．
+-- 右のNewボタンにfolderがあるのでそれで新しいのをDesktopにつくる
+-- untitled folderとなるが名前変更の仕方がわからず．
+
+- new であたらしいファイルをつくる
+-- だいたいとおる
+-- init_sessionがおかしい．
+-- prettyprintがdefaultにならない
+-- plotがうまくできないよ．
+
+-- from IPython.display import display
+-- init_printing(use_latex='mathjax')
+
+%matplotlib inline
+import matplotlib.pyplot as plt
+
+plt.show()
+
+-- 保存したfileは消える．．．
