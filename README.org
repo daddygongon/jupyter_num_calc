@@ -1,0 +1,12 @@
+* pythonで数学
+
+- mapleで作っていたテキストをpythonに書き換えてみた．
+- rubyのほうがやりたいけど．．．
+- emacs keybindが使えるぜ．
+- hikiのformatからの変換コードと手順, ~/ipynb_utils/md_to_ipynb.ipynbにあるが．．．
+
+* 目次と目標
+** [[file:./symbolic_math/README.ipynb][数式処理]]
+** [[file:./linear_algebra/README.ipynb][線形代数]]
+** [[file:./program_coding/README.ipynb][coding]]
+** [[file:./numerical_calc/README.ipynb][数値計算]]
