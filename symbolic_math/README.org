@@ -1,7 +1,33 @@
+#+TITLE:  jupyter notebook 授業でのQ & A
+#+AUTHOR:  Shigeto R. Nishitani
+#+EMAIL:     (concat "nishitani@kwansei.ac.jp")
+#+LANGUAGE:  jp
+#+OPTIONS:   H:4 toc:t num:2
+
+# #+SETUPFILE: /Users/bob/Github/org-html-themes/setup/theme-readtheorg-local-daddygongon.setup
+#+SETUPFILE: /Users/bob/Github/org-html-themes/setup/theme-readtheorg.setup
+#+STARTUP: indent nolineimages fold
+#+OPTIONS: ^:{}
+
 * 授業でのQ and A
-- jupyter notebookでnot foundがでる．-> browserを再起動
-- 家でやってきたのをどうすれば見れる　-> z:/に入れる
-- 前同じマシンでやったのは?　-> c:/users/自分のID
-- 人しすとか，4階でやったのは？ -> たぶん同じ設定なんで，そのマシンのlocalにある
-- 課題のコメントは?　-> cellの属性をmarkdownに変えて入力
-- 印刷の集約の方法は？　-> 
+- 授業プリントのjupyter notebookでnot foundがでる :: browserを再起動
+- 家でやってきたのをどうすれば見れる :: z:/に入れる
+- 前同じマシンでやったのは? :: c:/users/自分のID
+- 人しすとか，4階でやったのは？ :: たぶん同じ設定なんで，そのマシンのlocalにある．うそ，あっちのはlogoutしたら消えます．
+- 課題のコメントは? :: cellの属性をmarkdownに変えて入力，latex記法が使えます．
+* jupyter notebookのinit時の問題点
+** 起動時のhome directory
+今はz:/です．先週まではlocal:/[USER ID]でした．
+IV,V号館の演習室のPCでは4月いっぱいはlocal diskになっているので，
+logoutすると消えちゃいます．USBに写しておいてください．来月から同じになります．
+
+** printout
+IEだけでなく，Chromeでも後ろが切れるというバグがありました．
+起動するbrowserをFireFoxにしたら大丈夫です．
+  1. Jupyter notebookのmenu barのFile->Print Previewで作って，
+  1. FireFoxの右上のツールボタンから印刷を選んでください．
+集約して出すのを忘れずに．
+
+集約は，出てきた画面の左上の印刷ボタンを選んで，「プロパティ」から
+ワンクリック設定アイコンで集約を選択して印刷．
+
