@@ -2,6 +2,7 @@
 だめみたい．．．数値計算の学生はどうやってたのだろう．．．
 1. といあわせる
 2. ファイルの上げ方を教えてもらう
+IEではだめ．Chromeでも少しダメ．FireFoxだと問題ない．
 
 * nbviewer
 githubだと，ipynbをいちいちformatするようで，時間がかかる．
@@ -13,6 +14,14 @@ githubにあげたのは，nbviewerでそのまま見れる．
 https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/equation_manipulation.ipynb
 みたいに，blob/masterが間に入っているだけ．．．
 これをlinkとして貼り付けるだけ．．．ほんまかな．．．
+
+* filesの置き場所
+nbviewerだけでは，悩ましい．
+ipynbをそのまま使ったほうが良い場合もあるし．．．
+何と言ってもgithubのdirectory構造とhikiのが違う．
+これをタグ付けみたいにして，一つにできるといいが．．．
+ipynbとdirecotyとの自動対応か．
+それにhikiが絡むからややこしい．．．
 
 * gistからの試み(止めた)
 gist --login
