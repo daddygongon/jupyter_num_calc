@@ -15,6 +15,9 @@ https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/sym
 みたいに，blob/masterが間に入っているだけ．．．
 これをlinkとして貼り付けるだけ．．．ほんまかな．．．
 
+* githubでの表示
+- githubでipynbを直接開くと時々latex部の表示がおかしい．
+- nbviewerからだと正常に見える．
 * filesの置き場所
 nbviewerだけでは，悩ましい．
 ipynbをそのまま使ったほうが良い場合もあるし．．．

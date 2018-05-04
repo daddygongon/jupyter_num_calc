@@ -1,0 +1,27 @@
+task :default do
+  system 'rake -T'
+end
+
+desc 'sync here with hiki'
+task :sync do
+  p attach_dir = '/Users/bob/Sites/new_ist_data/ist_data/cache/attach/DoingMathWithPython/'
+  p http_address = 'https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/'
+  Dir.entries('.')[2..-1].each do |file|
+    #    ['.data','.ipynb'].each do |ext|
+    ['.ipynb'].each do |ext|
+      if File.extname(file)==ext
+        puts "{{attach_anchor(#{file})}}"
+        puts "[[#{file}|#{http_address}/#{file}]]"
+        FileUtils.cp(file, File.join(attach_dir,file))
+      end
+    end
+  end
+  exit
+end
+
+desc 'ls Dir'
+task :ls do
+  dir = ARGV[1]
+  p Dir.entries(dir)
+  exit
+end
