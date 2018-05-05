@@ -25,6 +25,28 @@ task :sync do
   exit
 end
 
+desc 'mk_toc FILE with hiki'
+task :mk_toc do
+  p file = ARGV[1]
+  entries = if file.nil?
+              Dir.entries('.')[2..-1]
+            else
+              [file]
+            end
+  p attach_dir = 'https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math'
+  p http_address = 'https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math'
+  entries.each do |file|
+    #    ['.data','.ipynb'].each do |ext|
+    ['.ipynb'].each do |ext|
+      if File.extname(file)==ext
+        print "- [[#{attach_dir}/#{file}][#{file}]]"
+        print "([[#{http_address}/#{file}][nbviewer]])\n"
+      end
+    end
+  end
+  exit
+end
+
 desc 'ls Dir'
 task :ls do
   dir = ARGV[1]
