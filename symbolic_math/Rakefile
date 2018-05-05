@@ -14,7 +14,7 @@ task :sync do
   p http_address = 'https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math'
   entries.each do |file|
     #    ['.data','.ipynb'].each do |ext|
-    ['.ipynb'].each do |ext|
+    ['.data','.pdf','.ipynb'].each do |ext|
       if File.extname(file)==ext
         print "{{attach_anchor(#{file})}}"
         print "([[nbviewer|#{http_address}/#{file}]])\n"

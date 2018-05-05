@@ -22,18 +22,18 @@
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/group_works_2.ipynb][group_works_2.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_2.ipynb][nbviewer]])
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/group_works_2_ans.ipynb][group_works_2_ans.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_2_ans.ipynb][nbviewer]])
 ** 線形代数
-- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/linear_solve.ipynb][linear_solve.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/linear_solve.ipynb][nbviewer]])
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/linear_algebra_scipy.ipynb][linear_algebra_scipy.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/linear_algebra_scipy.ipynb][nbviewer]])
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/linear_algebra_sympy.ipynb][linear_algebra_sympy.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/linear_algebra_sympy.ipynb][nbviewer]])
+- [[file:group_works_3.pdf]]
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/group_works_3_breast_cancer.ipynb][group_works_3_breast_cancer.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_3_breast_cancer.ipynb][nbviewer]])
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/group_works_3_ans.ipynb][group_works_3_ans.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_3_ans.ipynb][nbviewer]])
+- [[file:group_works_4.pdf]]
 ** 式変形
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/equation_manipulation.ipynb][equation_manipulation.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/equation_manipulation.ipynb][nbviewer]])
 ** その他
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/miscellaneous.ipynb][miscellaneous.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/miscellaneous.ipynb][nbviewer]])
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/cg.ipynb][cg.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/cg.ipynb][nbviewer]])
-
-
+- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/linear_solve.ipynb][linear_solve.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/linear_solve.ipynb][nbviewer]])
 
 * 授業でのQ and A
 - 授業プリントのjupyter notebookでnot foundがでる :: browserを再起動
