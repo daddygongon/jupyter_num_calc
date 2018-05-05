@@ -10,23 +10,30 @@
 #+OPTIONS: ^:{}
 
 * 数式処理内容
-- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/miscellaneous.ipynb][miscellaneous.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/miscellaneous.ipynb][nbviewer]])
-- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/differential.ipynb][differential.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/differential.ipynb][nbviewer]])
+** 基礎
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/first_leaf.ipynb][first_leaf.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/first_leaf.ipynb][nbviewer]])
-- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/linear_solve.ipynb][linear_solve.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/linear_solve.ipynb][nbviewer]])
-- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/group_works_2_ans.ipynb][group_works_2_ans.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_2_ans.ipynb][nbviewer]])
-- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/linear_algebra_sympy.ipynb][linear_algebra_sympy.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/linear_algebra_sympy.ipynb][nbviewer]])
-- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/integral.ipynb][integral.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/integral.ipynb][nbviewer]])
-- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/group_works_3_ans.ipynb][group_works_3_ans.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_3_ans.ipynb][nbviewer]])
-- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/linear_algebra_scipy.ipynb][linear_algebra_scipy.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/linear_algebra_scipy.ipynb][nbviewer]])
-- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/equals.ipynb][equals.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/equals.ipynb][nbviewer]])
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/functions.ipynb][functions.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/functions.ipynb][nbviewer]])
-- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/group_works_3_breast_cancer.ipynb][group_works_3_breast_cancer.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_3_breast_cancer.ipynb][nbviewer]])
+- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/equals.ipynb][equals.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/equals.ipynb][nbviewer]])
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/group_works_1.ipynb][group_works_1.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_1.ipynb][nbviewer]])
-- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/equation_manipulation.ipynb][equation_manipulation.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/equation_manipulation.ipynb][nbviewer]])
-- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/cg.ipynb][cg.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/cg.ipynb][nbviewer]])
-- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/group_works_2.ipynb][group_works_2.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_2.ipynb][nbviewer]])
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/group_works_1_ans.ipynb][group_works_1_ans.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_1_ans.ipynb][nbviewer]])
+** 微積
+- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/differential.ipynb][differential.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/differential.ipynb][nbviewer]])
+- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/integral.ipynb][integral.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/integral.ipynb][nbviewer]])
+- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/group_works_2.ipynb][group_works_2.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_2.ipynb][nbviewer]])
+- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/group_works_2_ans.ipynb][group_works_2_ans.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_2_ans.ipynb][nbviewer]])
+** 線形代数
+- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/linear_solve.ipynb][linear_solve.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/linear_solve.ipynb][nbviewer]])
+- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/linear_algebra_scipy.ipynb][linear_algebra_scipy.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/linear_algebra_scipy.ipynb][nbviewer]])
+- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/linear_algebra_sympy.ipynb][linear_algebra_sympy.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/linear_algebra_sympy.ipynb][nbviewer]])
+- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/group_works_3_breast_cancer.ipynb][group_works_3_breast_cancer.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_3_breast_cancer.ipynb][nbviewer]])
+- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/group_works_3_ans.ipynb][group_works_3_ans.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_3_ans.ipynb][nbviewer]])
+** 式変形
+- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/equation_manipulation.ipynb][equation_manipulation.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/equation_manipulation.ipynb][nbviewer]])
+** その他
+- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/miscellaneous.ipynb][miscellaneous.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/miscellaneous.ipynb][nbviewer]])
+- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/cg.ipynb][cg.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/cg.ipynb][nbviewer]])
+
+
 
 * 授業でのQ and A
 - 授業プリントのjupyter notebookでnot foundがでる :: browserを再起動
