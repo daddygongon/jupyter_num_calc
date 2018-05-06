@@ -27,10 +27,12 @@
 - [[file:group_works_3.pdf]]
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/group_works_3_breast_cancer.ipynb][group_works_3_breast_cancer.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_3_breast_cancer.ipynb][nbviewer]])
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/group_works_3_ans.ipynb][group_works_3_ans.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_3_ans.ipynb][nbviewer]])
+   - [[file:validate_A.data]],[[file:validate_b.data]],[[file:test_A.data]],[[file:test_b.data]]
 - [[file:group_works_4.pdf]]
 ** 式変形
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/equation_manipulation.ipynb][equation_manipulation.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/equation_manipulation.ipynb][nbviewer]])
 ** その他
+- [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/python_files_and_dir.ipynb][python_files_and_dir.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/python_files_and_dir.ipynb][nbviewer]])
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/miscellaneous.ipynb][miscellaneous.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/miscellaneous.ipynb][nbviewer]])
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/cg.ipynb][cg.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/cg.ipynb][nbviewer]])
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/linear_solve.ipynb][linear_solve.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/linear_solve.ipynb][nbviewer]])
