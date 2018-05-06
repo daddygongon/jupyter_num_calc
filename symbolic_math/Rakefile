@@ -13,7 +13,6 @@ task :sync do
   p attach_dir = '/Users/bob/Sites/new_ist_data/ist_data/cache/attach/DoingMathWithPython/'
   p http_address = 'https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math'
   entries.each do |file|
-    #    ['.data','.ipynb'].each do |ext|
     ['.data','.pdf','.ipynb'].each do |ext|
       if File.extname(file)==ext
         print "{{attach_anchor(#{file})}}"
@@ -25,8 +24,8 @@ task :sync do
   exit
 end
 
-desc 'mk_toc FILE with hiki'
-task :mk_toc do
+desc 'mk_link FILE for org'
+task :mk_link do
   p file = ARGV[1]
   entries = if file.nil?
               Dir.entries('.')[2..-1]
