@@ -4,8 +4,8 @@
 #+LANGUAGE:  jp
 #+OPTIONS:   H:4 toc:t num:2
 
-##+SETUPFILE: /Users/bob/Github/org-html-themes/setup/theme-readtheorg-local-daddygongon.setup
-#+SETUPFILE: /Users/bob/Github/org-html-themes/setup/theme-readtheorg-local.setup
+#+SETUPFILE: /Users/bob/Github/org-html-themes/setup/theme-readtheorg-local-daddygongon.setup
+##+SETUPFILE: /Users/bob/Github/org-html-themes/setup/theme-readtheorg-local.setup
 #+STARTUP:indent
 
 * 演習レポート評価基準
