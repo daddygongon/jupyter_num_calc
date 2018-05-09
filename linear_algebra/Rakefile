@@ -1,3 +1,4 @@
+puts 'help README.org and ipynbs, should copy this Rakefile to the cwd'
 task :default do
   system 'rake -T'
 end
