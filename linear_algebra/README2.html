@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="jp" xml:lang="jp">
+<head>
+<title>線形代数入門資料</title>
+<!-- 2018-05-09 水 14:39 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Shigeto R. Nishitani" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="/Users/bob/Github/org-html-themes/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="/Users/bob/Github/org-html-themes/styles/readtheorg/css/readtheorg.css"/>
+<script src="/Users/bob/anaconda3/lib/python3.6/site-packages/notebook/static/components/jquery/jquery.min.js"></script>
+<script src="/Users/bob/anaconda3/lib/python3.6/site-packages/notebook/static/components/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/Users/bob/Github/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="/Users/bob/Github/org-html-themes/styles/readtheorg/js/readtheorg.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">線形代数入門資料</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#">1. 目的</a></li>
+<li><a href="#">2. テキスト</a></li>
+<li><a href="#">3. 課題&amp;予定</a>
+<ul>
+<li><a href="#411530">3.1. 初回試験(4/11,5/30)</a></li>
+<li><a href="#425613nbviewer">3.2. 3章　行列式(4/25,6/13)(nbviewer)</a></li>
+<li><a href="#52620nbviewer">3.3. 4章　数ベクトル空間(5/2,6/20)(nbviewer)</a></li>
+<li><a href="#59627nbviewer">3.4. 5章　固有値とその応用(5/9,6/27)(nbviewer)</a></li>
+<li><a href="#516-74nbviewer">3.5. 6章　線形写像(5/16,</a></li>
+<li><a href="#523711">3.6. 最終試験(5/23,7/11)</a></li>
+</ul>
+</li>
+<li><a href="#">4. 試験問題(例)</a></li>
+</ul>
+</div>
+</div>
+<p>
+##+SETUPFILE: /Users/bob/Github/org-html-themes/setup/theme-readtheorg-local.setup
+</p>
+
+<div id="outline-container-目的" class="outline-2">
+<h2 id="目的"><a id="sec-1" name="sec-1"></a><span class="section-number-2">1</span> 目的</h2>
+<div class="outline-text-2" id="text-目的">
+
+<p>
+情報科学で使われる数学(微積分，線形代数)の基礎を，演習により習得する．2クラス同時に行い，前半と後半で担当者が交代する．
+## 評価 - 前半，後半のそれぞれの初めにおこなう試験に合格すれば合格． -
+不合格の学生は演習を受講後，最終試験．さらに欠席は減点． -
+各クラス100点満点で，両クラス60点以上で合格． -
+一回目にとおれば100点，それ以外はクラス末の試験の点数． -
+欠席は一回5点減点． -
+課題をやってきた学生には，その分量に多じて5点を満点で加点． -
+さらに，5mm方眼のレポート用紙，ボールペンで提出した学生には各1点追加． -
+レポート評価基準{{attach\<sub>anchor</sub>(ReportGradings.pdf,MathEx)}}
+</p>
+</div>
+</div>
+
+<div id="outline-container-テキスト" class="outline-2">
+<h2 id="テキスト"><a id="sec-2" name="sec-2"></a><span class="section-number-2">2</span> テキスト</h2>
+<div class="outline-text-2" id="text-テキスト">
+
+<pre class="example">
+    「演習と応用　線形代数」，寺田文行，木村宣昭，　サイエンス社
+</pre>
+</div>
+</div>
+
+<div id="outline-container-課題予定" class="outline-2">
+<h2 id="課題予定"><a id="sec-3" name="sec-3"></a><span class="section-number-2">3</span> 課題&amp;予定</h2>
+<div class="outline-text-2" id="text-課題予定">
+</div>
+
+<div id="outline-container-初回試験411530" class="outline-3">
+<h3 id="初回試験411530"><a id="sec-3-1" name="sec-3-1"></a><span class="section-number-3">3.1</span> 初回試験(4/11,5/30)</h3>
+<div class="outline-text-3" id="text-初回試験411530">
+
+<p>
+2018年度は4/9-7/13． ###
+2章　行基本操作(4/18,6/6)(<a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/linear_algebra/LA-I_lu.ipynb">nbviewer</a>)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">!項目</th>
+<th scope="col" class="left">!例題</th>
+<th scope="col" class="left">!課題</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">2.1 行基本操作</td>
+<td class="left">　</td>
+<td class="left">　</td>
+</tr>
+
+<tr>
+<td class="left">2.2 連立1次方程式</td>
+<td class="left">例題2</td>
+<td class="left">2.1(b),(d)</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">例題3</td>
+<td class="left">3.1(a)</td>
+</tr>
+
+<tr>
+<td class="left">2.3 基本解</td>
+<td class="left">例題5</td>
+<td class="left">5.1(a),(c)</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">5.2 例題3, 3.1(a)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-章行列式425613nbviewer" class="outline-3">
+<h3 id="章行列式425613nbviewer"><a id="sec-3-2" name="sec-3-2"></a><span class="section-number-3">3.2</span> 3章　行列式(4/25,6/13)(<a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/linear_algebra/LA-II_det.ipynb">nbviewer</a>)</h3>
+<div class="outline-text-3" id="text-章行列式425613nbviewer">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">!項目</th>
+<th scope="col" class="left">!例題</th>
+<th scope="col" class="left">!課題</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">3.1 行列式-たすきがけ</td>
+<td class="left">例題1</td>
+<td class="left">1.1(b),(e)</td>
+</tr>
+
+<tr>
+<td class="left">行列式-サラス</td>
+<td class="left">例題2</td>
+<td class="left">2.1(b)</td>
+</tr>
+
+<tr>
+<td class="left">3.2 行列式の性質</td>
+<td class="left">　</td>
+<td class="left">　</td>
+</tr>
+
+<tr>
+<td class="left">3.3 余因数展開</td>
+<td class="left">例題5</td>
+<td class="left">　</td>
+</tr>
+
+<tr>
+<td class="left">3.4 応用-逆行列．余因子行列，随伴行列</td>
+<td class="left">例題8</td>
+<td class="left">8.1(c)</td>
+</tr>
+
+<tr>
+<td class="left">応用-クラメール</td>
+<td class="left">例題9</td>
+<td class="left">9.1(d)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-章数ベクトル空間52620nbviewer" class="outline-3">
+<h3 id="章数ベクトル空間52620nbviewer"><a id="sec-3-3" name="sec-3-3"></a><span class="section-number-3">3.3</span> 4章　数ベクトル空間(5/2,6/20)(<a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/linear_algebra/LA-III_vector_space.ipynb">nbviewer</a>)</h3>
+<div class="outline-text-3" id="text-章数ベクトル空間52620nbviewer">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">!項目</th>
+<th scope="col" class="left">!例題</th>
+<th scope="col" class="left">!課題</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">4.1 数ベクトル空間</td>
+<td class="left">　</td>
+<td class="left">1.2</td>
+</tr>
+
+<tr>
+<td class="left">数ベクトル空間-1次独立</td>
+<td class="left">例題2(2015より変更)　</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">数ベクトル空間-1次従属</td>
+<td class="left">　</td>
+<td class="left">3.1(c)</td>
+</tr>
+
+<tr>
+<td class="left">4.2 基底・次元・成分</td>
+<td class="left">例題4</td>
+<td class="left">　</td>
+</tr>
+
+<tr>
+<td class="left">4.3 部分空間</td>
+<td class="left">例題8</td>
+<td class="left">7.1(a)</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">8.1(b),9.1(a)</td>
+</tr>
+
+<tr>
+<td class="left">4.4 計量ベクトル空間</td>
+<td class="left">　</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">4.5 正規直交基底)</td>
+<td class="left">例題14（グラムシュミットの直交化法),例題15(直交補空間)</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">4.6 外積</td>
+<td class="left">　</td>
+<td class="left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-章固有値とその応用59627nbviewer" class="outline-3">
+<h3 id="章固有値とその応用59627nbviewer"><a id="sec-3-4" name="sec-3-4"></a><span class="section-number-3">3.4</span> 5章　固有値とその応用(5/9,6/27)(<a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/linear_algebra/LA-IV_eig.ipynb">nbviewer</a>)</h3>
+<div class="outline-text-3" id="text-章固有値とその応用59627nbviewer">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">!項目</th>
+<th scope="col" class="left">!例題</th>
+<th scope="col" class="right">!課題</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">5.1 固有値・固有ベクトル</td>
+<td class="left">例題3</td>
+<td class="right"><del>3.1(a)</del>,(c)</td>
+</tr>
+
+<tr>
+<td class="left">5.2 一般固有空間(ケーリーハミルトン)</td>
+<td class="left">+例題4+2013年度より省略</td>
+<td class="right">5.1</td>
+</tr>
+
+<tr>
+<td class="left">5.3 対角化</td>
+<td class="left">　</td>
+<td class="right">8.1(a),(b)</td>
+</tr>
+
+<tr>
+<td class="left">5.4 ジョルダンの標準形</td>
+<td class="left">　</td>
+<td class="right">10.1</td>
+</tr>
+
+<tr>
+<td class="left">5.5 応用</td>
+<td class="left">　</td>
+<td class="right">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-章線形写像516-74nbviewer" class="outline-3">
+<h3 id="章線形写像516-74nbviewer"><a id="sec-3-5" name="sec-3-5"></a><span class="section-number-3">3.5</span> 6章　線形写像(5/16,</h3>
+<div class="outline-text-3" id="text-章線形写像516-74nbviewer">
+<p>
+7/4)(<a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/linear_algebra/LA-V_map.ipynb">nbviewer</a>)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">!項目</th>
+<th scope="col" class="left">!例題</th>
+<th scope="col" class="left">!課題</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">6.1 線形写像</td>
+<td class="left">例題1,2</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">6.2 像と核</td>
+<td class="left">例題4</td>
+<td class="left">4.1(a)</td>
+</tr>
+
+<tr>
+<td class="left">6.3 変換行列</td>
+<td class="left">　</td>
+<td class="left">　</td>
+</tr>
+
+<tr>
+<td class="left">6.4 線形変換</td>
+<td class="left">　</td>
+<td class="left">　</td>
+</tr>
+
+<tr>
+<td class="left">6.5 不変部分空間</td>
+<td class="left">例題12</td>
+<td class="left">　</td>
+</tr>
+
+<tr>
+<td class="left">6.6 内積入り線形変換</td>
+<td class="left">+例題15+2013年度後半で学生さんの指摘で削除</td>
+<td class="left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-最終試験523711" class="outline-3">
+<h3 id="最終試験523711"><a id="sec-3-6" name="sec-3-6"></a><span class="section-number-3">3.6</span> 最終試験(5/23,7/11)</h3>
+<div class="outline-text-3" id="text-最終試験523711">
+
+<ul class="org-ul">
+<li>ノート，レポート，テキスト持ち込み可
+</li>
+<li>ボールペンで書いたら5点加点．
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-試験問題例" class="outline-2">
+<h2 id="試験問題例"><a id="sec-4" name="sec-4"></a><span class="section-number-2">4</span> 試験問題(例)</h2>
+<div class="outline-text-2" id="text-試験問題例">
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">2017年度春学期，後半-最終</th>
+<th scope="col" class="left">{{attach\<sub>anchor</sub>(ex17-4.pdf)}}</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">2017年度春学期，後半-初回</td>
+<td class="left">{{attach\<sub>anchor</sub>(ex17-3.pdf)}}</td>
+</tr>
+
+<tr>
+<td class="left">2017年度春学期，前半-最終</td>
+<td class="left">{{attach\<sub>anchor</sub>(ex17-2.pdf)}}</td>
+</tr>
+
+<tr>
+<td class="left">2017年度春学期，前半-初回</td>
+<td class="left">{{attach\<sub>anchor</sub>(ex17-1.pdf)}}</td>
+</tr>
+
+<tr>
+<td class="left">2017年度春学期，後半-最終</td>
+<td class="left">{{attach\<sub>anchor</sub>(ex16-4.pdf)}}</td>
+</tr>
+
+<tr>
+<td class="left">2016年度春学期，後半-初回</td>
+<td class="left">{{attach\<sub>anchor</sub>(ex16-3.pdf)}}, 12-3.pdfとおなじ</td>
+</tr>
+
+<tr>
+<td class="left">2016年度春学期，前半-最終</td>
+<td class="left">レポート課題なんで，ex14-2.pdfにおなじ</td>
+</tr>
+
+<tr>
+<td class="left">2016年度春学期，前半-初回</td>
+<td class="left">{{attach\<sub>anchor</sub>(ex16-1.pdf)}}</td>
+</tr>
+
+<tr>
+<td class="left">2015年度春学期，後半-最終</td>
+<td class="left">{{attach\<sub>anchor</sub>(ex15-4.pdf)}}</td>
+</tr>
+
+<tr>
+<td class="left">2015年度春学期，後半-初回</td>
+<td class="left">{{attach\<sub>anchor</sub>(ex15-3.pdf)}}</td>
+</tr>
+
+<tr>
+<td class="left">2015年度春学期，前半-最終</td>
+<td class="left">{{attach\<sub>anchor</sub>(ex15-2.pdf)}}</td>
+</tr>
+
+<tr>
+<td class="left">2015年度春学期，前半-初回</td>
+<td class="left">{{attach\<sub>anchor</sub>(ex15-1.pdf)}}</td>
+</tr>
+
+<tr>
+<td class="left">2014年度春学期，後半-最終</td>
+<td class="left">{{attach\<sub>anchor</sub>(ex14-1.pdf)}}</td>
+</tr>
+
+<tr>
+<td class="left">2014年度春学期，後半-初回</td>
+<td class="left">{{attach\<sub>anchor</sub>(ex14-3.pdf)}}</td>
+</tr>
+
+<tr>
+<td class="left">2014年度春学期，前半-最終</td>
+<td class="left">{{attach\<sub>anchor</sub>(ex14-2.pdf)}}</td>
+</tr>
+
+<tr>
+<td class="left">2014年度春学期，前半-初回</td>
+<td class="left">{{attach\<sub>anchor</sub>(ex14-1.pdf)}}</td>
+</tr>
+
+<tr>
+<td class="left">2013年度春学期，前半-最終</td>
+<td class="left">{{attach\<sub>anchor</sub>(ex13-2.pdf)}}</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li>{{attach\<sub>anchor\</sub><sub>string</sub>(答案用紙,answer\<sub>sheet</sub>.pdf)}} ## 手渡し資料
+### 白紙
+</li>
+<li>{{attach\<sub>anchor</sub>(LinearAlgebra-I.pdf)}}
+</li>
+<li>{{attach\<sub>anchor</sub>(LinearAlgebra-II.pdf)}}
+</li>
+<li>{{attach\<sub>anchor</sub>(LinearAlgebra-III.pdf)}}
+</li>
+<li>{{attach\<sub>anchor</sub>(LinearAlgebra-IV.pdf)}}
+</li>
+<li>{{attach\<sub>anchor</sub>(LinearAlgebra-V.pdf)}} ### 解答例
+</li>
+<li>{{attach\<sub>anchor</sub>(HandsOut\<sub>Answers\</sub><sub>all</sub>.pdf)}}
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Shigeto R. Nishitani</p>
+<p class="date">Created: 2018-05-09 水 14:39</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

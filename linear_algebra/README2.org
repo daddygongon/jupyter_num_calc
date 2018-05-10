@@ -1,0 +1,154 @@
+#+TITLE:  線形代数入門資料
+#+AUTHOR:  Shigeto R. Nishitani
+#+EMAIL:     (concat "nishitani@kwansei.ac.jp")
+#+LANGUAGE:  jp
+#+OPTIONS:   H:4 toc:t num:2
+
+#+SETUPFILE: /Users/bob/Github/org-html-themes/setup/theme-readtheorg-local-daddygongon.setup
+##+SETUPFILE: /Users/bob/Github/org-html-themes/setup/theme-readtheorg-local.setup
+#+STARTUP:indent
+
+** 目的
+   :PROPERTIES:
+   :CUSTOM_ID: 目的
+   :END:
+
+情報科学で使われる数学(微積分，線形代数)の基礎を，演習により習得する．2クラス同時に行い，前半と後半で担当者が交代する．
+## 評価 - 前半，後半のそれぞれの初めにおこなう試験に合格すれば合格． -
+不合格の学生は演習を受講後，最終試験．さらに欠席は減点． -
+各クラス100点満点で，両クラス60点以上で合格． -
+一回目にとおれば100点，それ以外はクラス末の試験の点数． -
+欠席は一回5点減点． -
+課題をやってきた学生には，その分量に多じて5点を満点で加点． -
+さらに，5mm方眼のレポート用紙，ボールペンで提出した学生には各1点追加． -
+レポート評価基準{{attach\_anchor(ReportGradings.pdf,MathEx)}}
+
+** テキスト
+   :PROPERTIES:
+   :CUSTOM_ID: テキスト
+   :END:
+
+#+BEGIN_EXAMPLE
+    「演習と応用　線形代数」，寺田文行，木村宣昭，　サイエンス社
+#+END_EXAMPLE
+
+** 課題&予定
+   :PROPERTIES:
+   :CUSTOM_ID: 課題予定
+   :END:
+
+*** 初回試験(4/11,5/30)
+    :PROPERTIES:
+    :CUSTOM_ID: 初回試験411530
+    :END:
+
+2018年度は4/9-7/13． ###
+2章　行基本操作(4/18,6/6)([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/linear_algebra/LA-I_lu.ipynb][nbviewer]])
+
+| !項目               | !例題   | !課題               |
+|---------------------+---------+---------------------|
+| 2.1 行基本操作      | 　      | 　                  |
+| 2.2 連立1次方程式   | 例題2   | 2.1(b),(d)          |
+|                     | 例題3   | 3.1(a)              |
+| 2.3 基本解          | 例題5   | 5.1(a),(c)          |
+|                     |         | 5.2 例題3, 3.1(a)   |
+
+*** 3章　行列式(4/25,6/13)([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/linear_algebra/LA-II_det.ipynb][nbviewer]])
+    :PROPERTIES:
+    :CUSTOM_ID: 章行列式425613nbviewer
+    :END:
+
+| !項目                                   | !例題   | !課題        |
+|-----------------------------------------+---------+--------------|
+| 3.1 行列式-たすきがけ                   | 例題1   | 1.1(b),(e)   |
+| 行列式-サラス                           | 例題2   | 2.1(b)       |
+| 3.2 行列式の性質                        | 　      | 　           |
+| 3.3 余因数展開                          | 例題5   | 　           |
+| 3.4 応用-逆行列．余因子行列，随伴行列   | 例題8   | 8.1(c)       |
+| 応用-クラメール                         | 例題9   | 9.1(d)       |
+
+*** 4章　数ベクトル空間(5/2,6/20)([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/linear_algebra/LA-III_vector_space.ipynb][nbviewer]])
+    :PROPERTIES:
+    :CUSTOM_ID: 章数ベクトル空間52620nbviewer
+    :END:
+
+| !項目                    | !例題                                                    | !課題           |
+|--------------------------+----------------------------------------------------------+-----------------|
+| 4.1 数ベクトル空間       | 　                                                       | 1.2             |
+| 数ベクトル空間-1次独立   | 例題2(2015より変更)　                                    |                 |
+| 数ベクトル空間-1次従属   | 　                                                       | 3.1(c)          |
+| 4.2 基底・次元・成分     | 例題4                                                    | 　              |
+| 4.3 部分空間             | 例題8                                                    | 7.1(a)          |
+|                          |                                                          | 8.1(b),9.1(a)   |
+| 4.4 計量ベクトル空間     | 　                                                       |                 |
+| 4.5 正規直交基底)        | 例題14（グラムシュミットの直交化法),例題15(直交補空間)   |                 |
+| 4.6 外積                 | 　                                                       |                 |
+
+*** 5章　固有値とその応用(5/9,6/27)([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/linear_algebra/LA-IV_eig.ipynb][nbviewer]])
+    :PROPERTIES:
+    :CUSTOM_ID: 章固有値とその応用59627nbviewer
+    :END:
+
+| !項目                                  | !例題                     | !課題          |
+|----------------------------------------+---------------------------+----------------|
+| 5.1 固有値・固有ベクトル               | 例題3                     | +3.1(a)+,(c)   |
+| 5.2 一般固有空間(ケーリーハミルトン)   | +例題4+2013年度より省略   | 5.1            |
+| 5.3 対角化                             | 　                        | 8.1(a),(b)     |
+| 5.4 ジョルダンの標準形                 | 　                        | 10.1           |
+| 5.5 応用                               | 　                        |                |
+
+*** 6章　線形写像(5/16,
+7/4)([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/linear_algebra/LA-V_map.ipynb][nbviewer]])
+    :PROPERTIES:
+    :CUSTOM_ID: 章線形写像516-74nbviewer
+    :END:
+
+| !項目                  | !例題                                        | !課題    |
+|------------------------+----------------------------------------------+----------|
+| 6.1 線形写像           | 例題1,2                                      |          |
+| 6.2 像と核             | 例題4                                        | 4.1(a)   |
+| 6.3 変換行列           | 　                                           | 　       |
+| 6.4 線形変換           | 　                                           | 　       |
+| 6.5 不変部分空間       | 例題12                                       | 　       |
+| 6.6 内積入り線形変換   | +例題15+2013年度後半で学生さんの指摘で削除   |          |
+
+*** 最終試験(5/23,7/11)
+    :PROPERTIES:
+    :CUSTOM_ID: 最終試験523711
+    :END:
+
+-  ノート，レポート，テキスト持ち込み可
+-  ボールペンで書いたら5点加点．
+
+** 試験問題(例)
+   :PROPERTIES:
+   :CUSTOM_ID: 試験問題例
+   :END:
+
+| 2017年度春学期，後半-最終   | {{attach\_anchor(ex17-4.pdf)}}                     |
+|-----------------------------+----------------------------------------------------|
+| 2017年度春学期，後半-初回   | {{attach\_anchor(ex17-3.pdf)}}                     |
+| 2017年度春学期，前半-最終   | {{attach\_anchor(ex17-2.pdf)}}                     |
+| 2017年度春学期，前半-初回   | {{attach\_anchor(ex17-1.pdf)}}                     |
+| 2017年度春学期，後半-最終   | {{attach\_anchor(ex16-4.pdf)}}                     |
+| 2016年度春学期，後半-初回   | {{attach\_anchor(ex16-3.pdf)}}, 12-3.pdfとおなじ   |
+| 2016年度春学期，前半-最終   | レポート課題なんで，ex14-2.pdfにおなじ             |
+| 2016年度春学期，前半-初回   | {{attach\_anchor(ex16-1.pdf)}}                     |
+| 2015年度春学期，後半-最終   | {{attach\_anchor(ex15-4.pdf)}}                     |
+| 2015年度春学期，後半-初回   | {{attach\_anchor(ex15-3.pdf)}}                     |
+| 2015年度春学期，前半-最終   | {{attach\_anchor(ex15-2.pdf)}}                     |
+| 2015年度春学期，前半-初回   | {{attach\_anchor(ex15-1.pdf)}}                     |
+| 2014年度春学期，後半-最終   | {{attach\_anchor(ex14-1.pdf)}}                     |
+| 2014年度春学期，後半-初回   | {{attach\_anchor(ex14-3.pdf)}}                     |
+| 2014年度春学期，前半-最終   | {{attach\_anchor(ex14-2.pdf)}}                     |
+| 2014年度春学期，前半-初回   | {{attach\_anchor(ex14-1.pdf)}}                     |
+| 2013年度春学期，前半-最終   | {{attach\_anchor(ex13-2.pdf)}}                     |
+
+-  {{attach\_anchor\_string(答案用紙,answer\_sheet.pdf)}} ## 手渡し資料
+   ### 白紙
+-  {{attach\_anchor(LinearAlgebra-I.pdf)}}
+-  {{attach\_anchor(LinearAlgebra-II.pdf)}}
+-  {{attach\_anchor(LinearAlgebra-III.pdf)}}
+-  {{attach\_anchor(LinearAlgebra-IV.pdf)}}
+-  {{attach\_anchor(LinearAlgebra-V.pdf)}} ### 解答例
+-  {{attach\_anchor(HandsOut\_Answers\_all.pdf)}}
