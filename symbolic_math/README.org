@@ -48,6 +48,9 @@
 - 前に同じマシンでやったのは? :: c:/users/自分のID
 - 人シスとか，4階でやったのは？ :: 残念ながら，あっちのはlogoutしたら消えます．
 - 課題のコメントは? :: cellの属性をmarkdownに変えて入力，latex記法が使えます．
+- jupyter notebookが反応しない :: kernel, interruptかrestartを掛ける
+- nbviewerからipynb :: down loadできます
+- nbviewerの表示が古い :: 原因はわかりません．しばらくしてから再度アクセスしてみてください．
 * jupyter notebookのinit時の問題点
 ** 起動時のhome directory
 今はz:/です．先週まではlocal:/[USER ID]でした．
