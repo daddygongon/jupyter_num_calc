@@ -1,6 +1,5 @@
-#+TITLE:  jupyter notebook 授業でのQ & A
+#+TITLE:  
 #+AUTHOR:  Shigeto R. Nishitani
-#+EMAIL:     (concat "nishitani@kwansei.ac.jp")
 #+LANGUAGE:  jp
 #+OPTIONS:   H:4 toc:t num:2
 
@@ -9,7 +8,7 @@
 #+STARTUP: indent nolineimages fold
 #+OPTIONS: ^:{}
 
-* 数式処理内容
+* 数式処理テキスト
 ** 基礎
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/first_leaf.ipynb][first_leaf.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/first_leaf.ipynb][nbviewer]])
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/functions.ipynb][functions.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/functions.ipynb][nbviewer]])
@@ -37,11 +36,17 @@
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/cg.ipynb][cg.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/cg.ipynb][nbviewer]])
 - [[https://github.com/daddygongon/jupyter_num_calc/tree/master/symbolic_math/linear_solve.ipynb][linear_solve.ipynb]]([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/linear_solve.ipynb][nbviewer]])
 
-* 授業でのQ and A
-- 授業プリントのjupyter notebookでnot foundがでる :: browserを再起動
+
+* 日程と課題
+** !! 5/11:線形代数LA
+- グループ課題:[[https://github.com/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_4.pdf][group_works_4.pdf]]
+- 宿題（次週までの宿題，プリントアウトして一部提出）([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/equation_manipulation.ipynb][equation_manipulation.ipynb]])
+
+* jupyter notebook 授業でのQ & A
+- 授業プリントをnbviewerで開けるとnot foundがでる :: browserを再起動
 - 家でやってきたのをどうすれば見れる :: z:/に入れる
-- 前同じマシンでやったのは? :: c:/users/自分のID
-- 人しすとか，4階でやったのは？ :: たぶん同じ設定なんで，そのマシンのlocalにある．うそ，あっちのはlogoutしたら消えます．
+- 前に同じマシンでやったのは? :: c:/users/自分のID
+- 人シスとか，4階でやったのは？ :: 残念ながら，あっちのはlogoutしたら消えます．
 - 課題のコメントは? :: cellの属性をmarkdownに変えて入力，latex記法が使えます．
 * jupyter notebookのinit時の問題点
 ** 起動時のhome directory
