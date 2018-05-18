@@ -43,11 +43,6 @@
 - [[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/linear_solve.ipynb][linear_solve.ipynb]]
 
 
-* 日程と課題
-** !! 5/11:線形代数LA
-- グループ課題:[[https://github.com/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_4.pdf][group_works_4.pdf]]
-- 宿題（次週までの宿題，プリントアウトして一部提出）([[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/equation_manipulation.ipynb][equation_manipulation.ipynb]])
-
 * jupyter notebook 授業でのQ & A
 - 授業プリントをnbviewerで開けるとnot foundがでる :: browserを再起動
 - 家でやってきたのをどうすれば見れる :: z:/に入れる
