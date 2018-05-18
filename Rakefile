@@ -48,6 +48,23 @@ task :mk_link do
   exit
 end
 
+
+desc 'conv_link FILE.org > FILE2.org'
+task :conv_link do
+  lines = File.readlines(ARGV[1])
+# [[_d1][file]]([[address][_d2]])
+lines.each do |line|
+  if m=line.match(/\[\[(.*?)\]\[(.*?)\]\]\(\[\[(.*?)\]\[(.*?)\]\]\)/)
+    _d1, file, address, _d2 = m[1..-1]
+    puts  "- [[#{address}][#{file}]]"
+  else
+    puts line
+  end
+end
+
+  dir = ARGV[1]
+end
+
 desc 'ls Dir'
 task :ls do
   dir = ARGV[1]
