@@ -52,6 +52,9 @@
 - jupyter notebookが反応しない :: kernel, interruptかrestartを掛ける
 - nbviewerからipynb :: down loadできます
 - nbviewerの表示が古い :: 原因はわかりません．しばらくしてから再度アクセスしてみてください．
+- init_session()でMultipleInstanceErrorがでる :: Googleと
+  https://github.com/sympy/sympy/issues/13319
+  とのことだが... 三月ごろ修正パッチが貼られたversionがrelease?, init_print()で代用，あとkernel restart
 * jupyter notebookのinit時の問題点
 ** 起動時のhome directory
 今はz:/です．先週まではlocal:/[USER ID]でした．
