@@ -1,4 +1,4 @@
-#+TITLE:  
+#+TITLE:  数式処理演習（関西学院大学理工学部，情報科学科）
 #+AUTHOR:  Shigeto R. Nishitani
 #+LANGUAGE:  jp
 #+OPTIONS:   H:4 toc:t num:2
