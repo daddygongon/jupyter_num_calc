@@ -1,3 +1,13 @@
+#+TITLE:  Doing Math with Python
+#+AUTHOR:  Shigeto R. Nishitani
+#+LANGUAGE:  jp
+#+OPTIONS:   H:4 toc:t num:2
+
+# #+SETUPFILE: /Users/bob/Github/org-html-themes/setup/theme-readtheorg-local-daddygongon.setup
+#+SETUPFILE: /Users/bob/Github/org-html-themes/setup/theme-readtheorg.setup
+#+STARTUP: indent nolineimages fold
+#+OPTIONS: ^:{}
+
 * pythonで数学
 
 - mapleで作っていたテキストをpythonに書き換えてみた．
