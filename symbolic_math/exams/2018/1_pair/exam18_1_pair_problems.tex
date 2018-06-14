@@ -1,0 +1,134 @@
+\documentclass[12pt,a4j]{jarticle}
+\usepackage[dvips]{graphicx,color}
+\usepackage{amsmath,amsthm,amssymb}
+%\topmargin -15mm\oddsidemargin -4mm\evensidemargin\oddsidemargin
+%\textwidth 170mm\textheight 257mm\columnsep 7mm
+\setlength{\fboxrule}{0.2ex}
+\setlength{\fboxsep}{0.6ex}
+
+\pagestyle{empty}
+\begin{document}
+\small{v.18.1}
+\hfill\small{2018/6/8 実施}
+\begin{center}
+{\gt\large{情報科学科　数式処理実習ペア試験問題}}
+\end{center}
+\vspace{5mm}
+
+全部で4問．資料を参考にして以下の問題をpythonで解き，グループごとに1部出力して提出せよ．全員の名前を忘れんように．60点以上が合格．何番をやっているかが分かるようにせよ.
+
+\begin{enumerate}
+
+\item 
+\begin{enumerate}
+\item 微分(15点) 
+
+次の関数を微分せよ．
+\begin{eqnarray*}
+\sin^{-1}{\left (\frac{x^{2} - 1}{x^{2} + 1} \right )}
+\end{eqnarray*}
+ただし，\verb|x = symbols('x',positive = True)|で
+変数の値を制約しておくと，式がとても簡単になる．
+
+\item 2重積分(15点)
+次の2重積分を資料を参考にして求めよ．
+\begin{equation*}
+\int \int_D \sqrt{x^2+4y^2}dxdy, \, \, 
+D:0\leqq x \leqq y \leqq 1
+\end{equation*}
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item 写像のIm, Ker(15点)
+
+次の変換の行列$A$で表される写像$f$のIm, Kerのそれぞれの次元と1組の基底を求めなさい．
+\begin{equation*}
+A = \left(\begin{matrix}1 & 1 & 3 & 3\\0 & 1 & 1 & 2\\1 & 0 & 2 & 1\end{matrix}\right)
+\end{equation*}
+\item  行列の対角化(15点)
+
+次の行列$A$を対角化する変換の行列$P$を求めて，対角化しなさい．
+\begin{equation*}
+A=\left(\begin{matrix}0.5 & 0 & 0.5\\0 & 0.5 & 0.5\\0.5 & 0.5 & 0\end{matrix}\right)
+\end{equation*}
+
+\end{enumerate}
+
+\pagebreak
+\item
+\begin{enumerate}
+\item (10点)
+Oを原点とする座標平面上の放物線$y=x^2+1$を$C$とし，
+点$(a,2a)$をPとする．
+
+点Pを通り，放物線$C$に接する直線の方程式を求めよう．
+
+$C$上の点$(t, t^2+1)$における接線の方程式は
+\begin{equation*}
+y=\fbox{ ア }\,\, tx -t^2 +\fbox{ イ }
+\end{equation*}
+である．
+この直線がPを通るとすると，$t$は方程式
+\begin{equation*}
+t^2 - \fbox{ ウ }\,\,at + \fbox{ エ }\,a -\fbox{ オ }\, = 0
+\end{equation*}
+を満たすから，
+$\displaystyle 
+t = {\fbox{ カ }}\,\,a - \fbox{ キ },\,\,
+{\fbox{ ク }}$
+である．よって，
+$\displaystyle a \neq {\fbox{ ケ }}$
+のとき，Pを通る$C$の接線は2本あり，それらの方程式は，
+\begin{equation}
+y = \left( {\fbox{ コ }}\,\,a -{\fbox{ サ }}\,\right)\,x -
+{\fbox{ シ }}\,\,a^2 + {\fbox{ ス }}\, a
+\end{equation}
+と
+\begin{equation*}
+y = \fbox{ セ }\,\,x
+\end{equation*}
+ある\footnote{2017年度大学入試センター試験数学II・B本試験第2問(a)}． 
+
+\item (20点)
+問3-(a)において，放物線$C$を$\displaystyle y=x^2 +2 $, 点Pを$(a, \sqrt{8}a)$と読み替えて，$t$の値を求めよ．
+
+\end{enumerate}
+
+\item 問3-(a)の続き\footnote{2017年度大学入試センター試験数学II・B本試験第2問(b,c)}(10点)
+
+(a)の方程式(1)で表される直線を$l$とする．$l$と$y$軸との
+交点をR$(0,r)$とすると，
+$\displaystyle r = -{\fbox{ シ }}\,\,a^2 + {\fbox{ ス }}\, a$
+である．
+$\displaystyle r > 0$
+となるのは，
+$\displaystyle {\fbox{ ソ }}\, < a < {\fbox{ タ }} $
+のときであり，このとき，三角形OPRの面積$S$は
+\begin{equation*}
+S = {\fbox{ チ }} \left(a^{\fbox{ツ}}- a^{\fbox{テ}} \right)
+\end{equation*}
+となる．
+
+$\displaystyle {\fbox{ ソ }}\, < a < {\fbox{ タ }} $
+のとき，$S$の増減を調べると，$S$は
+$\displaystyle a = \frac{{\fbox{ ト }}}{{\fbox{ ナ }}}$
+で最大値
+$\displaystyle \frac{{\fbox{ ニ }}}{{\fbox{ ヌネ }}}$
+をとることがわかる．
+
+$\displaystyle {\fbox{ ソ }}\, < a < {\fbox{ タ }} $
+のとき，放物線$C$と直線$l$および2直線
+$x=0, x=a$で囲まれた図形の面積を$T$とすると
+\begin{equation*}
+T = \frac{{\fbox{ ノ }}}{{\fbox{ ハ }}}\,\, a^3
+- {\fbox{ ヒ }}\,\,a^2
++ {\fbox{ フ }}
+\end{equation*}
+である．
+$\displaystyle \frac{2}{3} \leqq a < 1$
+の範囲において$T$は単調増加する．
+
+
+\end{enumerate}
+\end{document}
