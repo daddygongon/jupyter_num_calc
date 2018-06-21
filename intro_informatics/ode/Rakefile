@@ -1,0 +1,8 @@
+task :default do
+  p 'hello'
+  ['https://ist.ksc.kwansei.ac.jp/~nishitani/?LectureNotes',
+   'newton_simulation.pages.pdf','ode.key','SolarSystem.mw'].each do |target|
+    system "open #{target}"
+  end
+  system 'new_terminal|jupyter notebook'
+end
