@@ -1,8 +1,23 @@
 task :default do
+  system "rake -T"
+end
+
+desc "open lecture files"
+task :open do
   p 'hello'
   ['https://ist.ksc.kwansei.ac.jp/~nishitani/?LectureNotes',
    'newton_simulation.pages.pdf','ode.key','SolarSystem.mw'].each do |target|
     system "open #{target}"
   end
   system 'new_terminal|jupyter notebook'
+end
+
+desc "grading"
+task :grading do
+  p "revise files "
+  p "puts sorted ids in luna_sheet.tmp"
+  p com ="ruby grading.rb"
+  system com
+  p "copy tmp.csv after open it"
+
 end
