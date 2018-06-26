@@ -17,6 +17,7 @@ task :open do
   system 'new_terminal|jupyter notebook'
 end
 
+
 desc "grading"
 task :grading do
   p "revise files "
@@ -25,3 +26,4 @@ task :grading do
   system com
   p "copy tmp.csv after open it"
 end
+
