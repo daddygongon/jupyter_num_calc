@@ -20,7 +20,7 @@ end
 
 desc "grading"
 task :grading do
-  p "revise files "
+  p "revise files in grading.rb"
   p "puts sorted ids in luna_sheet.tmp"
   p com ="ruby grading.rb"
   system com
