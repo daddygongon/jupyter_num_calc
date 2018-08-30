@@ -59,6 +59,9 @@
 IV,V号館の演習室のPCでは4月いっぱいはlocal diskになっているので，
 logoutすると消えちゃいます．USBに写しておいてください．来月から同じになります．
 
+** 起動
+書類のダブルクリックで起動できない．
+
 ** printout
 IEだけでなく，Chromeでも後ろが切れるというバグがありました．
 起動するbrowserをFireFoxにしたら大丈夫です．
@@ -68,16 +71,18 @@ IEだけでなく，Chromeでも後ろが切れるというバグがありまし
 
 集約は，出てきた画面の左上の印刷ボタンを選んで，「プロパティ」から
 ワンクリック設定アイコンで集約を選択して印刷．
+- 出力が半分切れるような表示になる．
 
 ** init_session()でMultipleInstanceErrorがでる :: Googleだと
   https://github.com/sympy/sympy/issues/13319
   とのことだが... 三月ごろ修正パッチが貼られたversionがrelease?, init_print()で代用，あとkernel restart
 
 ** init_session()
-init_session() => init_printing()
+- init_session() => init_printing()
 すると綺麗に出力してくれる。
 
-出力が混乱してきたときは、Kernel restartで初期化するべし。
+- 出力が混乱してきたときは、Kernel restartで初期化するべし。
+
 
 ** 解けない問題リスト
 -  16_pre 1(a) : (x**3+1)**(1/3) sqrt->cbrt (5523),
