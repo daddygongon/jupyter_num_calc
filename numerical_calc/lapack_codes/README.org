@@ -1,0 +1,177 @@
+#+OPTIONS: ^:{}
+#+STARTUP: indent nolineimages
+#+TITLE: 固有値ベクトルJacobi, Lapack(dgesv)関連コード
+#+AUTHOR: cc by Shigeto R. Nishitani, Kwansei Gakuin Univ., 2018 
+#+EMAIL:     (concat "nishitani@kwansei.ac.jp")
+#+LANGUAGE:  jp
+#+OPTIONS:   H:4 toc:t num:2
+
+#+SETUPFILE: /Users/bob/org-html-themes/setup/theme-readtheorg.setup
+
+* Maple 
+
+$A$を対称正方行列，$x$をベクトルとしたときに，
+$$
+Ax = \lambda x
+$$
+の解，$\lambda$を固有値，$x$を固有ベクトルという．$x$がゼロベクトルではない意味のある解は特性方程式det$(A-\lambda E)=0$が成り立つときにのみ得られる．
+
+まず特性方程式を解いてみる．
+
+#+begin_src maple
+> restart;
+> with(LinearAlgebra):with(plots):with(plottools):
+> A:=Matrix(1..2,1..2,[[3,2/3],[2/3,2]]);
+#+end_src
+
+$$
+A\, := \, \left[ \begin {array}{cc} 3&2/3\\2/3&2\end {array} \right]
+$$
+
+#+begin_src maple
+> EE:=Matrix([[1,0],[0,1]]):
+>  A-lambda.EE;
+> eq2:=Determinant(A-lambda.EE);
+#+end_src
+
+$$
+ {\it eq2}\, := \,{\frac {50}{9}}-5\,\lambda+{\lambda}^{2}
+$$
+
+#+begin_src
+> solve(eq2=0,lambda);
+#+end_src
+$$
+10/3,\,5/3
+$$
+
+#+begin_src maple
+> lambda,V:=Eigenvectors(A);
+#+end_src
+
+$$
+\lambda,\,V\, := \, \left[ \begin {array}{c} 10/3\\5/3\end {array} \right] ,\, \left[ \begin {array}{cc} 2&-1/2\\1&1\end {array} \right] 
+$$
+
+固有値を求めるコマンドEigenvectorsを適用すると，固有値と固有ベクトルが求まる．ここで，固有ベクトルは行列の列(Column)ベクトルに入っている．
+#+begin_src maple
+> lambda,V:=Eigenvectors(A);
+#+end_src
+$$
+\lambda,\,V\, := \, \left[ \begin {array}{c} 10/3\\5/3\end {array} \right] ,\, \left[ \begin {array}{cc} 2&-1/2\\1&1\end {array} \right] 
+$$
+得られた固有ベクトルは規格化されているわけではない．
+
+行列の列を取り出すコマンドColumnを用いて，方程式(\ref{Eq:Eigen})が成り立っていることを確認する．
+#+begin_src
+> lambda[1].Column(V,1)=A.Column(V,1);
+#+end_src
+$$
+\left[ \begin {array}{c} 20/3\\
+10/3\end {array} \right] = 
+\left[ \begin {array}{c} 20/3\\
+10/3\end {array} \right] 
+$$
+一般的な規格化は，コマンドNormalize(vector,Euclidean)によっておこなう．
+#+begin_src maple
+> Normalize(Column(v,1),Euclidean);
+#+end_src
+
+* rubyの注
+ちなみにrubyでは[SciRuby](https://github.com/SciRuby/nmatrix/wiki/Getting-started)
+に従ってnmatrixをinstallして，
+#+begin_src ruby
+require 'nmatrix'
+require 'time'
+
+#n = NMatrix.new(3, [4,9,2,3,5,7,8,1,6], dtype: :float64)
+[1000,2000,4000].each do |size|
+  n = size
+  aa = NMatrix.random([n,n+1])
+  start = Time.now
+  lu = aa.factorize_lu
+  p Time.now - start
+end
+#+end_src
+
+素直に走らせると，
+
+|size|nmatrix[sec]|nmaxtrix/lapacke|
+|:----|-----:|-----:|
+|1000 | 0.2118|0.028607|
+|2000 | 1.9287|0.191315|
+|4000 |16.9059|1.313174|
+
+のnmatrixです．2017/10/28現在nmatrix-0.2.4です．
+やっぱ，Rubyは数値計算苦手なんかと諦めかけたんですが，
+
+#+begin_example
+gem install nmatrix nmatrix-lapacke
+#+end_example
+
+して
+#+begin_src ruby
+Require 'nmatrix/lapacke'
+#+end_src
+
+すると前表のnmatrix/lapacke欄です．これだと，C版に遜色ないですね．
+nmatrix-lapacke-0.2.3がinstallされています．
+このあたりの解説が[sciruby](http://sciruby.com/nmatrix/)以外見当たらなくて．．．
+
+
+* Jacobi回転による固有値を求めるCコード
+- [[file:c_versions/Jacobi2.c]]
+
+*  西谷謹製lazy逆行列計算プログラム 
+- [[file:c_versions/bob.c]]
+*  LAPACK謹製smart逆行列計算プログラム 
+- [[file:c_versions/lapack.c]]
+
+** リスト: ヤコビ法の計算結果．
+#+begin_example maple
+[BobsNewPBG4:~/NumRecipe/chap8] bob% cat input.txt
+4
+5 4 1 1
+4 5 1 1
+1 1 4 2
+1 1 2 4
+
+BobsNewPBG4:~/NumRecipe/chap8] bob% Jacobi2<input.txt
+  5.00  4.00  1.00  1.00
+  4.00  5.00  1.00  1.00
+  1.00  1.00  4.00  2.00
+  1.00  1.00  2.00  4.00
+
+p,q=  1,  2
+  9.00 -0.00  1.41  1.41
+ -0.00  1.00 -0.00 -0.00
+  1.41 -0.00  4.00  2.00
+  1.41 -0.00  2.00  4.00
+
+p,q=  1,  3
+  9.37 -0.00 -0.00  1.88
+ -0.00  1.00  0.00 -0.00
+ -0.00  0.00  3.63  1.57
+  1.88 -0.00  1.57  4.00
+
+p,q=  1,  4
+  9.96 -0.00  0.47 -0.00
+ -0.00  1.00  0.00  0.00
+  0.47  0.00  3.63  1.50
+  0.00  0.00  1.50  3.41
+
+...<中略>...
+
+Eigen values:
+ 10.00  1.00  5.00  2.00
+Eigen vectors:
+  0.63 -0.71 -0.32  0.00
+  0.63  0.71 -0.32  0.00
+  0.32  0.00  0.63 -0.71
+  0.32  0.00  0.63  0.71
+#+end_example
+
+
+
+
+
