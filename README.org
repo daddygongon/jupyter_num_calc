@@ -1,22 +1,35 @@
-#+TITLE:  Doing Math with Python
-#+AUTHOR:  Shigeto R. Nishitani
-#+LANGUAGE:  jp
-#+OPTIONS:   H:4 toc:t num:2
-
-# #+SETUPFILE: /Users/bob/Github/org-html-themes/setup/theme-readtheorg-local-daddygongon.setup
-#+SETUPFILE: /Users/bob/Github/org-html-themes/setup/theme-readtheorg.setup
-#+STARTUP: indent nolineimages fold
-#+OPTIONS: ^:{}
-
 * pythonで数学
+  :PROPERTIES:
+  :CUSTOM_ID: pythonで数学
+  :END:
 
-- mapleで作っていたテキストをpythonに書き換えてみた．
-- rubyのほうがやりたいけど．．．
-- emacs keybindが使えるぜ．
-- hikiのformatからの変換コードと手順, ~/ipynb_utils/md_to_ipynb.ipynbにあるが．．．
+-  mapleで作っていたテキストをpythonに書き換えてみた．
+-  rubyのほうがやりたいけど．．．
+-  emacs keybindが使えるぜ．
+-  hikiのformatからの変換コードと手順,
+   ~/ipynb\_utils/md\_to\_ipynb.ipynbにあるが．．．
 
 * 目次と目標
-** [[file:./symbolic_math/README.org][数式処理]]
-** [[file:./linear_algebra/README.org][線形代数]]
-** [[file:./program_coding/README.ipynb][coding]]
-** [[file:./numerical_calc/README.ipynb][数値計算]]
+  :PROPERTIES:
+  :CUSTOM_ID: 目次と目標
+  :END:
+
+** [[./symbolic_math/README.org][数式処理]]
+   :PROPERTIES:
+   :CUSTOM_ID: 数式処理
+   :END:
+
+** [[./linear_algebra/README.org][線形代数]]
+   :PROPERTIES:
+   :CUSTOM_ID: 線形代数
+   :END:
+
+** [[./program_coding/README.ipynb][coding]]
+   :PROPERTIES:
+   :CUSTOM_ID: coding
+   :END:
+
+** [[./numerical_calc/README.ipynb][数値計算]]
+   :PROPERTIES:
+   :CUSTOM_ID: 数値計算
+   :END:
