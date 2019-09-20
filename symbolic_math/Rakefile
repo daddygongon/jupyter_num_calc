@@ -1,0 +1,21 @@
+require 'open3'
+require 'colorize'
+task :default do
+  system 'rake -T'
+end
+
+desc 'rsync'
+task :rsync do
+  src = '/Users/bob/python/doing_math_with_python/symbolic_math'
+  attach = '/Users/bob/Sites/new_ist_data/ist_data/cache/attach/DoingMathWithPython/'
+  ["rsync -v -ptgo --stats *.ipynb #{attach}",
+   "ls -lat *.ipynb",
+   "ls -lat #{File.join(attach, '*.ipynb')}"].each_with_index do |command, i|
+    out, _err, _status = Open3.capture3(command)
+    case i
+    when 0; print out.green
+    when 1; print out.red
+    when 2; print out.blue
+    end
+  end
+end

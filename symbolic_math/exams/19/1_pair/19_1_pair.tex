@@ -1,0 +1,136 @@
+\documentclass[12pt,a4j]{jarticle}
+\usepackage[dvips]{graphicx}
+\usepackage{amsmath,amsthm,amssymb}
+%\topmargin -15mm\oddsidemargin -4mm\evensidemargin\oddsidemargin
+%\textwidth 170mm\textheight 257mm\columnsep 7mm
+\setlength{\fboxrule}{0.2ex}
+\setlength{\fboxsep}{0.6ex}
+
+%%%%% 問題番号 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\labelenumi{[~\theenumi~]}  % 大問[1][2],... と付番したい場合
+%\def\labelenumi{}              % 大問は1個で付番なしの場合
+\def\labelenumii{(\arabic{enumii})}
+%\def\labelenumi{(\arabic{enumi})}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{empty}
+\begin{document}
+\small{v.19.1}　
+\hfill\small{2019/06/14 実施}
+\begin{center}
+{\gt\large{情報科学科　数式処理演習 ペア　試験問題}}
+\end{center}
+\vspace{5mm}
+
+以下の問題をpythonを用いてペアで解き，出力して提出せよ．60 点以下でグループ解散．
+
+\begin{enumerate}
+
+\item 
+\begin{enumerate}
+\item
+  (偏微分，saddle point)
+  関数$f(x,y)=x^2 - y^2$の2次偏導関数$f_{xx}, f_{xy}, f_{yx}, f_{yy}$を求めよ．
+  また，$(x,y)=(0,0)$での判別式
+  \begin{equation*}
+    D = {f_{xy}(0,0)}^2-f_{xx}(0,0)f_{yy}(0,0) > 0
+  \end{equation*}
+  を確かめよ．さらに，関数$f(x,y)$をplot3dして鞍点(saddle point)の意味を確認せよ．
+  (15点)
+  
+\item 
+  (フーリエ積分)
+  関数$f(x)= \sin(x) \sin(2x)$の不定積分を求めよ．$f(x)$を$x=-\pi..\pi$でプロットし，この区間での積分値を求めよ．結果についてコメントせよ．
+  (15点)
+\end{enumerate}
+
+\item 
+\begin{enumerate}
+\item 
+(ヌルスペース)
+行列$A = \left(\begin{array}{cccc}
+4 & -1 & -1 & 1\\
+1 & 2 & -1 & -2\\
+\end{array}
+\right)
+$を表現行列とする$R^4\rightarrow R^2$の線形写像$f$のKer($f$)の1組の基底を求めよ．(15点)
+
+\item
+(対角化)
+行列$A = \left(\begin{array}{cccc}
+4 & -1 & -1 \\
+1 & 2 & -1 \\
+3 & -1 & 0
+\end{array}
+\right)
+$の固有値と固有ベクトルを求めよ．
+また，対角化行列$P$を求めて，
+$P^{-1}AP$と$P^{t}AP$を求め，違いを確かめよ．(15点)
+\end{enumerate}
+
+
+\item (2015年度大学入試センター試験 本試験 数学II・B第2問)
+
+以下のセンター試験問題をpythonでcode化せよ．ただし，関数$f(x)$は
+\begin{verbatim}
+f =Rational(1,2)*x**2
+f.subs({x:a})
+\end{verbatim}
+などとするべし．
+
+  \begin{enumerate}
+  \item
+    関数$f(x)=\frac{1}{2}x^2$の$x=a$における微分係数$f'(a)$を
+    求めよう．$h$が0でないとき，$x$が$a$から$a+h$まで変化するときの$f(x)$の
+    平均変化率は$\fbox{ ア }+\frac{h}{\fbox{ イ }}$である．
+    したがって，求める微分係数は
+    \begin{equation*}
+      f'(a) = \lim_{h \rightarrow \fbox{ ウ }}
+      \left(\fbox{ ア }+\frac{h}{\fbox{ イ }}\right) = \fbox{ エ }
+    \end{equation*}
+    である．
+  \item
+    放物線$y=\frac{1}{2}x^2$を$C$とし，$C$上に点P$\left(a, \frac{1}{2}a^2\right)$をとる．
+    ただし，$a > 0$とする．点Pにおける$C$の接線$l$の方程式は
+    \begin{equation*}
+      y = \fbox{ オ }x - \frac{1}{\fbox{ カ }}a^2
+    \end{equation*}
+    である．
+    直線$l$と$x$軸との交点$Q$の座標は$\left(\frac{\fbox{ キ }}{\fbox{ ク }}, 0\right)$である．
+    点Qを通り$l$に垂直な直線を$m$とすると，$m$の方程式は
+    \begin{equation*}
+      y = \frac{\fbox{ ケコ }}{\fbox{ サ }}x + \frac{\fbox{ シ }}{\fbox{ ス }}
+    \end{equation*}
+    である．
+  \item
+    直線$m$と$y$軸との交点をAとする．三角形APQの面積を$S$とおくと
+    \begin{equation*}
+      S = \frac{a\left(a^2+\fbox{ セ }\right)}{\fbox{ ソ }}
+    \end{equation*}
+    となる．また，$y$軸と線分APおよび曲線$C$によって囲まれた図形の面積を$T$とおくと
+    \begin{equation*}
+      T = \frac{a\left(a^2+\fbox{ タ }\right)}{\fbox{ チツ }}
+    \end{equation*}
+    となる．
+
+    $a>0$の範囲における$S-T$の値について調べよう．
+    \begin{equation*}
+      S -T = \frac{a\left(a^2-\fbox{ テ }\right)}{\fbox{ トナ }}
+    \end{equation*}
+    である．
+    $a>0$であるから，$S-T>0$となるような$a$ のとり得る値の範囲は
+    $ a > \sqrt{\fbox{ ニ }}$である．
+    また，$a>0$のときの$S-T$の増減を調べると，
+    $S-T$は$a=\fbox{ ヌ }$で最小値$\frac{\fbox{ ネノ }}{\fbox{ ハヒ }}$をとることがわかる．
+
+    (10点)
+  \end{enumerate}
+
+\item 前問の関数を$f(x)=0.49x^2$および放物線$C$の方程式を$y=0.49x^2$として問題を解け．
+  数値解となるので，答えはかっこによらず小数点となる．最後の最小値は-0.08676940ぐらい．(30点)
+
+
+\end{enumerate}
+
+
+\end{document}
