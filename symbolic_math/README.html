@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="jp" xml:lang="jp">
 <head>
-<!-- 2019-10-04 金 13:52 -->
+<!-- 2020-10-03 土 12:11 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>数式処理演習（関西学院大学理工学部，情報科学科）</title>
@@ -180,12 +180,18 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://fniessen.github.io/org-html-themes/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/lib/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/javascript" src="https://fniessen.github.io/org-html-themes/styles/readtheorg/js/readtheorg.js"></script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2018 Free Software Foundation, Inc.
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -234,74 +240,74 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org1a2af88">1. 数式処理テキスト</a>
+<li><a href="#org8017593">1. 数式処理テキスト</a>
 <ul>
-<li><a href="#orgbfd5356">1.1. 基礎</a></li>
-<li><a href="#orgadaccea">1.2. 微積</a></li>
-<li><a href="#orgdce4d3a">1.3. 線形代数</a></li>
-<li><a href="#orgf407b31">1.4. 式変形</a></li>
-<li><a href="#org1af79be">1.5. その他</a></li>
+<li><a href="#org5e79f1a">1.1. 基礎</a></li>
+<li><a href="#org7651480">1.2. 微積</a></li>
+<li><a href="#org6f0b03e">1.3. 線形代数</a></li>
+<li><a href="#org9fc6d52">1.4. 式変形</a></li>
+<li><a href="#orga9c5d82">1.5. その他</a></li>
 </ul>
 </li>
-<li><a href="#org6efcc80">2. jupyter notebook 授業でのQ &amp; A</a></li>
-<li><a href="#orgef51c88">3. jupyter notebookのinit時の問題点</a>
+<li><a href="#org6912bc4">2. jupyter notebook 授業でのQ &amp; A</a></li>
+<li><a href="#org0b8d1f0">3. jupyter notebookのinit時の問題点</a>
 <ul>
-<li><a href="#org8e3b59b">3.1. 起動時のhome directory</a></li>
-<li><a href="#orgfe66b72">3.2. 起動</a></li>
-<li><a href="#orgd4bf602">3.3. printout</a></li>
-<li><a href="#orgdfab866">3.4. init_session()でMultipleInstanceErrorがでる :: Googleだと</a></li>
-<li><a href="#org1f7a985">3.5. init_session()</a></li>
-<li><a href="#org0ee5c1f">3.6. 解けない問題リスト</a></li>
+<li><a href="#org7ae111b">3.1. 起動時のhome directory</a></li>
+<li><a href="#orga3e35f0">3.2. 起動</a></li>
+<li><a href="#org6ee9687">3.3. printout</a></li>
+<li><a href="#orgf02a34c">3.4. init_session()でMultipleInstanceErrorがでる :: Googleだと</a></li>
+<li><a href="#orgd73d2f0">3.5. init_session()</a></li>
+<li><a href="#org051abae">3.6. 解けない問題リスト</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org1a2af88" class="outline-2">
-<h2 id="org1a2af88"><span class="section-number-2">1</span> 数式処理テキスト</h2>
+<div id="outline-container-org8017593" class="outline-2">
+<h2 id="org8017593"><span class="section-number-2">1</span> 数式処理テキスト</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgbfd5356" class="outline-3">
-<h3 id="orgbfd5356"><span class="section-number-3">1.1</span> 基礎</h3>
+<div id="outline-container-org5e79f1a" class="outline-3">
+<h3 id="org5e79f1a"><span class="section-number-3">1.1</span> 基礎</h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
-<li><a href="https://nbviewer.jupyter.org/github/daddygongon/symbolic_math_with_python/blob/master/first_leaf.ipynb">first_leaf.ipynb</a></li>
-<li><a href="https://nbviewer.jupyter.org/github/daddygongon/symbolic_math_with_python/blob/master/functions.ipynb">functions.ipynb</a></li>
-<li><a href="https://nbviewer.jupyter.org/github/daddygongon/symbolic_math_with_python/blob/master/equals.ipynb">equals.ipynb</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/first_leaf.ipynb">first_leaf.ipynb</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/functions.ipynb">functions.ipynb</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/equals.ipynb">equals.ipynb</a></li>
 <li>課題
 <ul class="org-ul">
-<li><a href="https://nbviewer.jupyter.org/github/daddygongon/symbolic_math_with_python/blob/master/group_works_1.ipynb">group_works_1.ipynb</a></li>
-<li><a href="https://nbviewer.jupyter.org/github/daddygongon/symbolic_math_with_python/blob/master/group_works_1_ans.ipynb">group_works_1_ans.ipynb</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_1.ipynb">group_works_1.ipynb</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_1_ans.ipynb">group_works_1_ans.ipynb</a></li>
 </ul></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgadaccea" class="outline-3">
-<h3 id="orgadaccea"><span class="section-number-3">1.2</span> 微積</h3>
+<div id="outline-container-org7651480" class="outline-3">
+<h3 id="org7651480"><span class="section-number-3">1.2</span> 微積</h3>
 <div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
-<li><a href="https://nbviewer.jupyter.org/github/daddygongon/symbolic_math_with_python/blob/master/differential.ipynb">differential.ipynb</a></li>
-<li><a href="https://nbviewer.jupyter.org/github/daddygongon/symbolic_math_with_python/blob/master/integral.ipynb">integral.ipynb</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/differential.ipynb">differential.ipynb</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/integral.ipynb">integral.ipynb</a></li>
 <li>課題
 <ul class="org-ul">
-<li><a href="https://nbviewer.jupyter.org/github/daddygongon/symbolic_math_with_python/blob/master/group_works_2.ipynb">group_works_2.ipynb</a></li>
-<li><a href="https://nbviewer.jupyter.org/github/daddygongon/symbolic_math_with_python/blob/master/group_works_2_ans.ipynb">group_works_2_ans.ipynb</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_2.ipynb">group_works_2.ipynb</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_2_ans.ipynb">group_works_2_ans.ipynb</a></li>
 </ul></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgdce4d3a" class="outline-3">
-<h3 id="orgdce4d3a"><span class="section-number-3">1.3</span> 線形代数</h3>
+<div id="outline-container-org6f0b03e" class="outline-3">
+<h3 id="org6f0b03e"><span class="section-number-3">1.3</span> 線形代数</h3>
 <div class="outline-text-3" id="text-1-3">
 <ul class="org-ul">
-<li><a href="https://nbviewer.jupyter.org/github/daddygongon/symbolic_math_with_python/blob/master/linear_algebra_scipy.ipynb">linear_algebra_scipy.ipynb</a></li>
-<li><a href="https://nbviewer.jupyter.org/github/daddygongon/symbolic_math_with_python/blob/master/linear_algebra_sympy.ipynb">linear_algebra_sympy.ipynb</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/linear_algebra_scipy.ipynb">linear_algebra_scipy.ipynb</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/linear_algebra_sympy.ipynb">linear_algebra_sympy.ipynb</a></li>
 <li>課題
 <ul class="org-ul">
 <li><a href="group_works_3.pdf">group_works_3.pdf</a></li>
-<li><a href="https://nbviewer.jupyter.org/github/daddygongon/symbolic_math_with_python/blob/master/group_works_3_breast_cancer.ipynb">group_works_3_breast_cancer.ipynb</a></li>
-<li><a href="https://nbviewer.jupyter.org/github/daddygongon/symbolic_math_with_python/blob/master/group_works_3_ans.ipynb">group_works_3_ans.ipynb</a>
+<li><a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_3_breast_cancer.ipynb">group_works_3_breast_cancer.ipynb</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_3_ans.ipynb">group_works_3_ans.ipynb</a>
 <ul class="org-ul">
 <li><a href="validate_A.data">validate_A.data</a>,<a href="validate_b.data">validate_b.data</a>,<a href="test_A.data">test_A.data</a>,<a href="test_b.data">test_b.data</a></li>
 </ul></li>
@@ -310,35 +316,35 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf407b31" class="outline-3">
-<h3 id="orgf407b31"><span class="section-number-3">1.4</span> 式変形</h3>
+<div id="outline-container-org9fc6d52" class="outline-3">
+<h3 id="org9fc6d52"><span class="section-number-3">1.4</span> 式変形</h3>
 <div class="outline-text-3" id="text-1-4">
 <ul class="org-ul">
-<li><a href="https://nbviewer.jupyter.org/github/daddygongon/symbolic_math_with_python/blob/master/equation_manipulation.ipynb">equation_manipulation.ipynb</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/equation_manipulation.ipynb">equation_manipulation.ipynb</a></li>
 <li>課題
 <ul class="org-ul">
-<li><a href="https://nbviewer.jupyter.org/github/daddygongon/symbolic_math_with_python/blob/master/group_works_5.pdf">group_works_5.pdf</a></li>
-<li><a href="https://nbviewer.jupyter.org/github/daddygongon/symbolic_math_with_python/blob/master/group_works_5_ans.ipynb">group_works_5_ans.ipynb</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_5.pdf">group_works_5.pdf</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/group_works_5_ans.ipynb">group_works_5_ans.ipynb</a></li>
 </ul></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org1af79be" class="outline-3">
-<h3 id="org1af79be"><span class="section-number-3">1.5</span> その他</h3>
+<div id="outline-container-orga9c5d82" class="outline-3">
+<h3 id="orga9c5d82"><span class="section-number-3">1.5</span> その他</h3>
 <div class="outline-text-3" id="text-1-5">
 <ul class="org-ul">
-<li><a href="https://nbviewer.jupyter.org/github/daddygongon/symbolic_math_with_python/blob/master/python_files_and_dir.ipynb">python_files_and_dir.ipynb</a></li>
-<li><a href="https://nbviewer.jupyter.org/github/daddygongon/symbolic_math_with_python/blob/master/miscellaneous.ipynb">miscellaneous.ipynb</a></li>
-<li><a href="https://nbviewer.jupyter.org/github/daddygongon/symbolic_math_with_python/blob/master/cg.ipynb">cg.ipynb</a></li>
-<li><a href="https://nbviewer.jupyter.org/github/daddygongon/symbolic_math_with_python/blob/master/linear_solve.ipynb">linear_solve.ipynb</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/python_files_and_dir.ipynb">python_files_and_dir.ipynb</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/miscellaneous.ipynb">miscellaneous.ipynb</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/cg.ipynb">cg.ipynb</a></li>
+<li><a href="https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/master/symbolic_math/linear_solve.ipynb">linear_solve.ipynb</a></li>
 </ul>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-org6efcc80" class="outline-2">
-<h2 id="org6efcc80"><span class="section-number-2">2</span> jupyter notebook 授業でのQ &amp; A</h2>
+<div id="outline-container-org6912bc4" class="outline-2">
+<h2 id="org6912bc4"><span class="section-number-2">2</span> jupyter notebook 授業でのQ &amp; A</h2>
 <div class="outline-text-2" id="text-2">
 <dl class="org-dl">
 <dt>授業プリントをnbviewerで開けるとnot foundがでる</dt><dd>browserを再起動</dd>
@@ -353,12 +359,12 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgef51c88" class="outline-2">
-<h2 id="orgef51c88"><span class="section-number-2">3</span> jupyter notebookのinit時の問題点</h2>
+<div id="outline-container-org0b8d1f0" class="outline-2">
+<h2 id="org0b8d1f0"><span class="section-number-2">3</span> jupyter notebookのinit時の問題点</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org8e3b59b" class="outline-3">
-<h3 id="org8e3b59b"><span class="section-number-3">3.1</span> 起動時のhome directory</h3>
+<div id="outline-container-org7ae111b" class="outline-3">
+<h3 id="org7ae111b"><span class="section-number-3">3.1</span> 起動時のhome directory</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 今はz:/です．先週まではlocal:/[USER ID]でした．
@@ -368,8 +374,8 @@ logoutすると消えちゃいます．USBに写しておいてください．�
 </div>
 </div>
 
-<div id="outline-container-orgfe66b72" class="outline-3">
-<h3 id="orgfe66b72"><span class="section-number-3">3.2</span> 起動</h3>
+<div id="outline-container-orga3e35f0" class="outline-3">
+<h3 id="orga3e35f0"><span class="section-number-3">3.2</span> 起動</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 書類のダブルクリックで起動できない．
@@ -377,8 +383,8 @@ logoutすると消えちゃいます．USBに写しておいてください．�
 </div>
 </div>
 
-<div id="outline-container-orgd4bf602" class="outline-3">
-<h3 id="orgd4bf602"><span class="section-number-3">3.3</span> printout</h3>
+<div id="outline-container-org6ee9687" class="outline-3">
+<h3 id="org6ee9687"><span class="section-number-3">3.3</span> printout</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 IEだけでなく，Chromeでも後ろが切れるというバグがありました．
@@ -402,8 +408,8 @@ IEだけでなく，Chromeでも後ろが切れるというバグがありまし
 </div>
 </div>
 
-<div id="outline-container-orgdfab866" class="outline-3">
-<h3 id="orgdfab866"><span class="section-number-3">3.4</span> init_session()でMultipleInstanceErrorがでる :: Googleだと</h3>
+<div id="outline-container-orgf02a34c" class="outline-3">
+<h3 id="orgf02a34c"><span class="section-number-3">3.4</span> init_session()でMultipleInstanceErrorがでる :: Googleだと</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 <a href="https://github.com/sympy/sympy/issues/13319">https://github.com/sympy/sympy/issues/13319</a>
@@ -412,8 +418,8 @@ IEだけでなく，Chromeでも後ろが切れるというバグがありまし
 </div>
 </div>
 
-<div id="outline-container-org1f7a985" class="outline-3">
-<h3 id="org1f7a985"><span class="section-number-3">3.5</span> init_session()</h3>
+<div id="outline-container-orgd73d2f0" class="outline-3">
+<h3 id="orgd73d2f0"><span class="section-number-3">3.5</span> init_session()</h3>
 <div class="outline-text-3" id="text-3-5">
 <ul class="org-ul">
 <li>init_session() =&gt; init_printing()</li>
@@ -429,8 +435,8 @@ IEだけでなく，Chromeでも後ろが切れるというバグがありまし
 </div>
 
 
-<div id="outline-container-org0ee5c1f" class="outline-3">
-<h3 id="org0ee5c1f"><span class="section-number-3">3.6</span> 解けない問題リスト</h3>
+<div id="outline-container-org051abae" class="outline-3">
+<h3 id="org051abae"><span class="section-number-3">3.6</span> 解けない問題リスト</h3>
 <div class="outline-text-3" id="text-3-6">
 <ul class="org-ul">
 <li>16_pre 1(a) : (x**3+1)**(1/3) sqrt-&gt;cbrt (5523),</li>
@@ -447,7 +453,7 @@ IEだけでなく，Chromeでも後ろが切れるというバグがありまし
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Shigeto R. Nishitani</p>
-<p class="date">Created: 2019-10-04 金 13:52</p>
+<p class="date">Created: 2020-10-03 土 12:11</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
