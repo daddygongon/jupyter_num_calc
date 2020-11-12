@@ -1,0 +1,114 @@
+README.ipynb			la_fundamentals.key*
+Untitled.ipynb			la_matrix_inverse.ipynb
+error.ipynb			la_matrix_inverse_ans.ipynb
+fft.ipynb			la_speed_race.ipynb
+fft_memo_14.pdf			least_square_fit.ipynb
+fsolve.ipynb			non_linear_fit.ipynb
+interpolation_integral.ipynb	python_ode.ipynb
+la_eigen_ans.ipynb		report_2_solve.ipynb
+la_eigen_vectors.ipynb		report_3_error.ipynb
+la_fundamentals.ipynb		report_4_mapping.ipynb
+
+C2Error_c:
+MachineE32*		a.out_orig*		sec2-3-1.c
+MachineEdouble*		double_precision.c	sec2-3-2-ans.c
+MachineEfloat*		double_test.c		strange_small_diff.c
+SolveQuadEq.c		int_test.c		test.c
+a.out*			machineE.c
+
+breast_cancer_detector:
+c7_CNN.ipynb	maple.ipynb	ruby.ipynb
+codes/		python.ipynb	text.ipynb
+
+exams:
+Exam17.pdf		exam16_ans.ipynb	exam18_ans.ipynb
+exam15_ans.ipynb	exam17_ans.ipynb	exam18_ans.pdf
+exam15_ans.pdf		exam18.pdf
+
+figs:
+C10_FFTplot2d1.png			LAFundamentalsplot2d3.png
+C10_FFTplot2d10.png			LAFundamentalsplot2d4.png
+C10_FFTplot2d11.png			LAFundamentalsplot2d5.png
+C10_FFTplot2d12.png			LAFundamentalsplot2d6.png
+C10_FFTplot2d13.png			LAFundamentalsplot2d7.png
+C10_FFTplot2d14.png			LAFundamentalsplot2d8.png
+C10_FFTplot2d15.png			Projection1.png
+C10_FFTplot2d16.png			Projection2.png
+C10_FFTplot2d17.png			Projection3-1.png
+C10_FFTplot2d2.png			Projection3-2.png
+C10_FFTplot2d3.png			Projection3-3.png
+C10_FFTplot2d4.png			Projection3-4.png
+C10_FFTplot2d5.png			fsolveExampleplot2d1.png
+C10_FFTplot2d6.png			fsolveExampleplot2d2.png
+C10_FFTplot2d7.png			func2d.png
+C10_FFTplot2d8.png			la_fund_ex1.png
+C10_FFTplot2d9.png			la_fundamentals.001.jpeg
+C10_FFTplot3d6.png			la_fundamentals.001.png
+C2_fsolveplot2d1.png			la_fundamentals.002.jpeg
+C2_fsolveplot2d2.png			la_fundamentals.002.png
+C2_fsolveplot2d3.png			la_fundamentals.003.jpeg
+C2_fsolveplot2d4.png			la_fundamentals.003.png
+C2_fsolveplot2d6.png			la_fundamentals.004-1.png
+C2_fsolveplot2d7.png			la_fundamentals.004-2.png
+C2_fsolveplot3d5.png			la_fundamentals.004-3.png
+C6_IntegralAppendixplot2d1.png		la_fundamentals.004-4.png
+C6_IntegralAppendixplot2d2.png		la_fundamentals.004.jpeg
+C6_NewtonsDividedDifferenceplot2d1.png	la_fundamentals.005.jpeg
+C6_NewtonsDividedDifferenceplot2d2.png	la_fundamentals.006.jpeg
+C7_InterpolationIntegralplot2d1.png	la_fundamentals.007.jpeg
+C7_InterpolationIntegralplot2d2.png	la_fundamentals.008.png
+C7_InterpolationIntegralplot2d3.png	linkstruct.png
+C8_LeastSquareFitplot2d1.png		non_linear_fit_graph.png
+C8_LeastSquareFitplot2d2.png		ode.001.jpeg
+C8_LeastSquareFitplot3d3.png		ode.001.small.jpeg
+C8_LeastSquareFitplot3d4.png		ode.001.small.xbb
+C9_NonLinearFitplot2d1.png		ode.001.xbb
+C9_NonLinearFitplot2d10.png		ode.002.jpeg
+C9_NonLinearFitplot2d2.png		ode.002.small.jpeg
+C9_NonLinearFitplot2d3.png		ode.002.small.xbb
+C9_NonLinearFitplot2d4.png		ode.002.xbb
+C9_NonLinearFitplot2d5.png		ode.003.jpeg
+C9_NonLinearFitplot2d6.png		ode.003.small.jpeg
+C9_NonLinearFitplot2d7.png		ode.003.small.xbb
+C9_NonLinearFitplot2d8.png		ode.003.xbb
+C9_NonLinearFitplot2d9.png		ode.004.jpeg
+EigenVectors3plot1.png			ode.004.small.jpeg
+FFTExplot2d1.png			ode.004.small.xbb
+FFTExplot2d2.png			ode.004.xbb
+FFTExplot2d3.png			ode.005.jpeg
+FFTExplot2d4.png			ode.005.small.jpeg
+LAFundamentalsKernelImage.png		ode.005.small.xbb
+LAFundamentalsplot2d1.png		ode.005.xbb
+LAFundamentalsplot2d2.png		tmp.png
+
+gitignores:
+error_ans.ipynb				la_fundamentals_ans.ipynb
+fsolve_ans.ipynb			la_matrix_inverse_ans.ipynb
+fsolve_ex_ans.ipynb			least_square_fit_ex_ans.ipynb
+interpolation_integral_ans.ipynb	least_square_fit_ex_ans_fig.jpg
+la_eigen_ans.ipynb			non_linear_fit_ans.ipynb
+
+lapack_codes:
+LA_speed_race.pdf	la_dgesv.py		multi_calc.rb
+README.html		la_dgesv.rb		res.dat
+README.org		la_ludecomp.mw		svd.py
+c_versions/		la_qr.rb
+
+ode:
+2017_report_ans.pdf		newton_simulation.pages
+2017_report_super_car.ipynb	newton_simulation.pages.pdf
+Rakefile			ode.key
+SolarSystem.mw			ode.key.pdf
+figs/				python_ode.ipynb
+model_phys_kepler@		speaker_180619.org
+newton.org			speaker_180620.org
+
+pagerank:
+facebook_combined.txt	facebook_plot.ipynb
+
+pdfs:
+breast_cancer_python.pdf	la_fundamentals.pdf
+error.pdf			la_matrix_inverse.pdf
+fsolve.pdf			least_square_fit.pdf
+interpolation_integral.pdf	non_linear_fit.pdf
+la_eigen_vectors.pdf		python_ode.pdf

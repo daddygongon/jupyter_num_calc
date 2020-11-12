@@ -1,0 +1,17 @@
+desc 'rake -T'
+task :default do
+  system "rake -T"
+end
+
+desc 'make links'
+task :mk_link do
+  dir = ARGV[1] || '.'
+  Dir.glob("#{dir}/*").each do |file|
+    system "ln #{file} /Users/bob/Sites/new_ist_data/ist_data/cache/attach/MapleOldExams/"
+    basename = File.basename(file)
+    puts "{{attach_anchor(#{basename})}}"
+    if File.extname(file) == '.ipynb'
+      puts nbviewer = "* ans_ipynb:[[nbviewer|https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/symbolic_math/exams/#{file}]]"
+    end
+  end
+end
