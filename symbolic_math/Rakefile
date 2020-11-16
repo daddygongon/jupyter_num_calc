@@ -1,9 +1,21 @@
 require 'open3'
 require 'colorize'
+
 task :default do
   system 'rake -T'
 end
-
+desc 'make problem from ans'
+task :split do
+  p file = ARGV[1]
+  unless file =~ /_ans.ipynb$/
+    p 'wrong file?'.red
+    exit
+  else
+    p splitter = File.join(File.dirname(__FILE__),'bin/pick_works_from_ans.rb')
+    system "ruby #{splitter} #{file}"
+  end
+  exit
+end
 desc 'rsync'
 task :rsync do
   src = '/Users/bob/python/doing_math_with_python/symbolic_math'
