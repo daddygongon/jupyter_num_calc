@@ -1,0 +1,37 @@
+#+SETUPFILE: ~/.emacs.d/org-mode/theme-readtheorg.setup
+
+$a$ を正の実数とし，
+放物線$y=3x^2$ を$C_1$,
+放物線$y=2x^2+a^2$ を$C_2$ とする．
+$C_1$ と$C_2$ の二つの共有点を $x$ 座標の小さい順にA,Bとする．
+また，$C_1$ と$C_2$ の両方に第1象限で接する直線を$l$ とする．
+
+(1) Bの座標を$a$ を用いて表すと
+$(\fbox{ ア }\, \fbox{ イ }\,a^{ \fbox{ ウ }})$
+である．
+
+直線$l$ と二つの放物線$C_1, C_2$ の接点の$x$ 座標をそれぞれ$s,t$ とおく．
+$l$ は$x=s$ で$C_1$ と接するので，$l$ の方程式は
+\begin{equation*}
+  y = \fbox{ エ }\,sx - \fbox{ オ }\,s^{ \fbox{ カ }}
+\end{equation*}
+と表せる．
+同様に，$l$ は$x=t$ で$C_2$ と接するので，$l$ の方程式は
+\begin{equation*}
+  y = \fbox{ キ }\,tx - \fbox{ ク }\,t^{ \fbox{ カ }} + a^2
+\end{equation*}
+とも表せる．これらにより，$s,t$ は
+\begin{equation*}
+  s = \frac{\sqrt{\fbox{ ケ }}}{\fbox{ コ }}a , \,\,\,\, 
+t= \frac{\sqrt{\fbox{ ケ }}}{\fbox{ サ }}a 
+\end{equation*}
+である．
+
+放物線$C_1$ の$s \leqq x \leqq {\fbox{ ア }}$ の部分
+放物線$C_2$ の${\fbox{ ア }} \leqq x \leqq r$ の部分,
+$x$ 軸，
+および2直線$x=s, x=t$で囲まれた図形の面積は
+\begin{equation*}
+  \frac{\fbox{ シ }\sqrt{\fbox{ ス }}-\fbox{ セ }}{\fbox{ ソ }}a^{\fbox{ タ }}
+\end{equation*}
+である．
