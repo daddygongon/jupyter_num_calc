@@ -8,11 +8,14 @@ desc 'make problem from ans'
 task :split do
   p file = ARGV[1]
   unless file =~ /_ans.ipynb$/
-    p 'wrong file?'.red
+    puts 'wrong file?'.red
     exit
   else
     p splitter = File.join(File.dirname(__FILE__),'bin/pick_works_from_ans.rb')
     system "ruby #{splitter} #{file}"
+    puts "check ipynb, cause additional markdown or remaining code parts...".red
+    puts "directly remove them or remain them like ...".red
+    puts "ruby bin/pick_works_from_ans.rb gitignores/gw2_diff_ans.ipynb -1 '17 23' ''".red
   end
   exit
 end
