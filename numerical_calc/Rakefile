@@ -12,8 +12,8 @@ task :sync do
             else
               [file]
             end
-  p attach_dir = '/Users/bob/Sites/new_ist_data/ist_data/cache/attach/DoingMathWithPython/'
-  p http_address = 'https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/symbolic_math'
+  p attach_dir = '/Users/bob/Sites/new_ist_data/ist_data/cache/attach/NumRecipe'
+  p http_address = 'https://nbviewer.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc'
   entries.each do |file|
     ['.data','.pdf','.ipynb'].each do |ext|
       if File.extname(file)==ext
