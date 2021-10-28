@@ -34,3 +34,10 @@ task :rsync do
     end
   end
 end
+
+desc 'link' "make link"
+task :link do
+  Dir.glob("*.ipynb").each do |ipynb|
+    puts "([[nbviewer|https://nbviewer.org/github/daddygongon/jupyter_num_calc/blob/main/symbolic_math/#{ipynb}]])"
+  end
+end
