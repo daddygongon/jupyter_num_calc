@@ -6,20 +6,25 @@
 //#define PRINT
 //#undef PRINT
 
-void printMatrix(double *a, double *b, long n);
+void printMatrix(double *a, double *b, int n);
 
 int main(void){
   clock_t start, end;
   int i,j;
   double *a,*b;
-  long n,nrhs=1, lda,ldb, info, *ipiv;
+  //long n,nrhs=1, lda,ldb, info, *ipiv;
+  int n,nrhs=1, lda,ldb, info, *ipiv;
 
-  scanf("%ld",&n);
+  /* DGESV prototype */
+  extern void dgesv_( int* n, int* nrhs, double* a, int* lda, int* ipiv,
+                double* b, int* ldb, int* info );
+
+  scanf("%d",&n);
 
   a=(double *)malloc(n*n*sizeof(double));
   b=(double *)malloc(n*sizeof(double));
   lda=ldb=n;
-  ipiv=(long *)malloc(n*sizeof(long));
+  ipiv=(int *)malloc(n*sizeof(int));
   
   for (i=0;i<n;i++){
     for (j=0;j<n;j++){
@@ -46,7 +51,7 @@ int main(void){
   return 0;
 }
 
-void printMatrix(double *a, double *b, long n){
+void printMatrix(double *a, double *b, int n){
   int i,j;
 #ifdef PRINT
   printf("\n");
