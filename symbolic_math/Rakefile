@@ -23,7 +23,6 @@ desc 'rsync'
 task :rsync do
   src = '/Users/bob/Desktop/Lectures/math_python/jupyter_num_calc/symbolic_math/'
   attach = '/Users/bob/Sites/new_ist_data/ist_data/cache/attach/DoingMathWithPython/'
-  
   ["rsync -v -ptgo --stats *.ipynb #{attach}",
    "ls -lat *.ipynb",
    "ls -lat #{File.join(attach, '*.ipynb')}"].each_with_index do |command, i|
@@ -41,10 +40,8 @@ task :rsync_gw5_pdf do
   src = '/Users/bob/Desktop/Lectures/math_python/jupyter_num_calc/symbolic_math/'
   attach = '/Users/bob/Sites/new_ist_data/ist_data/cache/attach/DoingMathWithPython/'
   file = 'gw5_center_exams.pdf'
-  command = "cp #{src}/#{file} #{attach}"
-  puts command
+  p command = "cp #{src}/#{file} #{attach}"
   out, _err, _status = Open3.capture3(command)
-  puts out
 end
 
 desc 'link' "make link"
