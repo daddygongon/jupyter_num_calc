@@ -4,6 +4,19 @@ task :default do
   system 'rake -T'
 end
 
+desc 'mk link and rsync marked_pdfs '
+task :marked_pdfs do
+  p attach_dir = '/Users/bob/Sites/new_ist_data/ist_data/cache/attach/NumRecipe'
+  Dir.glob('./marked_pdfs/d*.pdf').each do |file|
+    file
+    basename = File.basename(file)
+    target = File.join(attach_dir,basename)
+    puts "{{attach_anchor(#{basename})}}"
+    FileUtils.cp(file, target)
+  end
+  exit
+end
+
 desc 'sync FILE with hiki'
 task :sync do
   p file = ARGV[1]
