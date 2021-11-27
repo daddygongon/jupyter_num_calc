@@ -1,86 +1,34 @@
-puts 'help README.org and ipynbs, should copy this Rakefile to the cwd'
+$attach = '/Users/bob/Sites/new_ist_data/ist_data/cache/attach/NumRecipe'
+puts "$attach = %s" % $attach
+$nbviewer = 'https://nbviewer.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc'
+puts "$nbview = %s" % $nbviewer
 
 task :default do
   system 'rake -T'
 end
 
 desc 'mk link and rsync marked_pdfs '
-task :marked_pdfs do
-  p attach_dir = '/Users/bob/Sites/new_ist_data/ist_data/cache/attach/NumRecipe'
-  Dir.glob('./marked_pdfs/d*.pdf').each do |file|
-    file
+task :mk_link do
+  if ARGV[1] == nil
+    puts "Need ARGV[1] as follows with ''"
+    puts './marked_pdfs/d*.pdf'
+    puts '*.data, *.pdf or *.ipynb'
+    exit
+  else
+    target_files = Dir.glob(ARGV[1])
+  end
+  target_files.each do |file|
+    p file
     basename = File.basename(file)
-    target = File.join(attach_dir,basename)
-    puts "{{attach_anchor(#{basename})}}"
+    target = File.join($attach,basename)
+    if File.extname(file)=='.ipynb'
+      print "||{{attach_anchor_string(------, #{target}) || "
+      print "([[#{$nbviewer}/#{file}][nbviewer]])\n"
+    else
+      puts "{{attach_anchor(#{basename})}}"
+    end
     FileUtils.cp(file, target)
   end
   exit
 end
 
-desc 'sync FILE with hiki'
-task :sync do
-  p file = ARGV[1]
-  entries = if file.nil?
-              Dir.entries('.')[2..-1]
-            else
-              [file]
-            end
-  p attach_dir = '/Users/bob/Sites/new_ist_data/ist_data/cache/attach/NumRecipe'
-  p http_address = 'https://nbviewer.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc'
-  entries.each do |file|
-    ['.data','.pdf','.ipynb'].each do |ext|
-      if File.extname(file)==ext
-        print "{{attach_anchor(#{file})}}"
-        print "([[nbviewer|#{http_address}/#{file}]])\n"
-        FileUtils.cp(file, File.join(attach_dir,file))
-      end
-    end
-  end
-  exit
-end
-
-desc 'mk_link FILE for org'
-task :mk_link do
-  p file = ARGV[1]
-  entries = if file.nil?
-              Dir.entries('.')[2..-1]
-            else
-              [file]
-            end
-  p attach_dir = 'https://github.com/daddygongon/jupyter_num_calc/tree/main/symbolic_math'
-  p http_address = 'https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/symbolic_math'
-  entries.each do |file|
-    #    ['.data','.ipynb'].each do |ext|
-    ['.ipynb'].each do |ext|
-      if File.extname(file)==ext
-        print "- [[#{attach_dir}/#{file}][#{file}]]"
-        print "([[#{http_address}/#{file}][nbviewer]])\n"
-      end
-    end
-  end
-  exit
-end
-
-
-desc 'conv_link FILE.org > FILE2.org'
-task :conv_link do
-  lines = File.readlines(ARGV[1])
-# [[_d1][file]]([[address][_d2]])
-lines.each do |line|
-  if m=line.match(/\[\[(.*?)\]\[(.*?)\]\]\(\[\[(.*?)\]\[(.*?)\]\]\)/)
-    _d1, file, address, _d2 = m[1..-1]
-    puts  "- [[#{address}][#{file}]]"
-  else
-    puts line
-  end
-end
-
-  dir = ARGV[1]
-end
-
-desc 'ls Dir'
-task :ls do
-  dir = ARGV[1]
-  p Dir.entries(dir)
-  exit
-end
