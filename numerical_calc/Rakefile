@@ -1,3 +1,5 @@
+require 'colorize'
+
 $attach = '/Users/bob/Sites/new_ist_data/ist_data/cache/attach/NumRecipe'
 puts "$attach = %s" % $attach
 $nbviewer = 'https://nbviewer.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc'
@@ -17,17 +19,18 @@ task :mk_link do
   else
     target_files = Dir.glob(ARGV[1])
   end
+
   target_files.each do |file|
-    p file
+    puts file.green
     basename = File.basename(file)
     target = File.join($attach,basename)
+    FileUtils.cp(file, target)
     if File.extname(file)=='.ipynb'
-      print "||{{attach_anchor_string(------, #{target}) || "
+      print "||{{attach_anchor_string(------, #{basename}) || "
       print "([[#{$nbviewer}/#{file}][nbviewer]])\n"
     else
       puts "{{attach_anchor(#{basename})}}"
     end
-    FileUtils.cp(file, target)
   end
   exit
 end
