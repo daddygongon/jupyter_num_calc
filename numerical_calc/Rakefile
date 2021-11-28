@@ -9,12 +9,16 @@ task :default do
   system 'rake -T'
 end
 
-desc 'mk link and rsync marked_pdfs '
+desc 'mk link and rsync with dir'
 task :mk_link do
   if ARGV[1] == nil
-    puts "Need ARGV[1] as follows with ''"
-    puts './marked_pdfs/d*.pdf'
-    puts '*.data, *.pdf or *.ipynb'
+    comment = <<~COMMENT
+    cp target files to hiki and nbviewer directory and make links.
+    need ARGV[1] as follows with ''
+      './marked_pdfs/d*.pdf'
+    and '*.data, *.pdf or *.ipynb'
+    COMMENT
+    puts comment.cyan
     exit
   else
     target_files = Dir.glob(ARGV[1])
