@@ -15,7 +15,8 @@ task :mk_link do
     comment = <<~COMMENT
     cp target files to hiki and nbviewer directory and make links.
     need ARGV[1] as follows with ''
-      './marked_pdfs/d*.pdf'
+    './marked_pdfs/d*.pdf', 'pdfs/*.pdf', 'ipynb_txt/d*.ipynb',
+    and 'report_ans/r*.ipynb'
     and '*.data, *.pdf or *.ipynb'
     COMMENT
     puts comment.cyan

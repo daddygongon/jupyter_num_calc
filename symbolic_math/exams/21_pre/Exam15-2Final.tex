@@ -1,0 +1,135 @@
+\documentclass[12pt,a4j]{jarticle}
+\usepackage[dvips]{graphicx,color}
+\usepackage{amsmath,amsthm,amssymb}
+%\topmargin -15mm\oddsidemargin -4mm\evensidemargin\oddsidemargin
+%\textwidth 170mm\textheight 257mm\columnsep 7mm
+\setlength{\fboxrule}{0.2ex}
+\setlength{\fboxsep}{0.6ex}
+
+\pagestyle{empty}
+\begin{document}
+\small{v.15.2}　
+\hfill\small{2015/7/3 実施}
+\begin{center}
+{\gt\large{情報科学科　数式処理実習試験問題}}
+\end{center}
+\vspace{5mm}
+
+資料を参考にして以下の問題をMapleで解き，出力して提出せよ．80点以上が合格．何番をやっているかが分かるようにせよ.
+
+\begin{enumerate}
+\item 
+\begin{enumerate}
+\item 
+次の関数の導関数を求めよ\footnote{寺田・坂田，「演習と応用 微分積分」(サイエンス社,2003)，p.18, 問題9.1(3).}．(10点)
+\begin{equation*}
+\sqrt{x^2+1}\sqrt[3]{x^3+1}
+\end{equation*}
+\item
+資料を参考にして次の関係から$\displaystyle \frac{dy}{dx}$を求めよ．結果は$t$の関数のままでよい\footnote{寺田・坂田，「演習と応用 微分積分」(サイエンス社,2003)，p.19, 問題10.1(1).}.(15点) 
+\begin{eqnarray*}
+x &=& a \cos^3 t\\
+y &=& a \sin^3 t \hspace{5mm} (a>0)
+\end{eqnarray*}
+
+\end{enumerate}
+
+\item 
+\begin{enumerate}
+\item 
+$\displaystyle \frac{1}{\cos^2x+4\sin^2x}$を積分せよ\footnote{寺田・坂田，「演習と応用 微分積分」(サイエンス社,2003)，p.42, 例題5(2).}．(10点)
+
+\item
+資料を参考にして次の広義の２重積分を求めよ\footnote{寺田・坂田，「演習と応用 微分積分」(サイエンス社,2003)，p.95, 問題6.1(1).}．(15点)
+\begin{equation*}
+\int \!\int _D \frac{dxdy}{(y-x)^{1/3}}\hspace{5mm}(D:0\leqq x \leqq y \leqq 1)
+\end{equation*}
+
+\end{enumerate}
+
+\item
+\begin{enumerate}
+\item 
+行列$\displaystyle A= \left( \begin {array}{ccc} 1&-1&1\\ 
+-7&2&1 \\ 
+2&1&2
+\end {array} \right)$
+を対角化せよ\footnote{寺田・木村，「演習と応用 線形代数」(サイエンス社,2005)，p.78, 問題8.1{b}}．(10点)
+\item 
+$\displaystyle A= \left( \begin {array}{ccc} 0&c&b\\ 
+c&0&a \\ 
+b&a&0
+\end {array} \right)$,
+$\displaystyle B= \left( \begin {array}{ccc} 0&1&1\\ 
+1&0&1 \\ 
+1&1&0
+\end {array} \right)$
+として，$BA$を計算することにより，
+$\displaystyle \left| \begin {array}{ccc} b+c&a&a\\ 
+b&c+a&b \\ 
+c&c&a+b
+\end {array} \right|$
+を求めよ
+\footnote{寺田・木村，「演習と応用 線形代数」(サイエンス社,2005)，p.39, 問題10.1{a}}．(15点)
+\end{enumerate}
+
+\item 
+
+関数$f(x)$は
+\begin{eqnarray*}
+x \leqq 3 &のとき& f(x)=x \\
+x > 3 &のとき& f(x)=-3x+12
+\end{eqnarray*}
+で与えられている．このとき，$x \geqq 0$に対して，関数$g(x)$を
+\begin{equation*}
+g(x)=\int_0^x f(t) dt
+\end{equation*}
+と定める．
+
+\begin{enumerate}
+\item
+$0 \leqq x \leqq 3$のとき
+\begin{equation*}
+g(x) = \frac{\fbox{ ア }}{\fbox{ イ }}\,x ^{\fbox{ ウ }}
+\end{equation*}
+であり，$x \geqq 3$のとき
+\begin{equation*}
+g(x) = -\frac{3}{2} x^2 + \fbox{ エオ }\,x - \fbox{ カキ }
+\end{equation*}
+である．
+
+\item 曲線$y=g(x)$を$C$とする．$C$上の点P$(a,\,g(a))$(ただし，$0 < a < 3$)における$C$の接線$l$の傾きは\fbox{ ク }であるから，$l$の方程式は
+\begin{equation*}
+y= \fbox{ ク }\, x-\frac{\fbox{ ケ }}{\fbox{ コ }}\, a^2
+\end{equation*}
+である．
+
+\item
+$l$と$x$軸の交点をQとするとQの座標は
+\begin{equation*}
+\left(\frac{\fbox{ サ }}{\fbox{ シ }}\,a,\, 0\right)
+\end{equation*}
+であり，$l$と$C$のP以外の交点をRとするとRの座標は
+\begin{equation*}
+\left(\fbox{ ス }\,-a,\,\fbox{ セ }\,a-\frac{\fbox{ ソ }}{\fbox{ タ }}\,a^2\right)
+\end{equation*}
+である．
+
+\item
+Rから$x$軸に垂線を引き，$x$軸と交わる点をHとするとき，三角形QRHの面積$S$は
+\begin{equation}
+S = \frac{\fbox{ チ }}{\fbox{ ツ }}\,a^3- \fbox{ テ }\,a^2 + \fbox{ トナ }\,a
+\label{Eq:1}
+\end{equation}
+である．$S$は$a=\frac{\fbox{ 二 }}{\fbox{ ヌ }}$のとき最大値をとる
+\footnote{2003年度大学入試センター試験数学II・数学B第2問改}． (5点)
+\end{enumerate}
+\item
+大問4.において，関数$f(x)$として
+\begin{eqnarray*}
+x \leqq x_0 &のとき& f(x)=x \\
+x > x_0 &のとき& f(x)=-3.1x+12
+\end{eqnarray*}
+を考える．2つの直線が交わる点を$x_0$として，それ以降の領域を読み替えて問題を解け．ただし係数を変えたので，\fbox{ ア }，\fbox{ イウ }等の箱にはこだわらず，小数が入る．特にRの座標以降2次方程式の解の平方根が残り，(\ref{Eq:1})式では定数項も残るがビビらんように．(20点)
+\end{enumerate}
+\end{document}
