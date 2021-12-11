@@ -27,7 +27,8 @@ task :mk_link do
     target = File.join($attach,basename)
     FileUtils.cp(file, target)
     if File.extname(file)=='.ipynb'
-      print "||{{attach_anchor_string(------, #{basename} ) }} || "
+      print "||{{attach_anchor_string(------, #{basename} ) }} \n"
+      print "||{{attach_anchor( #{basename} ) }} || "
       print "([[nbviewer|#{$nbviewer}/#{file}]])\n"
     else
       puts "{{attach_anchor(#{basename}) }}"

@@ -1,17 +1,91 @@
-desc 'rake -T'
-task :default do
-  system "rake -T"
-end
+# -*- coding: utf-8 -*-
+require 'open3'
+require 'colorize'
+require 'fileutils'
+$attach = '/Users/bob/Sites/new_ist_data/ist_data/cache/attach/SymbolicMathOldExams'
+$nbviewer = 'https://nbviewer.org/github/daddygongon/jupyter_num_calc/blob/main/symbolic_math/exams'
 
-desc 'make links'
-task :mk_link do
-  dir = ARGV[1] || '.'
-  Dir.glob("#{dir}/*").each do |file|
-    system "ln #{file} /Users/bob/Sites/new_ist_data/ist_data/cache/attach/MapleOldExams/"
-    basename = File.basename(file)
-    puts "{{attach_anchor(#{basename})}}"
-    if File.extname(file) == '.ipynb'
-      puts nbviewer = "* ans_ipynb:[[nbviewer|https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/symbolic_math/exams/#{file}]]"
-    end
+module HikiLink
+  #check, org, nbviewer, hiki
+  SEP = '||'
+  def mk_link(name)
+    return case File.extname(name)
+           when '.ipynb'
+             "{{attach_anchor_string(ipynb, #{name})}}"
+           when '.pdf'
+             "{{attach_anchor_string(pdf, #{name})}}"
+           else
+             $stderr.puts name
+           end
   end
 end
+
+module CheckLink
+  SEP = '|'
+  def mk_link(name)
+    return case File.extname(name)
+           when '.ipynb'
+             "[[#{name}][ipynb]]"
+           when '.pdf'
+             "[[#{name}][pdf]]"
+           else
+             $stderr.puts name
+           end
+  end
+end
+
+desc 'mk org table, > tmp.org and open it by emacs'
+task :to_org do
+  include CheckLink
+  mk_table
+end
+
+
+desc 'mk table, mk_link and rsync with dir'
+task :to_hiki do
+  include HikiLink
+  mk_table
+end
+
+def mk_table
+  puts "#{SEP}年度#{SEP}種別#{SEP}問題#{SEP}解答例#{SEP}参考資料"
+  data = []
+  Dir.glob('./*').reverse.each do |dir|
+    next unless Dir.exist?(dir)
+    year, kind = File.basename(dir).split('_')
+
+    select = {problem: [], ans: [], ref: []}
+    Dir.glob("#{dir}/*").each do |file|
+      next if File.extname(file) =~ /\.tex|\.mw|\.bb|\.png|\.org|\.html/
+      FileUtils.cp(file, $attach, verbose: false)
+      name = File.basename(file)
+      case name
+      when /problem/
+        select[:problem] << mk_link(name)
+      when /ans/
+        select[:ans] << mk_link(name)
+      when /ref/
+        select[:ref] << mk_link(name)
+      else
+        select[:problem] << mk_link(name)
+      end
+    end
+
+    data << [year, kind, select]
+  end
+
+  data.each do |year, kind, select|
+    print "#{SEP}20#{year} #{SEP} #{kind} #{SEP}"
+    select.each do |key, val|
+      print " #{val.join(",")} #{SEP}"
+    end
+    puts ""
+  end  
+
+  exit
+end
+
+task :default do
+  system 'rake -T'
+end
+

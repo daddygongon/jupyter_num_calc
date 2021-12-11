@@ -1,0 +1,12 @@
+| 年度 | 種別  | 問題      | 解答例    | 参考資料    |
+| 2021 | pre   | [[exam21_pre.ipynb][ipynb]],[[exam21_pre_problem.pdf][pdf]] | [[exam21_pre_ans.ipynb][ipynb]]     | [[exam21_pre_references.pdf][pdf]]         |
+| 2020 | pre   | [[20_pre.ipynb][ipynb]],[[20_pre.pdf][pdf]] | [[20_pre_ans.ipynb][ipynb]],[[20_pre_ans.pdf][pdf]] | [[20_pre_ref.pdf][pdf]]         |
+| 2020 | pair  | [[20_pair.ipynb][ipynb]],[[20_pair.pdf][pdf]] | [[20_pair_ans.ipynb][ipynb]],[[20_pair_ans.pdf][pdf]] | [[20_18IIB_no2_ref.pdf][pdf]],[[20_pair_ref.pdf][pdf]],[[20_ref_ito_python_machine_learning_text.pdf][pdf]] |
+| 2019 | pair  | [[19_1_pair.pdf][pdf]]       | [[19_1_pair_ans.ipynb][ipynb]],[[19_1_pair_ans.pdf][pdf]] | [[19_1_pair_ref.pdf][pdf]]         |
+| 2018 | pre   | [[exam18_0_pre.ipynb][ipynb]],[[exam18_0_pre_problems.pdf][pdf]] | [[exam18_0_pre_ans.ipynb][ipynb]],[[exam18_0_pre_ans.pdf][pdf]] | [[exam18_0_pre_ref.pdf][pdf]]         |
+| 2018 | pair  | [[exam18_1_pair.ipynb][ipynb]],[[exam18_1_pair_problems.pdf][pdf]] | [[exam18_1_pair_ans.pdf][pdf]]       | [[exam18_1_pair_references.pdf][pdf]]         |
+| 2018 | final | [[18_2_final.ipynb][ipynb]],[[18_2_final_problems.pdf][pdf]] | [[18_2_final_ans.pdf][pdf]]       | [[18_2_final_ref.pdf][pdf]]         |
+| 2017 | pre   | [[17_pre.ipynb][ipynb]],[[problems.pdf][pdf]] | [[17_pre_ans.ipynb][ipynb]]     | [[17_pre_references.pdf][pdf]]         |
+| 2017 | pair  | [[exam17_1_pair_problems.pdf][pdf]]       | [[exam17_1_pair_ans.ipynb][ipynb]],[[exam17_1_pair_ans.pdf][pdf]] | [[exam17_1_pair_ref.pdf][pdf]]         |
+| 2017 | final | [[exam17_2_final_problems.pdf][pdf]]       | [[exam17_2_final_ans.ipynb][ipynb]],[[exam17_2_final_ans.pdf][pdf]] | [[exam17_2_final_ref.pdf][pdf]]         |
+| 2016 | pair  | [[exam16_1_pair_problems.pdf][pdf]]       | [[exam16_1_pair_ans.ipynb][ipynb]],[[exam16_1_pair_ans_python.pdf][pdf]] | [[exam16_1_pair_references.pdf][pdf]]         |
