@@ -61,13 +61,13 @@ def mk_table
       name = File.basename(file)
       case name
       when /problem/
-        select[:problem] << mk_link(name)
+        select[:problem] << mk_link(file)
       when /ans/
-        select[:ans] << mk_link(name)
+        select[:ans] << mk_link(file)
       when /ref/
-        select[:ref] << mk_link(name)
+        select[:ref] << mk_link(file)
       else
-        select[:problem] << mk_link(name)
+        select[:problem] << mk_link(file)
       end
     end
 
