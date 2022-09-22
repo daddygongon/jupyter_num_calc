@@ -18,7 +18,7 @@ task :mk_link do
     puts comment.cyan
     exit
   else
-    target_files = Dir.glob(ARGV[1])
+    p target_files = Dir.glob(ARGV[1])
   end
 
   target_files.each do |file|
