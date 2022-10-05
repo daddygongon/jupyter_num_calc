@@ -4,6 +4,17 @@ require 'colorize'
 $attach = '/Users/bob/Sites/new_ist_data/ist_data/cache/attach/DoingMathWithPython/'
 $nbviewer = 'https://nbviewer.org/github/daddygongon/jupyter_num_calc/blob/main/symbolic_math'
 
+desc 'kick off the prepartion'
+task :kick_off do
+  ['hiki touch DoingMathWithPython',
+   'hiki open DoingMathWithPython',
+  ].each do |comm|
+    puts comm
+    system comm
+  end
+end
+
+
 desc 'mk link and rsync with dir'
 task :mk_link do
   puts "$attach = %s" % $attach
