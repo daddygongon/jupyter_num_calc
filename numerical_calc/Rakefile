@@ -11,30 +11,23 @@ desc 'mk link and rsync with dir'
 task :mk_link do
   puts "$attach = %s".blue % $attach
   puts "$nbview = %s".yellow % $nbviewer
-  if ARGV[1] == nil
-    comment = <<~COMMENT
-    cp target files to hiki and nbviewer directory and make links.
-    need ARGV[1] as follows with ''
-    './marked_pdfs/d*.pdf', 'pdfs/*.pdf', 'ipynb_txt/d*.ipynb',
-    and 'report_ans/r*.ipynb'
-    and '*.data, *.pdf or *.ipynb'
-    COMMENT
-    puts comment.cyan
-    exit
-  else
-    target_files = Dir.glob(ARGV[1])
-  end
+  ['./marked_pdfs/d*.pdf', 'pdfs/*.pdf', 'ipynb_text/d*.ipynb',
+   'report_ans/r*.ipynb'].each do |dir|
+    p dir
+    target_files = Dir.glob(dir)
 
-  target_files.each do |file|
-    puts file.green
-    basename = File.basename(file)
-    target = File.join($attach,basename)
-    FileUtils.cp(file, target)
-    if File.extname(file)=='.ipynb'
-      print "||{{attach_anchor_string(------, #{basename}) }} ".blue
-      print "([[nbviewer|#{$nbviewer}/#{file}]])\n".cyan
-    else
-      puts "{{attach_anchor(#{basename})}}"
+    target_files.each do |file|
+      next if File.directory?(file)
+      puts file.green
+      basename = File.basename(file)
+      target = File.join($attach,basename)
+      FileUtils.cp(file, target)
+      if File.extname(file)=='.ipynb'
+        print "||{{attach_anchor_string(------, #{basename}) }} ".blue
+        print "([[nbviewer|#{$nbviewer}/#{file}]])\n".cyan
+      else
+        puts "{{attach_anchor(#{basename})}}"
+      end
     end
   end
   exit
