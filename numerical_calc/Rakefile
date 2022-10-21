@@ -31,11 +31,11 @@ def mk_link_target(file)
   puts file.green
   basename = File.basename(file)
   target = File.join(ATTACH,basename)
-  FileUtils.cp(file, target)
+  FileUtils.cp(file, target, verbose: true)
   if File.extname(file)=='.ipynb'
-    print "| {{attach_anchor(#{basename}) }} ".blue
-    print "| ([[#{NBVIEWER}/#{file}][nbviewer]])\n".cyan
+    print "| [[#{basename}]] ".blue
+    print "| [[#{NBVIEWER}/#{file}][nbviewer]]\n".cyan
   else
-    puts "{{attach_anchor(#{basename})}}"
+    puts "[[#{basename}]]"
   end
 end
