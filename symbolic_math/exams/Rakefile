@@ -2,7 +2,7 @@
 require 'open3'
 require 'colorize'
 require 'fileutils'
-$attach = '/Users/bob/Sites/new_ist_data/ist_data/cache/attach/SymbolicMathOldExams'
+$attach = '/Users/bob/Sites/new_ist_data/ist_data/cache/attach/PythonOldExams'
 $nbviewer = 'https://nbviewer.org/github/daddygongon/jupyter_num_calc/blob/main/symbolic_math/exams'
 
 module HikiLink
@@ -23,11 +23,13 @@ end
 module CheckLink
   SEP = '|'
   def mk_link(name)
+    basename = File.basename(name)
     return case File.extname(name)
            when '.ipynb'
-             "[[#{name}][ipynb]]"
+             "[[#{basename}][ipynb]]"+
+               "([[#{File.join($nbviewer,name)}][nbviewer]])"
            when '.pdf'
-             "[[#{name}][pdf]]"
+             "[[#{basename}][pdf]]"
            else
              $stderr.puts name
            end

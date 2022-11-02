@@ -33,9 +33,9 @@ def mk_link_target(file)
   target = File.join(ATTACH,basename)
   FileUtils.cp(file, target, verbose: true)
   if File.extname(file)=='.ipynb'
-    print "| [[#{basename}]] ".blue
-    print "| [[#{NBVIEWER}/#{file}][nbviewer]]\n".cyan
+    print "| [[#{basename}][リンク]] ".cyan
+    print "([[#{NBVIEWER}/#{file}][nbviewer]])\n".cyan
   else
-    puts "[[#{basename}]]"
+    puts "[[#{basename}][テキスト]]"
   end
 end
