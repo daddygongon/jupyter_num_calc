@@ -5,22 +5,23 @@ require 'fileutils'
 $attach = '/Users/bob/Sites/new_ist_data/ist_data/cache/attach/PythonOldExams'
 $nbviewer = 'https://nbviewer.org/github/daddygongon/jupyter_num_calc/blob/main/symbolic_math/exams'
 
-module HikiLink
+module PlainLink
   #check, org, nbviewer, hiki
-  SEP = '||'
+  SEP = '|'
   def mk_link(name)
+    basename = File.basename(name)
     return case File.extname(name)
            when '.ipynb'
-             "{{attach_anchor_string(ipynb, #{name})}}"
+             "#{basename}(nbviewer)"
            when '.pdf'
-             "{{attach_anchor_string(pdf, #{name})}}"
+             "#{basename}"
            else
              $stderr.puts name
            end
   end
 end
 
-module CheckLink
+module OrgLink
   SEP = '|'
   def mk_link(name)
     basename = File.basename(name)
@@ -38,14 +39,14 @@ end
 
 desc 'mk org table, > tmp.org and open it by emacs'
 task :to_org do
-  include CheckLink
+  include OrgLink
   mk_table
 end
 
 
 desc 'mk table, mk_link and rsync with dir'
-task :to_hiki do
-  include HikiLink
+task :to_plain do
+  include PlainLink
   mk_table
 end
 
