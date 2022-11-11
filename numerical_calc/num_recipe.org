@@ -1,0 +1,163 @@
+#+STARTUP: indent nolineimages overview num
+#+OPTIONS: ^:{}
+#+OPTIONS:   H:4 toc:t num:2
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+* 2022年度秋学期数値計算(動画・リンク)
+- [[https://us06web.zoom.us/j/82584873567?pwd=alh3NmhiNk1aTFBESVpaN1hsZXhsUT09][Zoom URL]] 
+
+そのほかの資料は下の方のスケジュール予定にあり
+
+* 各回の動画ほか特記事項
+動画リンクは下の方のスケジュール（講義予定）に移しました．
+
+  - 授業の進め方，参考資料を紹介, anacondaのinstall, pythonの基礎
+  - フォーマンセルですが，基本は４人，４人以下ならOK, ５人以上は不可．
+  - 提出課題はありません．フォーマンセルの同意書だけアップロードしてください．
+
+** 講義の補足資料
+- [[http://ist.ksc.kwansei.ac.jp/~nishitani/maple][Maple]]
+- [[https://github.com/daddygongon/jupyter_num_calc][python]]
+- [[https://github.com/daddygongon/jupyter_num_calc][c5の言語ごとの計算競争の結果]]の'notebooks_python/LA_speed_race.ipynb'にある
+
+* 単位について
+** 全般の注意
+- フォーマンセルで取り組む．+座席指定．+
+- フォーマンセルですが，基本は４人，４人以下ならOK, ５人以上は不可．
+- 期末試験の結果をフォーマンセルで平均する．
+- 授業中に与えた課題に解答あるいはまともな質問をしたフォーマンセルに加点（合計20点程度）．
+- 章末の演習課題を提出したフォーマンセルに加点（2点X9回程度），
+- 現在の各チーム得点
+  - [[NumRecipeScore22]]
+- 過去年度の得点
+  - [[NumRecipeScore21]]
+  - [[NumRecipeScore20]]
+  - [[NumRecipeScore19]]
+  - [[NumRecipeScore18]]
+  - [[NumRecipeScore17]]
+  - [[NumRecipeScore16]]
+  - [[NumRecipeScore15]]
+  - [[NumRecipeScore14]]
+  - [[NumRecipeScore13]]
+  - [[NumRecipeScore12]]
+  - [[NumRecipeScore11]]
+- 相当量の印刷物を配布予定（100page以上)．試験に備えてバインダーに保存しておくこと．
+
+** 章末の演習課題について
+- 次週の前日の夜中までにLUNAにpdfで提出．
+- 全部やる必要はない．２，３問を指定します．
+- 採点結果は私のURLへup.
+- レポートっぽく色々試したり，追加してもらうと加点．
+- +ペア（ツーマンセル）+フォーマンセルで１つ出せばよい．
+- 採点の都合上，遅れたら，0点．
+
+** 期末試験について（100点満点）
+- [[NumRecipe_ExamTA_manual][TAマニュアル]]
+- 12/23の講義時間中に，対面で実施．
+- 講義室で実施
+- 座席指定．時間中５分間だけ相談時間を設ける予定．
+- +大学のコンピュータを使って実際に数値計算をする課題がある．+
+- BYODでcodeを実行，LUNAへ提出．
+- メール(含むLINE等のSNS)の使用は一切不可．見つかれば即退場．webの利用はOKだけど，「教えて」なんかはダメよ．
+- 資料などの持ち込みは，プリント，ノート，コピーおよびレポート．
+- USBメモリーの試験時間中の使用は不可．必要な資料や課題のファイルはあらかじめ自分のフォルダーに入れておくように
+- 章末の演習課題と重複する問題が多い．よく消化しておくように．
+
+* 講義の目的：数値計算をPythonで解説
+** 数値計算
+「数値計算」が対象とする分野は，関数の解，積分，微分方程式，固有値問題などで，数学の問題を解析的(analytical)
+ではなく，数値的 (numerical)
+に解く手法の集大成．数値計算には，料理と同じで，正しい調理法
+(レシピ，recipe) がある． ## 基本的な戦術
+数値計算が必要となる問題を解くときの戦術は， 1.
+手持ちのツールで解いてみる， 1. 解析的な解を捜す， 1.
+既存の数値計算のサブルーチンを写して，利用． 1.
+使いやすいライブラリを捜す， 1. 自分でサブルーチンを考える，
+という順でおおむね進める．
+数値計算のサブルーチンを実際に自分で考えるということはほとんどない．
+しかし，例え 3. や 4. の既存のサブルーチンに頼るときにも，
+ブラックボックスの中で何がおこなわれているかを大まかに理解しておかないと
+大失敗をしでかすことがある．
+
+といっても，数値計算手法の全てを理解しておく必要はない．
+料理において基本となる，切る，煮る， 焼くなどを知っていれば，recipe
+を見ながら調理ができる．
+数値計算においても同じで，基本となる誤差，精度，収束性，安定性，計算速度などの本質を理解しておけば，
+新しい数値計算手法もだいたいの振る舞いを予測することが出来る．
+
+本講義ではこのような視点にたって，
+いくつかの典型的な数値計算手法の基礎的な考え方と実際のプログラムを紹介する．
+
+** python
+- jupyter notebookで資料を提供
+- github, [[https://github.com/daddygongon/jupyter_num_calc]]の数値計算
+- nbviewer,
+  [[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/README.ipynb]]
+- anaconda, 自習するならanaconda
+  [[https://www.anaconda.com]]でinstallするのが便利．大学のpcにはサブセット(miniconda)が入っている．
+
+* スケジュール予定
+** 初回環境整備と諸注意
+- [[https://github.com/daddygongon/jupyter_num_calc][github]]の数値計算(num_calc), [[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/README.ipynb][nbviewer]] |
+- [[https://kwanseio365-my.sharepoint.com/:b:/g/personal/cru32369_nuc_kwansei_ac_jp/ETMXnjOHKZtNvRx1i4eYFKoByg9nVEzABi2xbEQSbhxbgA?e=d28wk9][anacondaのinstall]], [[https://kwanseio365-my.sharepoint.com/:b:/g/personal/cru32369_nuc_kwansei_ac_jp/EUASKW9Xlx1JhzB8gytVmzEBJpc2xJ97dasYydlVwIR6Zw?e=Lfhxle][python基礎]]([[https://kwanseio365-my.sharepoint.com/:v:/g/personal/cru32369_nuc_kwansei_ac_jp/EY_8FHmiE4FDhpcqH7B-aMsBvJeV8mX0fseKf2kF2tR6Qw?e=KRxwiX][動画]])，{{attach_anchor_string(チーム同意書, num_recipe_team_agreement.docx)}}(lunaへ提出) 
+- 数式処理実習の受講生はanacondaのinstall, pythonの基礎は見る必要ありません．
+** 講義内容
+| date          | ipynb              | nbviewer | pdf      | マーク付きpdf          | 解答例           | 動画   |
+| 第0回(9/30)   | 授業進行説明       |          |          | [[d0_lecture_marked.pdf][講義手順]]               |                  |        |
+| 第1回(9/30)   | [[d1_python_ode.ipynb][常微分方程式]]       | [[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/ipynb_text/d1_python_ode.ipynb][nbviewer]] |          | [[d1_python_ode_marked.pdf][テキスト]]               |                  | [[https://kwanseio365-my.sharepoint.com/:v:/g/personal/cru32369_nuc_kwansei_ac_jp/EVHsHjqGG_9CmPdAjQ0lGQEB6ESKLOD7Ss7XDeYOVIpirg?e=c0ggzu][リンク]] |
+| 第2回(10/7)   | [[d2_fsolve.ipynb][代数方程式]]         | [[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/ipynb_text/d2_fsolve.ipynb][nbviewer]] | [[d2_fsolve.pdf][テキスト]] | [[d2_fsolve_marked.pdf][テキスト]]               | [[r2_fsolve_ans.ipynb][ipynb]]            | [[https://kwanseio365-my.sharepoint.com/:v:/g/personal/cru32369_nuc_kwansei_ac_jp/ETUfMC4S6l5Hl24p1x3j1t8BqtvuTTK5nDN3nP9GoPO7eQ?e=qB3uPK][リンク]] |
+| 第3回(10/14)  | [[d3_error.ipynb][誤差]]               | [[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/ipynb_text/d3_error.ipynb][nbviewer]] | [[d3_error.pdf][テキスト]] | [[20221014_memo.pdf][レポートメモ]], [[d3_error_marked.pdf][テキスト]] | [[r3_error_ans.ipynb][ipynb]] ([[https://nbviewer.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/report_ans/r3_error_ans.ipynb][nbviewer]]) | [[https://kwanseio365-my.sharepoint.com/:v:/g/personal/cru32369_nuc_kwansei_ac_jp/EU9O4JVK0TJHo-JhtQoH3YUBs4l55wn4mdZiW2NMbg32sA?e=hhlFhx][リンク]] |
+| 第4回(10/21)  | [[d4_la_fundamentals.ipynb][写像]]               | [[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/ipynb_text/d4_la_fundamentals.ipynb][nbviewer]] | [[d4_la_fundamentals.pdf][テキスト]] | [[d4_la_fundamentals_marked.pdf][テキスト]]               | [[r4_la_basic_ans.ipynb][ipynb]] ([[https://nbviewer.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/./report_ans/r4_la_basic_ans.ipynb][nbviewer]]) | [[https://kwanseio365-my.sharepoint.com/:v:/g/personal/cru32369_nuc_kwansei_ac_jp/EQm9fRgTblZMr4ZvB3f70f0ByRclVG_W6Xub-Zl-jTvu_w?e=e4IsEf][リンク]] |
+| 第5回(10/28)  | [[d5_la_matrix_inverse.ipynb][逆行列]]             | [[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/ipynb_text/d5_la_matrix_inverse.ipynb][nbviewer]] | [[d5_la_matrix_inverse.pdf][テキスト]] | [[d5_la_matrix_inverse_marked.pdf][テキスト]]               | [[r5_la_inverse_ans.ipynb][ipynb]] ([[https://nbviewer.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/report_ans/r5_la_inverse_ans.ipynb][nbviewer]]) | [[https://kwanseio365-my.sharepoint.com/:v:/g/personal/cru32369_nuc_kwansei_ac_jp/EeKz2Y_3uaVGte4LK46TQUMBkcZDH3yCK4_MCNsUzHi-KQ?e=87LlP9][リンク]] |
+| 　発展課題    | [[d5_breast_cancer_detector.ipynb][乳がん検出器]]       | [[https://nbviewer.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/ipynb_text/d5_breast_cancer_detector.ipynb][nbviewer]] | [[d5_breast_cancer_detector.pdf][テキスト]] | [[d5_breast_cancer_detector_marked.pdf][テキスト]]               |                  |        |
+| 第6回(11/4)   | [[d6_la_eigen_vectors.ipynb][固有値とライブラリ]] | [[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/ipynb_text/d6_la_eigen_vectors.ipynb][nbviewer]] | [[d6_la_eigen_vectors.pdf][テキスト]] | [[d6_la_eigen_vectors_marked.pdf][テキスト]]               | 11/11            | [[https://kwanseio365-my.sharepoint.com/:v:/g/personal/cru32369_nuc_kwansei_ac_jp/Ecea43WkuPFIq0ZXOEuG7RIB6O3IihMCE2Y06Mc1HzoXbg?e=0oYhDe][リンク]] |
+|               | [[d6_la_speed_race.ipynb][計算速度競争]]       | [[https://nbviewer.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/./ipynb_text/d6_la_speed_race.ipynb][nbviewer]] | [[d6_la_speed_race.pdf][テキスト]] |                        |                  |        |
+| 第7回(11/11)  | [[d7_interpolation_integral.ipynb][補間と数値積分]]     | [[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/ipynb_text/d7_interpolation_integral.ipynb][nbviewer]] | [[d7_interpolation_integral.pdf][テキスト]] | 11/11                  | 11/18            | 11/11  |
+| 第8回(11/18)  | [[d8_least_square_fit.ipynb][線形最小二乗法]]     | [[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/ipynb_text/d8_least_square_fit.ipynb][nbviewer]] | 11/18    | 11/18                  | 11/25            | 11/18  |
+| 第9回(11/25)  | [[d9_non_linear_fit.ipynb][非線形最小二乗法]]   | [[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/ipynb_text/d9_non_linear_fit.ipynb][nbviewer]] |          |                        |                  |        |
+| 第10回(12/2)  | [[d10_fft.ipynb][FFT]]                | [[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/ipynb_text/d10_fft.ipynb][nbviewer]] |          |                        |                  |        |
+| 第11回(12/9)  | [[python_ode.ipynb][常微分方程式]]       | [[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/ipynb_text/d1_python_ode.ipynb][nbviewer]] |          |                        |                  |        |
+| 第12回(12/16) |                    |          |          |                        |                  |        |
+| 第13回(12/23) |                    |          |          |                        |                  |        |
+
+- 第５回の発展課題(乳がん検出器)のdata  [[train_A.data]], [[train_b.data]], [[validate_A.data]], [[validate_b.data]]
+- 日付はupload予定日
+
+* 期末試験関連資料
+| 年度         | 問題                         | 内容                                                    | 解答例                          |
+|--------------+------------------------------+---------------------------------------------------------+---------------------------------|
+| 20年度       | [[exam_20.ipynb]], [[exam_20.pdf]]   | フィッティング,数値解の収束性,常微分方程式, fft         | [[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/exams/exam_20_ans.ipynb][python解答例]], [[exam_20_ans.ipynb]] |
+|              |                              |                                                         | [[exam_20_ans.pdf]]                 |
+| 19年度       | [[Exam19.pdf]]                   | 行列計算,fft,解の収束性,ODE                             | [[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/exams/exam_19_ans.ipynb][python解答例]],[[exam_19_ans.pdf]]    |
+| 18年度       | [[exam18.pdf]]                   | 行列計算,解収束性,精度・誤差,最小二乗法,常微分方程式    | [[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/exams/exam18_ans.ipynb][python解答例]]                    |
+| 17年度       | [[Exam17.pdf]]                   | 行列計算,精度・誤差,積分,最小2乗法,常微分方程式         | [[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/exams/exam17_ans.ipynb][python解答例]]                    |
+| 16年度       | [[Exam16.pdf][NumRecipe16]], [[Exam16_ans.pdf][NumRecipe16_ans]] | 収束性,Gauss-Seidel,FFT強度表示,tanニュートン差分商補間 | [[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/exams/exam16_ans.ipynb][python解答例]]                    |
+| 15年度       | [[Exam15.pdf][NumRecipe15]], [[Exam15_ans.pdf][NumRecipe15_ans]] | 収束性,丸め誤差,Newton差分商公式,ページランク           | [[https://nbviewer.jupyter.org/github/daddygongon/jupyter_num_calc/blob/main/numerical_calc/exams/exam15_ans.ipynb][python解答例]]                    |
+| 14年度       | [[Exam14.pdf][NumRecipe14]], [[Exam14_ans.pdf][NumRecipe14_ans]] |                                                         |                                 |
+| 11年度       | [[Exam11r.pdf][NumRecipe12]]                  |                                                         |                                 |
+| TAマニュアル | [[NumRecipe_ExamTA_manual]] |                                                         |                                 |
+
+* 来年度に向けて
+- プリントアウトで不正が起こるかも．試験の提出はLUNAから.
+- 学期の始めに，以下の項目を体感してもらうために，模擬試験を受けさせる
+  - コピペでいいこと．
+  - 何を削るべきか？
+  - どこを換えるべきか？
+  - どのような操作がJupyter Notebookで最低限修得しないといけないか？
+  - チームの結束．
+  - 課題の意味．
+
+* 参考文献
+-  William H. Press 他著「ニューメリカルレシピ・イン・シー C言語による数値計算レシピ」(技術評論社，1993) :: 
+数値計算のバイブル．原著 Numerical recipe
+では非常に広範な計算対象に対して，C， Fortran， C++， Pascal， Basic
+版が用意されており，数値計算プログラムをコーディングする際の洗練され
+たスタイルも提示している．記述は初学者には難しいが，ある程度経験を積んだプログラマには，
+手法を選ぶうえで非常に役に立つ情報である．
+
+- 奥村晴彦著「C言語による最新アルゴリズム事典」(技術評論社，1991) :: いわゆる数値計算に限らず，いろいろな計算機問題とその解法が載っている．数値計算についても必要最小限の記述とプログラムがまとめられており，非常に便利．改訂版が2018に出た．
+
+- 数値解析法，森正武著，1984， 朝倉書店朝倉現代物理学講座7 ::
+- 数値解析，一松信著，1982，朝倉書店新数学講座13 :: 両書とも少し古いが，数値計算の基礎となる理論的な説明が明解．
+
+- 河村哲也著「数値計算の初歩!」(山海堂，2002年) :: レベルは高くないが，重要な数値計算の初歩を丁寧に解説．
