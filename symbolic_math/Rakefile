@@ -1,4 +1,4 @@
-require 'open3'
+grequire 'open3'
 require 'colorize'
 
 $attach = '/Users/bob/Sites/new_ist_data/ist_data/cache/attach/DoingMathWithPython/'
