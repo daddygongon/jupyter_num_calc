@@ -9,15 +9,12 @@ end
 
 desc 'mk_link all'
 task :mk_link_all do
-  puts "ATTACH = %s".blue % ATTACH
-  puts "$nbview = %s".yellow % NBVIEWER
-  ['./marked_pdfs/*.pdf', 'pdfs/*.pdf', 'ipynb_text/d*.ipynb',
-   'report_ans/r*.ipynb'].each do |dir|
-    target_files = Dir.glob(dir)
-    target_files.each do |file|
-      next if File.directory?(file)
-      mk_link_target(file)
-    end
+#  puts "ATTACH = %s".blue % ATTACH
+#  puts "$nbview = %s".yellow % NBVIEWER
+  files = ARGV[1]
+  Dir.glob(files).each do |file|
+    p file
+    mk_link_target(file)
   end
 end
 desc 'mk link and rsync with dir'
