@@ -9,14 +9,14 @@ end
 
 desc 'mk_link all'
 task :mk_link_all do
-#  puts "ATTACH = %s".blue % ATTACH
-#  puts "$nbview = %s".yellow % NBVIEWER
   files = ARGV[1]
   Dir.glob(files).each do |file|
     p file
     mk_link_target(file)
   end
+  exit
 end
+
 desc 'mk link and rsync with dir'
 task :mk_link do
   file = ARGV[1]
